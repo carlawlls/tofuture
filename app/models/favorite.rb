@@ -10,3 +10,8 @@ class Favorite < ApplicationRecord
     update!(blocked: true)
   end
 end
+
+
+# GEM DOCUMENTATION
+
+# https://github.com/jonhue/acts_as_favoritor
