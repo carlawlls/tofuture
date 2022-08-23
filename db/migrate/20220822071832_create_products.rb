@@ -9,7 +9,7 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.text :description
       t.string :name
       t.string :sector
-      t.integer :product_type
+      t.integer :product_type, default: 0
 
       t.timestamps
     end
