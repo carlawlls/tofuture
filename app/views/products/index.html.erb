@@ -1,1 +1,18 @@
-<h1>Products </h1>
+<h2 id="offers-header">Products</h2>
+<div class="container">
+  <div class="cards">
+    <% @products.each do |product| %>
+      <%= link_to product_path(product) do %>
+        <div class="card-product">
+          <div class="card-product-infos">
+            <div>
+              <h2> <%= product.name %> </h2>
+              <p><%= product.ticker %></p>
+              <p> <%= product.product_type %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

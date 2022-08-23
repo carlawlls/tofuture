@@ -3,8 +3,13 @@ require "json"
 require "open-uri"
 require_relative "download_json"
 puts "destroying sweet stocks"
-Product.destroy_all
 puts "creating sweet stocks..."
+puts "destroying users"
+puts "creating users"
+Product.destroy_all
+User.destroy_all
+
+
 
 if ENV['download']
   puts 'download'
@@ -67,3 +72,22 @@ end
 #     product.esg_score = esg_info["total"]
 #   )
 # end
+User.create!(
+  email: "billcook8122@gmail.com",
+  password: "123123",
+)
+
+User.create!(
+  email: "willmes.carla@gmail.com",
+  password: "123123",
+)
+
+User.create!(
+  email: "ayakayakaaaa@gmail.com",
+  password: "123123",
+)
+
+User.create!(
+  email: "jdchappelow@gmail.com",
+  password: "123123",
+)
