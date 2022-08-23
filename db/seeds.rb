@@ -91,3 +91,9 @@ User.create!(
   email: "jdchappelow@gmail.com",
   password: "123123",
 )
+
+User.all.each do |user|
+  3.times do
+    user.favorite(Product.all.sample)
+  end
+end
