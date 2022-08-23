@@ -1,4 +1,3 @@
-Product.Create(name:)
 require "uri"
 require "json"
 require "open-uri"
@@ -30,41 +29,8 @@ Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
   )
 end
 
-
-
-
-# # FOR ESG SCORES CURRENTLY NOT WORKING DO NOT TOUCH
-
-# stringfied_products = Product.all.map do |product|
-#   "#{product.exchange}:#{product.ticker}"
-# end.join(",")
-
-# # https://www.esgenterprise.com/esg-enterprise-data-api-services/
-
-# response = URI.open("https://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?q=#{stringfied_products}&token=#{ENV['ESG_API_KEY']}").read
-
-# response.each do |esg_info|
-#   product = Product.find_by(ticker: esg_info["stock_symbol"])
-#   next unless product
-
-#   product.esg_score = esg_info["total"]
-#   product.er_score = esg_info["environment_score"]
-#   product.sr_score = esg_info["social_score"]
-#   product.gr_score = esg_info["governance_score"]
-#   product.save
-# end
-
-
-# Dir[File.join(dir, "test_esgs/*.json")].sort.each do |file2|
-#   puts file2
-#   json = File.open(file2).read
-#   p esg_info = JSON.parse(json)
-#   Product.create!(
-#     product = Product.find_by(ticker: esg_info["stock_symbol"]),
-
-#     product.er_score = esg_info["environment_score"],
-#     product.sr_score = esg_info["social_score"],
-#     product.gr_score = esg_info["governance_score"],
-#     product.esg_score = esg_info["total"]
-#   )
-# end
+User.all.each do |user|
+  3.times do
+    user.favorite(Product.all.sample)
+  end
+end
