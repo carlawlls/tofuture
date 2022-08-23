@@ -114,7 +114,7 @@ Issue.create!(
 Issue.create!(
   issue_name: "Human rights at home and abroad",
   explanation: "Human rights are moral principles or norms for certain standards of human behaviour and are regularly protected in municipal and international law. They are commonly understood as inalienable, fundamental rights to which a person is inherently entitled simply because she or he is a human being and which are inherent in all human beings, regardless of their age, ethnic origin, location, language, religion, ethnicity, or any other status"
-
+)
 User.create!(
   email: "billcook8122@gmail.com",
   password: "123123"
