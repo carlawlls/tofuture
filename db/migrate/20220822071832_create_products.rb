@@ -2,6 +2,7 @@ class CreateProducts < ActiveRecord::Migration[7.0]
   def change
     create_table :products do |t|
       t.string :ticker
+      t.string :exchange
       t.float :esg_score
       t.float :er_score
       t.float :sr_score

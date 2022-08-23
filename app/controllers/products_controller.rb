@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   before_action :authenticate_user!
   include Pundit::Authorization

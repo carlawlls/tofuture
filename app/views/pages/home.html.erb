@@ -1,6 +1,17 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.jpg" %>);">
+  <div class="home-navbar">
+    <%= render "shared/navbar" %>
+  </div>
+  <div class="container">
+    <div class="banner-text">
+      <h1>toFuture</h1>
+      <p>Invest in <strong>change</strong>.</p>
+      <a class="btn btn-ghost" href="#">Browse</a>
+    </div>
+  </div>
+</div>
+
 <div class="container">
-  <h1>Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
   <div class="col-sm-4">
     <%= form_tag products_path, method: :get, class: "d-flex my-3" do %>
       <%= text_field_tag :query,
