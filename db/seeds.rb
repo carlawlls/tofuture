@@ -117,20 +117,20 @@ Issue.create!(
 
 User.create!(
   email: "billcook8122@gmail.com",
-  password: "123123",
+  password: "123123"
 )
 
 User.create!(
   email: "willmes.carla@gmail.com",
-  password: "123123",
+  password: "123123"
 )
 
 User.create!(
   email: "ayakayakaaaa@gmail.com",
-  password: "123123",
+  password: "123123"
 )
 
 User.create!(
   email: "jdchappelow@gmail.com",
-  password: "123123",
-
+  password: "123123"
+)
