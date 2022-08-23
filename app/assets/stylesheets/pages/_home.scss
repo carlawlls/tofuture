@@ -1,1 +1,69 @@
-// Specific CSS for your home-page
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.banner-text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 24px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  line-height: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-navbar {
+  background-color: transparent;
+  color: white;
+}
+
+.home-navbar ul li {
+  position: relative;
+}
+
+.home-navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.home-navbar ul li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.home-navbar ul li::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.home-navbar ul li:hover::after {
+  width: 100%;
+}
