@@ -26,11 +26,11 @@ Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
     name: product_info["Name"],
     exchange: product_info["Exchange"],
     description: product_info["Description"],
-    sector: product_info["Sector"],
-    er_score: rand(0.000..10.000),
-    sr_score: rand(0.000..10.000),
-    gr_score: rand(0.000..10.000),
-    esg_score: rand(0.000..10.000)
+    sector: product_info["Sector"]
+    # er_score: rand(0.000..10.000),
+    # sr_score: rand(0.000..10.000),
+    # gr_score: rand(0.000..10.000),
+    # esg_score: rand(0.000..10.000)
   )
 end
 
@@ -39,24 +39,25 @@ end
 
 # # FOR ESG SCORES CURRENTLY NOT WORKING DO NOT TOUCH
 
-# stringfied_products = Product.all.map do |product|
-#   "#{product.exchange}:#{product.ticker}"
-# end.join(",")
 
-# # https://www.esgenterprise.com/esg-enterprise-data-api-services/
 
-# response = URI.open("https://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?q=#{stringfied_products}&token=#{ENV['ESG_API_KEY']}").read
+products =  Product.all.map {|product| "#{product.exchange}:#{product.ticker}"}.join(",")
+p products
 
-# response.each do |esg_info|
-#   product = Product.find_by(ticker: esg_info["stock_symbol"])
-#   next unless product
+# https://www.esgenterprise.com/esg-enterprise-data-api-services/
 
-#   product.esg_score = esg_info["total"]
-#   product.er_score = esg_info["environment_score"]
-#   product.sr_score = esg_info["social_score"]
-#   product.gr_score = esg_info["governance_score"]
-#   product.save
-# end
+response = URI.open("https://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?q=#{products}&token=#{ENV['ESG_API_KEY']}").read
+
+response.each do |esg_info|
+  product = Product.find_by(ticker: esg_info["stock_symbol"])
+  next unless product
+
+  product.esg_score = esg_info["total"]
+  product.er_score = esg_info["environment_score"]
+  product.sr_score = esg_info["social_score"]
+  product.gr_score = esg_info["governance_score"]
+  product.save
+end
 
 
 # Dir[File.join(dir, "test_esgs/*.json")].sort.each do |file2|
