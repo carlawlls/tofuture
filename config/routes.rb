@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :issues, only: [:index, :show]
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :users, only: [] do
+    get "/favorites", to: "users#favorites", as: :favorite
+  end
 end

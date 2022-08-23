@@ -168,6 +168,8 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
+    nokogiri (1.13.8-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
@@ -177,6 +179,8 @@ GEM
     public_suffix (5.0.0)
     puma (5.6.4)
       nio4r (~> 2.0)
+    pundit (2.2.0)
+      activesupport (>= 3.0.0)
     racc (1.6.0)
     rack (2.2.4)
     rack-test (2.0.2)
@@ -268,6 +272,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-19
   x86_64-darwin-21
   x86_64-linux
@@ -286,6 +291,7 @@ DEPENDENCIES
   money-rails (~> 1.12)
   pg (~> 1.1)
   puma (~> 5.0)
+  pundit
   rails (~> 7.0.3, >= 7.0.3.1)
   sassc-rails
   selenium-webdriver
