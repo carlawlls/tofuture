@@ -4,12 +4,21 @@
   height: 100vh;
 }
 
-.banner-text {
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content {
   width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .banner h1 {
@@ -28,15 +37,9 @@
   line-height: 25px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-navbar {
-  background-color: transparent;
+.home-navbar .navbar-lewagon {
   color: white;
+  background-color: transparent;
 }
 
 .home-navbar ul li {
@@ -66,4 +69,56 @@
 
 .home-navbar ul li:hover::after {
   width: 100%;
+}
+
+.trending {
+  padding: 0 32px;
+}
+
+.trending h2 {
+  text-align: center;
+  padding: 24px;
+  color: 212529;
+  text-transform: uppercase;
+}
+
+.trending-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .trending-btn {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .trending-btn {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .trending-btn {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .trending-btn {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .trending-btn {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
