@@ -1,3 +1,7 @@
 <h1>My favorites</h1>
-<%= @favorites.last.name %>
+<% @favorites.each do |product| %>
+  <ul><%= product.name %></ul>
+  <ul><%= product.sector %></ul>
+  <ul><%= product.esg_score %></ul>
+<% end %>
 <%= link_to "back", root_path %>
