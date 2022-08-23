@@ -8,8 +8,6 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-<<<<<<< HEAD
-
   <body>
     <% unless @skip_navbar %>
       <%= render "shared/navbar" %>
@@ -17,15 +15,11 @@
 
     <%= render "shared/flashes" %>
 
-    <%= yield %>
-=======
-  <body>
-    <%= render "shared/navbar" %>
-    <%= render "shared/flashes" %>
     <div class="content">
       <%= yield %>
     </div>
+
     <%= render "shared/footer" %>
->>>>>>> master
+
   </body>
 </html>
