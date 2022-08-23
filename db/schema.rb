@@ -59,6 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_22_073051) do
 
   create_table "products", force: :cascade do |t|
     t.string "ticker"
+    t.string "exchange"
     t.float "esg_score"
     t.float "er_score"
     t.float "sr_score"
