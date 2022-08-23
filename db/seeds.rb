@@ -3,8 +3,13 @@ require "json"
 require "open-uri"
 require_relative "download_json"
 puts "destroying sweet stocks"
-Product.destroy_all
 puts "creating sweet stocks..."
+puts "destroying users"
+puts "creating users"
+Product.destroy_all
+User.destroy_all
+
+
 
 if ENV['download']
   puts 'download'
@@ -68,6 +73,7 @@ end
 #   )
 # end
 
+
 # ISSUES SEED -------------------------------------------------
 
 #Environment
@@ -108,4 +114,23 @@ Issue.create!(
 Issue.create!(
   issue_name: "Human rights at home and abroad",
   explanation: "Human rights are moral principles or norms for certain standards of human behaviour and are regularly protected in municipal and international law. They are commonly understood as inalienable, fundamental rights to which a person is inherently entitled simply because she or he is a human being and which are inherent in all human beings, regardless of their age, ethnic origin, location, language, religion, ethnicity, or any other status"
+
+User.create!(
+  email: "billcook8122@gmail.com",
+  password: "123123",
 )
+
+User.create!(
+  email: "willmes.carla@gmail.com",
+  password: "123123",
+)
+
+User.create!(
+  email: "ayakayakaaaa@gmail.com",
+  password: "123123",
+)
+
+User.create!(
+  email: "jdchappelow@gmail.com",
+  password: "123123",
+
