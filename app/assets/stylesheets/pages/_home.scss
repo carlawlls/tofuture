@@ -4,12 +4,20 @@
   height: 100vh;
 }
 
-.banner-text {
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content {
   width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .banner h1 {
@@ -28,42 +36,54 @@
   line-height: 25px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.trending {
+  padding: 0 32px;
 }
 
-.home-navbar {
-  background-color: transparent;
-  color: white;
+.trending h2 {
+  text-align: center;
+  padding: 24px;
+  color: 212529;
+  text-transform: uppercase;
 }
 
-.home-navbar ul li {
-  position: relative;
+.trending-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
-.home-navbar ul li a {
-  text-decoration: none;
-  color: white;
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .trending-btn {
+    grid-template-columns: 1fr;
+  }
 }
 
-.home-navbar ul li a:hover {
-  text-decoration: none;
-  color: white;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .trending-btn {
+    grid-template-columns: 1fr;
+  }
 }
 
-.home-navbar ul li::after {
-  content: '';
-  height: 2px;
-  width: 0;
-  background: white;
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  transition: 0.5s;
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .trending-btn {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.home-navbar ul li:hover::after {
-  width: 100%;
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .trending-btn {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .trending-btn {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
