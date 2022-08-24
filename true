@@ -1,3 +1,23 @@
 destroying sweet stocks
 creating sweet stocks...
+destroying users
+creating users
 download
+["INTC", "CMI", "ACN", "XOM", "IBM"]
+""
+[15, 24] in ~/code/billcookie/tofuture/db/download_json.rb
+  [2m  15|[0m 
+  [2m  16|[0m 
+  [2m  17|[0m [32mdef[0m [34m[1mdownload_esg[0m
+  [2m  18|[0m   products = [34m[1m[4mProduct[0m.all.map {|product| [31m[1m"[0m[31m#{[0mproduct.exchange[31m}[0m[31m:[0m[31m#{[0mproduct.ticker[31m}[0m[31m[1m"[0m}.join([31m[1m"[0m[31m,[0m[31m[1m"[0m)
+  [2m  19|[0m   p products
+=>[2m  20|[0m   debugger
+  [2m  21|[0m   [34m[1m# https://www.esgenterprise.com/esg-enterprise-data-api-services/[0m
+  [2m  22|[0m   response = [34m[1m[4mURI[0m.open([31m[1m"[0m[31mhttps://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?q=[0m[31m#{[0mproducts[31m}[0m[31m&token=[0m[31m#{[0m[36m[1mENV[0m[[31m[1m'[0m[31mESG_API_KEY[0m[31m[1m'[0m][31m}[0m[31m[1m"[0m).read
+  [2m  23|[0m   [34m[1m[4mFile[0m.open([31m[1m"[0m[31mdb/test_esgs/esg.json[0m[31m[1m"[0m, [31m[1m'[0m[31mwb[0m[31m[1m'[0m) [32mdo[0m |f|
+  [2m  24|[0m     f.write(response)
+=>#0	[34m[1mObject#download_esg[0m at [32m~/code/billcookie/tofuture/db/download_json.rb:20[0m
+  #1	[34m[1m<main>[0m at [32m~/code/billcookie/tofuture/db/seeds.rb:17[0m
+  # and 34 frames (use `bt' command for all frames)
+(rdbg) [0m(rdbg) [36m[4mp[0m[2m    # command[0m(rdbg) pr(rdbg) pro(rdbg) prod(rdbg) produ(rdbg) produc(rdbg) product(rdbg) products""
+(rdbg) Really quit? [Y/n] (rdbg) Really quit? [Y/n] 

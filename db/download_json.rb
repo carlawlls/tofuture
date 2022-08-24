@@ -3,7 +3,7 @@ require "open-uri"
 
 
 def download_symbols
-  stock_symbols = ["INTC", "CMI", "ACN", "XOM", "IBM"]
+  p stock_symbols = ["INTC", "CMI", "ACN", "XOM", "IBM"]
   stock_symbols.each do |symbol|
     url = URI.parse("https://www.alphavantage.co/query?function=OVERVIEW&symbol=#{symbol}&apikey=#{ENV["ALPHA_VANTAGE_KEY"]}")
     items_search = URI.open(url).read
@@ -14,16 +14,21 @@ def download_symbols
 end
 
 
-# def download_esg
-#   stock_symbols = ["INTC", "CMI", "ACN", "XOM", "IBM"]
-#   stock_symbols.each do |symbol|
-#     url = URI.parse("https://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?q=#{stock_symbols}&token=#{ENV['ESG_API_KEY']}")
-#     items_search = URI.open(url).read
-#     File.open("db/test_esgs/#{symbol}.json", 'wb') do |f|
-#       f.write(items_search)
-#     end
-#   end
-# end
+def download_esg
+
+  products = Product.all.map {|product| "#{product.exchange}:#{product.ticker}"}.join(",")
+  p products
+  return if products.blank?
+
+  # https://www.esgenterprise.com/esg-enterprise-data-api-services/
+
+  p url = "https://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?q=#{products}&token=#{ENV['ESG_API_KEY']}"
+  response = URI.open(url).read
+  p response
+  File.open("db/test_esgs/esg.json", 'wb') do |f|
+    f.write(response)
+  end
+end
 
 
 
