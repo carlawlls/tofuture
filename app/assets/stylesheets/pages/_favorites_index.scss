@@ -20,11 +20,22 @@
 #favorite-product {
   overflow: hidden;
   background: rgb(240, 240, 240);
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
   width: 500px;
   height: 160px;
-  // margin-bottom: 16px;
+  -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
+}
+
+#favorite-product:hover {
+  -webkit-transform: translate(0, -8px);
+	-moz-transform: translate(0, -8px);
+	-ms-transform: translate(0, -8px);
+	-o-transform: translate(0, -8px);
+	transform: translate(0, -8px);
+  box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
+  margin-bottom: 16px;
 }
 
 // .card-product > img {
