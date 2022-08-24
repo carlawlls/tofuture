@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  acts_as_favoritable
+  acts_as_taggable_on :issues
 
   has_many :prices
   has_many :issue_relationships
