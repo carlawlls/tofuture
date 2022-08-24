@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .banner h1 {
@@ -35,40 +34,6 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   line-height: 25px;
-}
-
-.home-navbar .navbar-lewagon {
-  color: white;
-  background-color: transparent;
-}
-
-.home-navbar ul li {
-  position: relative;
-}
-
-.home-navbar ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-.home-navbar ul li a:hover {
-  text-decoration: none;
-  color: white;
-}
-
-.home-navbar ul li::after {
-  content: '';
-  height: 2px;
-  width: 0;
-  background: white;
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  transition: 0.5s;
-}
-
-.home-navbar ul li:hover::after {
-  width: 100%;
 }
 
 .trending {
