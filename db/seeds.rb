@@ -8,14 +8,28 @@ puts "destroying users"
 puts "creating users"
 Product.destroy_all
 User.destroy_all
+Issue.destroy_all
 
 # For Product Creation ----------------------------------------------------
 # DO NOT CHANGE THIS AT ALL IT MUST BE KEPT FALSE ONLY LIL COOKIE CAN CHANGE
 if false
-  puts 'download'
   download_symbols
 end
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+carbon_emissions = ActsAsTaggableOn::Tag.new(name: "Carbon Emissions")
+air_pollution = ActsAsTaggableOn::Tag.new(name: "Air Pollution")
+water_pollution = ActsAsTaggableOn::Tag.new(name: "Water Pollution")
+deforestation = ActsAsTaggableOn::Tag.new(name: "Deforestation")
+green_energy = ActsAsTaggableOn::Tag.new(name: "Green Energy")
+waste_management = ActsAsTaggableOn::Tag.new(name: "Water Management")
+employee_diversity = ActsAsTaggableOn::Tag.new(name: "Employee Diversity")
+human_rights = ActsAsTaggableOn::Tag.new(name: "Human Rights")
+labor_standards = ActsAsTaggableOn::Tag.new(name: "Labor Standards")
+political_lobbying = ActsAsTaggableOn::Tag.new(name: "Political Lobbying")
+animal_welfare = ActsAsTaggableOn::Tag.new(name: "Animal Welfare")
+
+issue_tags = [carbon_emissions, air_pollution, water_pollution, deforestation, green_energy, waste_management, employee_diversity, human_rights, labor_standards, political_lobbying, animal_welfare]
+
 dir = File.dirname(__FILE__)
 Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
   puts file1
@@ -26,18 +40,12 @@ Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
     name: product_info["Name"],
     exchange: product_info["Exchange"],
     description: product_info["Description"],
-    sector: product_info["Sector"]
-    # er_score: rand(0.000..10.000),
-    # sr_score: rand(0.000..10.000),
-    # gr_score: rand(0.000..10.000),
-    # esg_score: rand(0.000..10.000)
+    sector: product_info["Sector"],
+    issue_list: issue_tags.sample(3)
   )
 end
 
-
-
-
-# FOR ESG SCORES CURRENTLY NOT WORKING DO NOT TOUCH
+# # https://www.esgenterprise.com/esg-enterprise-data-api-services/
 
 # DO NOT CHANGE THIS AT ALL IT MUST BE KEPT FALSE ONLY LIL COOKIE CAN CHANGE
 if false
@@ -58,6 +66,7 @@ end
 
 # ISSUES SEED -------------------------------------------------
 
+
 #Environment
 Issue.create!(
   issue_name: "Carbon emissions",
@@ -65,8 +74,14 @@ Issue.create!(
 )
 
 Issue.create!(
-  issue_name: "Air and water pollution",
-  explanation: "Usually, air pollution affects the respiratory system, causing difficulty in breathing, COPD, respiratory infections, asthma and even lung cancer. It can also affect existing cardiac conditions. Whilst, water pollution usually affects the digestive system, but can also affect other body systems depending upon the type of pollutant or pathogen present in the water."
+  issue_name: "Air pollution",
+  explanation: "Air pollution is the contamination of air due to the presence of substances in the atmosphere that are harmful to the health of humans and other living beings, or cause damage to the climate or to materials."
+)
+
+
+Issue.create!(
+  issue_name: "Water pollution",
+  explanation: "Water pollution (or aquatic pollution) is the contamination of water bodies, usually as a result of human activities, so that it negatively affects its uses."
 )
 
 
@@ -77,7 +92,7 @@ Issue.create!(
 
 
 Issue.create!(
-  issue_name: "Green energy initiatives",
+  issue_name: "Green energy",
   explanation: "Renewable energy is energy that is collected from renewable resources that are naturally replenished on a human timescale. It includes sources such as sunlight, wind, the movement of water, and geothermal heat."
 )
 
@@ -89,12 +104,12 @@ Issue.create!(
 #Social
 
 Issue.create!(
-  issue_name: "Employee gender and diversity",
+  issue_name: "Employee diversity",
   explanation: "Gender and racial diversity is equitable or fair representation of people of different genders and/or races."
 )
 
 Issue.create!(
-  issue_name: "Human rights at home and abroad",
+  issue_name: "Human rights",
   explanation: "Human rights are moral principles or norms for certain standards of human behaviour and are regularly protected in municipal and international law. They are commonly understood as inalienable, fundamental rights to which a person is inherently entitled simply because she or he is a human being and which are inherent in all human beings, regardless of their age, ethnic origin, location, language, religion, ethnicity, or any other status"
 )
 User.create!(
@@ -107,14 +122,4 @@ User.create!(
   password: "123123"
 )
 
-User.create!(
-  email: "ayakayakaaaa@gmail.com",
-  password: "123123"
-)
-
-User.create!(
-  email: "jdchappelow@gmail.com",
-  password: "123123"
-)
-
-puts "Finished Seeding!!!"
+puts "FINISHED! BOY!"
