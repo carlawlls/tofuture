@@ -41,7 +41,7 @@ end
 
 
 
-products =  Product.all.map {|product| "#{product.exchange}:#{product.ticker}"}.join(",")
+products = Product.all.map {|product| "#{product.exchange}:#{product.ticker}"}.join(",")
 p products
 
 # https://www.esgenterprise.com/esg-enterprise-data-api-services/
