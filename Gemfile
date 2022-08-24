@@ -49,6 +49,7 @@ gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 
 # CUSTOM GEMS AND ADDED BY US
+gem 'acts-as-taggable-on', '~> 9.0'
 gem "devise"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
