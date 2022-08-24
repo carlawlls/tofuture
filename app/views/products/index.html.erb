@@ -1,18 +1,21 @@
-<h2 id="offers-header">Products</h2>
 <div class="container">
-  <div class="cards">
-    <% @products.each do |product| %>
-      <%= link_to product_path(product) do %>
-        <div class="card-product">
-          <div class="card-product-infos">
-            <div>
-              <h2> <%= product.name %> </h2>
-              <p><%= product.ticker %></p>
-              <p> <%= product.product_type %></p>
+  <div class="display-cards">
+    <h2 class="page-header">Products</h2>
+    <div class="cards">
+      <% @products.each do |product| %>
+        <%= link_to product_path(product) do %>
+          <div class="card-product">
+            <div class="card-product-infos">
+              <div>
+                <h2> <%= product.name %> </h2>
+                <p><%= product.ticker %></p>
+                <p> <%= product.product_type %></p>
+                <p> issues...  </p>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
