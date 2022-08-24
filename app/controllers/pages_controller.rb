@@ -8,7 +8,8 @@ class PagesController < ApplicationController
   def search
     @products = Product.all
     if params[:query].present?
-      @products = Product.search_by_name_and_ticker(params[:query])
+      @products = Product.tagged_with(params[:query]) + Product.search_by_name_and_ticker(params[:query])
+
     end
     @issues = Issue.all
     if params[:query].present?
@@ -16,3 +17,7 @@ class PagesController < ApplicationController
     end
   end
 end
+
+
+# params[:query].present?
+#       @products = Product.search_by_name_and_ticker(params[:query])
