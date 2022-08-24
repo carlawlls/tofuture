@@ -3,6 +3,14 @@
     <div class="display-cards">
       <h1 class="page-header">Products</h1>
 
+      <div class="form">
+        <p>Refine your search:</p>
+        <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+          <%= f.input :sector, collection: Product::SECTORS, as: :check_boxes, input_html: {value: ""} %>
+          <%= f.submit 'Search', class: "btn btn-flat"%>
+        <% end %>
+      </div>
+
       <div class="cards">
         <% @products.each do |product| %>
           <%= link_to product_path(product) do %>

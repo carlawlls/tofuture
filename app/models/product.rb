@@ -20,4 +20,6 @@ class Product < ApplicationRecord
     tsearch: { prefix: true }
   }
 
+  SECTORS = ['Healthcare', 'Materials', 'Real Estate', 'Consumer Staples', 'Consumer Discretionary', 'Utilities', 'Energy', 'Industrials', 'Consumer Services', 'Financials', 'TECHNOLOGY', 'MANUFACTURING']
+  TYPES = ['Stock', 'Fund']
 end
