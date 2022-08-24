@@ -11,26 +11,26 @@
   width: 40px;
 }
 
-.home-navbar .navbar-lewagon {
+.navbar-lewagon {
   color: white;
   background-color: transparent;
 }
 
-.home-navbar ul li {
+.navbar-lewagon ul li {
   position: relative;
 }
 
-.home-navbar ul li a, .navbar-brand {
+.navbar-lewagon ul li a, .navbar-brand {
   text-decoration: none;
   color: white;
 }
 
-.home-navbar ul li a:hover, .navbar-brand:hover {
+.navbar-lewagon ul li a:hover, .navbar-brand:hover {
   text-decoration: none;
   color: white;
 }
 
-.home-navbar ul li::after {
+.navbar-lewagon ul li::after {
   content: '';
   height: 2px;
   width: 0;
@@ -41,6 +41,6 @@
   transition: 0.5s;
 }
 
-.home-navbar ul li:hover::after {
+.navbar-lewagon ul li:hover::after {
   width: 100%;
 }
