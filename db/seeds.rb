@@ -43,7 +43,7 @@ Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
     sr_score: rand(0.000..10.000),
     gr_score: rand(0.000..10.000),
     esg_score: rand(0.000..10.000),
-    issue_list: issue_tags.sample(2)
+    issue_list: issue_tags.sample(3)
   )
 end
 
