@@ -9,13 +9,13 @@ puts "creating users"
 Product.destroy_all
 User.destroy_all
 
-
-
-if ENV['download']
+# For Product Creation ----------------------------------------------------
+# DO NOT CHANGE THIS AT ALL IT MUST BE KEPT FALSE ONLY LIL COOKIE CAN CHANGE
+if false
   puts 'download'
   download_symbols
-  # download_esg
 end
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 dir = File.dirname(__FILE__)
 Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
   puts file1
@@ -37,17 +37,14 @@ end
 
 
 
-# # FOR ESG SCORES CURRENTLY NOT WORKING DO NOT TOUCH
+# FOR ESG SCORES CURRENTLY NOT WORKING DO NOT TOUCH
 
-
-
-products = Product.all.map {|product| "#{product.exchange}:#{product.ticker}"}.join(",")
-p products
-
-# https://www.esgenterprise.com/esg-enterprise-data-api-services/
-
-response = URI.open("https://tf689y3hbj.execute-api.us-east-1.amazonaws.com/prod/authorization/search?q=#{products}&token=#{ENV['ESG_API_KEY']}").read
-
+# DO NOT CHANGE THIS AT ALL IT MUST BE KEPT FALSE ONLY LIL COOKIE CAN CHANGE
+if false
+  download_esg
+end
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+response = JSON.parse(File.open("db/test_esgs/esg.json").read)
 response.each do |esg_info|
   product = Product.find_by(ticker: esg_info["stock_symbol"])
   next unless product
@@ -58,22 +55,6 @@ response.each do |esg_info|
   product.gr_score = esg_info["governance_score"]
   product.save
 end
-
-
-# Dir[File.join(dir, "test_esgs/*.json")].sort.each do |file2|
-#   puts file2
-#   json = File.open(file2).read
-#   p esg_info = JSON.parse(json)
-#   Product.create!(
-#     product = Product.find_by(ticker: esg_info["stock_symbol"]),
-
-#     product.er_score = esg_info["environment_score"],
-#     product.sr_score = esg_info["social_score"],
-#     product.gr_score = esg_info["governance_score"],
-#     product.esg_score = esg_info["total"]
-#   )
-# end
-
 
 # ISSUES SEED -------------------------------------------------
 
@@ -135,3 +116,5 @@ User.create!(
   email: "jdchappelow@gmail.com",
   password: "123123"
 )
+
+puts "Finished Seeding!!!"
