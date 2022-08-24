@@ -1,0 +1,13 @@
+<h1 id="title">My favorites</h1>
+<div class="container">
+  <% @favorites.each do |product| %>
+    <div class="cards card-product">
+      <ul><%= product.name %></ul>
+      <ul><%= product.sector %></ul>
+      <ul><%= product.esg_score %></ul>
+    </div>
+  <% end %>
+  <div class="button">
+    <%= link_to "back", root_path %>
+  </div>
+</div>
