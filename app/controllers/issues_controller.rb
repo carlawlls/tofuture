@@ -3,6 +3,9 @@ class IssuesController < ApplicationController
 
   def index
     @issues = Issue.all
+    if params[:query].present?
+      @issues = Issue.search_by_issue_name(params[:query])
+    end
   end
 
   def show
