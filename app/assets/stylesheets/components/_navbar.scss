@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(15, 15, 30);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,26 +11,26 @@
   width: 40px;
 }
 
-.navbar-lewagon {
+.home-navbar .navbar-lewagon {
   color: white;
   background-color: transparent;
 }
 
-.navbar-lewagon ul li {
+.navbar-lewagon ul li, .home-navbar ul li {
   position: relative;
 }
 
-.navbar-lewagon ul li a, .navbar-brand {
+.navbar-lewagon ul li a, .home-navbar ul li a, .navbar-brand {
   text-decoration: none;
   color: white;
 }
 
-.navbar-lewagon ul li a:hover, .navbar-brand:hover {
+.navbar-lewagon ul li a:hover, .home-navbar ul li a:hover, .navbar-brand:hover {
   text-decoration: none;
   color: white;
 }
 
-.navbar-lewagon ul li::after {
+.navbar-lewagon ul li::after, .home-navbar ul li::after {
   content: '';
   height: 2px;
   width: 0;
@@ -41,6 +41,6 @@
   transition: 0.5s;
 }
 
-.navbar-lewagon ul li:hover::after {
+.navbar-lewagon ul li:hover::after, .home-navbar ul li:hover::after {
   width: 100%;
 }

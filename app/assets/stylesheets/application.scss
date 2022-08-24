@@ -10,3 +10,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h1 {
+  color: white;
+  padding: 40px 0;
+  font-weight: 200;
+}
+
+.page {
+  background-color: rgb(15, 15, 30);
+  height: 100vh;
+}
