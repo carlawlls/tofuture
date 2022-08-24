@@ -16,9 +16,4 @@ class Product < ApplicationRecord
   using: {
     tsearch: { prefix: true }
   }
-
-  pg_search_scope :search_by_issue_list,
-  :associated_against => {
-    :issue_list => [:name]
-  }
 end
