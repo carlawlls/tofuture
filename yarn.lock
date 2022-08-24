@@ -284,10 +284,12 @@ ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+
 anychart@^8.11.0:
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/anychart/-/anychart-8.11.0.tgz#1012ab6667e9d487fd0c33b9d62417ed670a2429"
   integrity sha512-9QhPSG2mVndLJFsJxuZbtaq5M2jN9GOGNQ7MO2kZrg4cBeZJz0z0HG8HQwNvKDzuhClyOURiJg34pTTaDGyXaA==
+
 
 bootstrap@^5.2.0:
   version "5.2.0"
