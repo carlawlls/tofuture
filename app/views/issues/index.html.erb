@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="display-cards">
+    <h2 class="page-header">Issues</h2>
+    <div class="cards">
+      <% @issues.each do |issue| %>
+        <%= link_to issue_path(issue) do %>
+          <div class="card-product">
+            <div class="card-product-infos">
+              <div>
+                <h2> <%= issue.issue_name %> </h2>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

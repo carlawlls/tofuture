@@ -9,6 +9,9 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if params[:query].present?
+      @products = Product.search_by_name_and_ticker(params[:query])
+    end
   end
 
   def show
