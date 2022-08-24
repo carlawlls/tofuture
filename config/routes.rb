@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "search", to: "pages#search"
   # Defines the root path route ("/")
   # root "articles#index"
+
+  get "/favorites", to: "users#favorites", as: :favorites
 end
