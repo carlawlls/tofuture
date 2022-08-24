@@ -1,10 +1,7 @@
 class Product < ApplicationRecord
 
   acts_as_taggable_on :issues
-
-
   acts_as_favoritable
-
 
   has_many :prices
   has_many :issue_relationships
@@ -18,5 +15,10 @@ class Product < ApplicationRecord
   against: [ :name, :ticker ],
   using: {
     tsearch: { prefix: true }
+  }
+
+  pg_search_scope :search_by_issue_list,
+  :associated_against => {
+    :issue_list => [:name]
   }
 end
