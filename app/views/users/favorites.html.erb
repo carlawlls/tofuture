@@ -1,13 +1,21 @@
-<h1 id="title">My favorites</h1>
-<div class="container">
-  <% @favorites.each do |product| %>
-    <div class="cards card-product">
-      <ul><%= product.name %></ul>
-      <ul><%= product.sector %></ul>
-      <ul><%= product.esg_score %></ul>
+<div id="favorites">
+  <h1 id="title">My favorites</h1>
+  <div class="container">
+    <div class="cards" id="favorite-cards">
+      <% @favorites.each do |product| %>
+        <%= link_to product_path(product) do %>
+          <div class="card-product" id="favorite-product">
+            <div class="card-product-infos" id="favorite-product-infos">
+              <div>
+                <h2> <%= product.name %> </h2>
+                <p><%= product.ticker %></p>
+                <p> <%= product.esg_score %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
-  <% end %>
-  <div class="button">
-    <%= link_to "back", root_path %>
   </div>
+  <%= link_to "back", root_path, class: "yellow-button"%>
 </div>
