@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
+  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +8,39 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 80px;
+  width: 40px;
+}
+
+.home-navbar .navbar-lewagon {
+  color: white;
+  background-color: transparent;
+}
+
+.home-navbar ul li {
+  position: relative;
+}
+
+.home-navbar ul li a, .navbar-brand {
+  text-decoration: none;
+  color: white;
+}
+
+.home-navbar ul li a:hover, .navbar-brand:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.home-navbar ul li::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.home-navbar ul li:hover::after {
+  width: 100%;
 }
