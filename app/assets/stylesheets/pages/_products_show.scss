@@ -4,7 +4,7 @@
 }
 
 #show-header {
-  color: white;
+  color: black;
   margin-left: 30px;
 }
 
@@ -85,7 +85,8 @@ $t: rgba(255,255,255,0.00001);
 //   overflow:hidden;
 //   background:$g;
   #wrap{
-    width:800px;
+    margin-top: 50px;
+    width:100%;
     height:500px;
     box-shadow:0 20px 30px -5px rgba(0,0,0,0.15);
     overflow:hidden;
@@ -346,21 +347,21 @@ $t: rgba(255,255,255,0.00001);
      &:nth-of-type(1n){
        .card{
          .inner{
-           background:$b;
+           background:linear-gradient(#273043,#ffff);
          }
        }
      }
      &:nth-of-type(2n){
        .card{
          .inner{
-           background:$r;
+           background:linear-gradient(#274c77,#ffffff);
          }
        }
      }
      &:nth-of-type(3n){
        .card{
          .inner{
-           background:$y;
+           background:linear-gradient(#150578,#ffff);
          }
        }
      }
