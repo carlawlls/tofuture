@@ -3,7 +3,7 @@ require "open-uri"
 
 
 def download_symbols
-  p stock_symbols = ["INTC", "CMI", "ACN", "XOM", "IBM"]
+  p stock_symbols = ["FSLR", "NPI", "BLNK", "ODD", "BG"]
   stock_symbols.each do |symbol|
     url = URI.parse("https://www.alphavantage.co/query?function=OVERVIEW&symbol=#{symbol}&apikey=#{ENV["ALPHA_VANTAGE_KEY"]}")
     items_search = URI.open(url).read
@@ -44,3 +44,6 @@ end
 # url2 = URI.parse("https://www.alphavantage.co/query?function=OVERVIEW&symbol=TSLA&apikey=V9QPU9YV92FPLJD1")
 
 # items_search2 = URI.open
+
+# ["INTC", "CMI", "ACN", "XOM", "IBM"
+# ["ECL", "AFL", "BBY", "CL", "BYND"]
