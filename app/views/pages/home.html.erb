@@ -24,11 +24,35 @@
   <div class="trending">
     <h2>Suggested Topics</h2>
     <div class="trending-btn">
-      <a class="btn btn-flat" href="#">Topic Name</a>
-      <a class="btn btn-flat" href="#">Topic Name</a>
-      <a class="btn btn-flat" href="#">Topic Name</a>
-      <a class="btn btn-flat" href="#">Topic Name</a>
-      <a class="btn btn-flat" href="#">Topic Name</a>
-      <a class="btn btn-flat" href="#">Topic Name</a>
+      <%= form_tag search_path, method: :get do %>
+        <%= hidden_field_tag :query,
+                  params[:query] = "Employee Diversity"%>
+        <%= submit_tag "Employee Diversity", class: "btn btn-flat"%>
+      <% end %>
+      <%= form_tag search_path, method: :get do %>
+        <%= hidden_field_tag :query,
+                  params[:query] = "Carbon Emissions"%>
+        <%= submit_tag "Carbon Emissions", class: "btn btn-flat"%>
+      <% end %>
+      <%= form_tag search_path, method: :get do %>
+        <%= hidden_field_tag :query,
+                  params[:query] = "Green Energy"%>
+        <%= submit_tag "Green Energy", class: "btn btn-flat"%>
+      <% end %>
+      <%= form_tag search_path, method: :get do %>
+        <%= hidden_field_tag :query,
+                  params[:query] = "Animal Welfare"%>
+        <%= submit_tag "Animal Welfare", class: "btn btn-flat"%>
+      <% end %>
+      <%= form_tag search_path, method: :get do %>
+        <%= hidden_field_tag :query,
+                  params[:query] = "Labor Standards"%>
+        <%= submit_tag "Labor Standards", class: "btn btn-flat"%>
+      <% end %>
+      <%= form_tag search_path, method: :get do %>
+        <%= hidden_field_tag :query,
+                  params[:query] = "Employee Diversity"%>
+        <%= submit_tag "Employee Diversity", class: "btn btn-flat"%>
+      <% end %>
     </div>
   </div>
