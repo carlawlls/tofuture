@@ -121,5 +121,4 @@ User.create!(
   email: "willmes.carla@gmail.com",
   password: "123123"
 )
-
 puts "FINISHED! BOY!"

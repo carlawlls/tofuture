@@ -1,12 +1,119 @@
-<h1><%= @product.name %></h1>
-<ul><%= @product.ticker %></ul>
-<ul><%= @product.exchange %></ul>
-<ul><%= @product.esg_score %></ul>
-<ul><%= @product.er_score %></ul>
-<ul><%= @product.sr_score %></ul>
-<ul><%= @product.gr_score %></ul>
-<ul><%= @product.description %></ul>
-<ul><%= @product.sector %></ul>
+<div class="product-top">
+  <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></ul>
+</h1>
+<button class="yellow-button">follow</button>
+<button type="button" id="like-button">
+  <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M91.6 13A28.7 28.7 0 0 0 51 13l-1 1-1-1A28.7 28.7 0 0 0 8.4 53.8l1 1L50 95.3l40.5-40.6 1-1a28.6 28.6 0 0 0 0-40.6z"/></svg>
+  Like
+</button>
+</div>
+<div class="description-card">
+  <ul id="description-text"><%= @product.description %></ul>
+</div>
+<div id='wrap'>
+  <input class='trigger' name='rad' type='radio'>
+  <input class='trigger' name='rad' type='radio'>
+  <input class='trigger' name='rad' type='radio'>
+  <input class='trigger' name='rad' type='radio'>
+  <input class='trigger' name='rad' type='radio'>
+  <input class='trigger' name='rad' type='radio'>
+  <input class='trigger' name='rad' type='radio'>
+  <input checked='checked' class='trigger' name='rad' type='radio'>
+  <div class='innerwrap'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <div class='cards'>
+      <div class='cardwrap'>
+        <div class='card'>
+          <div class='inner'>
+            <h1><span>exchange</span>Somebody</h1>
+            <div class='text'>
+              <p><%= @product.exchange %></p>
+            </div>
+            <div class='link'>
+              <p>Fed to the rules and I hit the ground running</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='cardwrap'>
+        <div class='card'>
+          <div class='inner'>
+            <h1><span>Hey Now</span>roll me</h1>
+            <div class='text'>
+              <p>
+                <ul><%= @product.esg_score %></ul>
+              </p>
+            </div>
+            <div class='link'>
+              <p>Judging by the hole in the satellite picture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='cardwrap'>
+        <div class='card'>
+          <div class='inner'>
+            <h1><span>Hey Now</span>roll me</h1>
+            <div class='text'>
+              <p>
+                <ul><%= @product.er_score %></ul>
+              </p>
+            </div>
+            <div class='link'>
+              <p>Judging by the hole in the satellite picture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='cardwrap'>
+        <div class='card'>
+          <div class='inner'>
+            <h1><span>Hey Now</span>roll me</h1>
+            <div class='text'>
+              <p><%= @product.sr_score %></p>
+            </div>
+            <div class='link'>
+              <p>Judging by the hole in the satellite picture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='cardwrap'>
+        <div class='card'>
+          <div class='inner'>
+            <h1><span>Hey Now</span>roll me</h1>
+            <div class='text'>
+              <p><%= @product.gr_score %></p>
+            </div>
+            <div class='link'>
+              <p>Judging by the hole in the satellite picture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='cardwrap'>
+        <div class='card'>
+          <div class='inner'>
+            <h1><span>Hey Now</span>roll me</h1>
+            <div class='text'>
+              <p><%= @product.sector %></p>
+            </div>
+            <div class='link'>
+              <p>Judging by the hole in the satellite picture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <%# <p>graphs, scores, issues etc</p> %>
 <div id="container" style="height: 600px"></div>
 <script>
