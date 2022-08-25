@@ -1,3 +1,89 @@
+#favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #title {
-  font-family: "Encode Sans Condensed";
+  font-family: $headers-font;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#favorite-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#favorite-product {
+  overflow: hidden;
+  background: rgb(240, 240, 240);
+  width: 500px;
+  height: 160px;
+  -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+#favorite-product:hover {
+  -webkit-transform: translate(0, -8px);
+	-moz-transform: translate(0, -8px);
+	-ms-transform: translate(0, -8px);
+	-o-transform: translate(0, -8px);
+	transform: translate(0, -8px);
+  box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
+  margin-bottom: 16px;
+}
+
+// .card-product > img {
+//   height: 250px;
+//   width: 260px;
+//   object-fit: cover;
+// }
+
+#favorite-product h2 {
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+#favorite-product h3 {
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+  padding-bottom: 5px;
+  padding-top: 16px;
+}
+
+#favorite-product p {
+  font-size: 16px;
+  opacity: 1;
+  margin: 0;
+  text-align: left;
+}
+
+#favorite-product #favorite-product-infos {
+  color: #201e1f;
+  font-family: "Encode Sans Condensed", sans-serif;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+@media (min-width: 768px) {
+  .button {
+    padding: 0 40px;
+  }
 }
