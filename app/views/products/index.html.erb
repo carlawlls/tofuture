@@ -2,7 +2,7 @@
   <h1 class="page-header">Products</h1>
   <div class="d-flex justify-content-center">
     <div class="main-grid d-flex">
-      <div class="search-form">
+      <div class="search-form mb-5">
         <h4>Refine your search:</h4>
         <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
           <%= f.input :sector, collection: Product::SECTORS, as: :check_boxes, input_html: {value: ""}, label: "Choose an industry" %>
@@ -10,7 +10,7 @@
         <% end %>
       </div>
 
-      <div class="product-cards d-flex flex-wrap gap-2 align-self-start ms-2">
+      <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
         <% @products.each do |product| %>
           <%= link_to product_path(product) do %>
           <div class="card-product">

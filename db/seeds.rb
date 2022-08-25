@@ -40,7 +40,7 @@ Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
     name: product_info["Name"],
     exchange: product_info["Exchange"],
     description: product_info["Description"],
-    sector: product_info["Sector"],
+    sector: product_info["Sector"].upcase,
     issue_list: issue_tags.sample(3)
   )
 end
