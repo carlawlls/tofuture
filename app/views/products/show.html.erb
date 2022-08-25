@@ -1,5 +1,13 @@
-<h1>Show product</h1>
-<p>graphs, scores, issues etc</p>
+<h1><%= @product.name %></h1>
+<ul><%= @product.ticker %></ul>
+<ul><%= @product.exchange %></ul>
+<ul><%= @product.esg_score %></ul>
+<ul><%= @product.er_score %></ul>
+<ul><%= @product.sr_score %></ul>
+<ul><%= @product.gr_score %></ul>
+<ul><%= @product.description %></ul>
+<ul><%= @product.sector %></ul>
+<%# <p>graphs, scores, issues etc</p> %>
 <div id="container" style="height: 600px"></div>
 <script>
   anychart.onDocumentReady(function () {
