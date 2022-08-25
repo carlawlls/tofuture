@@ -58,7 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_24_024704) do
   end
 
   create_table "prices", force: :cascade do |t|
-    t.integer "price"
+    t.integer "price_cents"
     t.date "date"
     t.bigint "product_id", null: false
     t.datetime "created_at", null: false
