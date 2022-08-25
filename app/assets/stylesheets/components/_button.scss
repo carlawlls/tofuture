@@ -16,9 +16,10 @@
 .btn-flat {
   color: white;
   padding: 8px 24px;
-  border-radius: 4px;
+  border-radius: 20px;
   background: #05284d;
   transition: background 0.3s ease;
+  width: 100%;
 }
 
 .btn-flat:hover {
@@ -81,4 +82,11 @@
 
 .yellow-button:hover {
   outline: 0;
+}
+
+
+.trending-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }

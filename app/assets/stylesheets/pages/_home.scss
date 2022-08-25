@@ -1,9 +1,16 @@
 .banner {
-  background-size: cover;
-  background-position: center;
+  background: rgb(2,19,48);
+  background: linear-gradient(90deg, rgba(2,19,48,1) 0%, rgba(17,47,82,1) 31%, rgba(155,191,212,1) 100%);
   height: 100vh;
 }
 
+.banner-content {
+  display: flex;
+  padding-top: 64px;
+  align-items: center;
+  justify-content: center;
+}
+/*
 .banner-container {
   display: flex;
   justify-content: center;
@@ -20,38 +27,34 @@
   align-items: center;
 }
 
+*/
+
 .banner-h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 40px;
-  font-weight: bold;
-  font-family: 'Anton', sans-serif;;
+  font-size: 88px;
+  text-transform: uppercase;
+  padding-right: 120px;
+  padding-bottom: 32px;
 }
 
-.banner p {
-  font-size: 24px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  line-height: 25px;
+.searchbar .form-control {
+  width: 260px;
 }
 
 .trending {
   padding: 0 32px;
+  margin-top: 32px;
 }
 
 .trending h2 {
   text-align: center;
   padding: 24px;
-  color: 212529;
   text-transform: uppercase;
-}
-
-.trending-btn {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  color: white;
+  font-size: 32px;
+  font-weight: 200;
 }
 
 // Smallest device
@@ -87,4 +90,8 @@
   .trending-btn {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.banner-card .card-product {
+  width: 320px;
 }

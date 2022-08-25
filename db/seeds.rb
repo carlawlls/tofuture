@@ -61,6 +61,14 @@ response.each do |esg_info|
   product.er_score = esg_info["environment_score"]
   product.sr_score = esg_info["social_score"]
   product.gr_score = esg_info["governance_score"]
+  product.esg_grade = esg_info["total_grade"]
+  product.e_grade = esg_info["environment_grade"]
+  product.s_grade = esg_info["social_grade"]
+  product.g_grade = esg_info["governance_grade"]
+  product.esg_level = esg_info["total_level"]
+  product.e_level = esg_info["environment_level"]
+  product.s_level = esg_info["social_level"]
+  product.g_level = esg_info["governance_level"]
   product.save
 end
 
@@ -68,6 +76,7 @@ end
 
 
 #Environment
+
 Issue.create!(
   issue_name: "Carbon emissions",
   explanation: "Greenhouse gas emissions from human activities strengthen the greenhouse effect, causing climate change. Most is carbon dioxide from burning fossil fuels: coal, oil, and natural gas."
@@ -119,6 +128,16 @@ User.create!(
 
 User.create!(
   email: "willmes.carla@gmail.com",
+  password: "123123"
+)
+
+User.create!(
+  email: "jdchappelow@gmail.com",
+  password: "123123"
+)
+
+User.create!(
+  email: "ayakayakaaaa@gmail.com",
   password: "123123"
 )
 
