@@ -1,14 +1,14 @@
 <% if @issues.any? %>
   <div class="container">
-    <div class="display-cards">
+    <div class="issue-cards">
       <h2 class="page-header">Issues</h2>
       <div class="cards">
         <% @issues.each do |issue| %>
           <%= link_to issue_path(issue) do %>
-            <div class="card-product">
-              <div class="card-product-infos">
+            <div class="card-issue">
+              <div class="card-issue-head" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= issue.image_url %>)">
+                <h2> <%= issue.issue_name %> </h2>
                 <div>
-                  <h2> <%= issue.issue_name %> </h2>
                 </div>
               </div>
             </div>
