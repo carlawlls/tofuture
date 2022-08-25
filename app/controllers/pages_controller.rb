@@ -9,7 +9,6 @@ class PagesController < ApplicationController
     @products = Product.all
     if params[:query].present?
       @products = Product.tagged_with(params[:query]) + Product.search_by_name_and_ticker(params[:query])
-
     end
     @issues = Issue.all
     if params[:query].present?
