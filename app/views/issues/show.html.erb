@@ -1,0 +1,11 @@
+<div class="index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%="http://source.unsplash.com/featured/?pollution&#{rand(10000)}" %>)">
+  <h1 class="banner-h1"> <%= @issue.issue_name %></h1>
+</div>
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <div class="issue-info">
+      <p><%= @issue.explanation %></p>
+    </div>
+    <img src="/assets/undraw_Tree.png" class="issue-image" alt="to do" style="width: 250px" >
+  </div>
+</div>

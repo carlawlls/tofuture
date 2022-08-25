@@ -284,16 +284,19 @@ ajv@^6.12.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-
 anychart@^8.11.0:
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/anychart/-/anychart-8.11.0.tgz#1012ab6667e9d487fd0c33b9d62417ed670a2429"
   integrity sha512-9QhPSG2mVndLJFsJxuZbtaq5M2jN9GOGNQ7MO2kZrg4cBeZJz0z0HG8HQwNvKDzuhClyOURiJg34pTTaDGyXaA==
 
+boostrap@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/boostrap/-/boostrap-2.0.0.tgz#f0a5256bc379c5da540564389e48e85e9ccff9fc"
+  integrity sha512-JEeFMOweKeGXEM9rt95eaVISOkluG9aKcl0jQCETOVH9jynCZxuBZe2oWgcWJpj5wqYWZl625SnW7OgHT2Ineg==
 
 bootstrap@^5.2.0:
   version "5.2.0"
-  resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-5.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.0.tgz#838727fb60f1630db370fe57c63cbcf2962bb3d3"
   integrity sha512-qlnS9GL6YZE6Wnef46GxGv1UpGGzAwO0aPL1yOjzDIJpeApeMvqV24iL+pjr2kU4dduoBA9fINKWKgMToobx9A==
 
 browserslist@^4.14.5:
@@ -743,6 +746,11 @@ terser@^5.14.1:
     acorn "^8.5.0"
     commander "^2.20.0"
     source-map-support "~0.5.20"
+
+typed.js@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.12.tgz#246aff074c8e18d32ec27acb7be15094ac0bc0e1"
+  integrity sha512-lyACZh1cu+vpfYY3DG/bvsGLXXbdoDDpWxmqta10IQUdMXisMXOEyl+jos+YT9uBbzK4QaKYBjT3R0kTJO0Slw==
 
 update-browserslist-db@^1.0.5:
   version "1.0.5"

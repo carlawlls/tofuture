@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @skip_navbar = true
+    @product = Product.all.sample
   end
 
   def search
