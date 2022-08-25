@@ -10,117 +10,110 @@
 <div class="description-card">
   <ul id="description-text"><%= @product.description %></ul>
 </div>
-<div id='wrap'>
-  <input class='trigger' name='rad' type='radio'>
-  <input class='trigger' name='rad' type='radio'>
-  <input class='trigger' name='rad' type='radio'>
-  <input class='trigger' name='rad' type='radio'>
-  <input class='trigger' name='rad' type='radio'>
-  <input class='trigger' name='rad' type='radio'>
-  <input class='trigger' name='rad' type='radio'>
-  <input checked='checked' class='trigger' name='rad' type='radio'>
-  <div class='innerwrap'>
-    <input type='checkbox'>
-    <input type='checkbox'>
-    <input type='checkbox'>
-    <input type='checkbox'>
-    <input type='checkbox'>
-    <input type='checkbox'>
-    <input type='checkbox'>
-    <input type='checkbox'>
-    <div class='cards'>
-      <div class='cardwrap'>
-        <div class='card'>
-          <div class='inner'>
-            <h1><span>exchange</span></h1>
-            <div class='text'>
-              <p><%= @product.exchange %></p>
-            </div>
-            <div class='link'>
-              <p>Fed to the rules and I hit the ground running</p>
-            </div>
+<div class="d-flex justify-content-center">
+  <div class="esg-card">
+    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
+      <div class="card-esg ">
+        <div class="card-head-esg all">
+          <div class="back-text truncate">
+          </div>
+        </div>
+        <div class="card-body-esg">
+          <div class="product-desc">
+            <h2 class="esg-title truncate">
+              Overall
+            </h2>
+            <span class="esg-caption">
+            </span>
+          </div>
+          <div class="d-flex flex-column-reverse justify-content-center">
+            <p> <%= @product.esg_grade %> </p>
+            <p> <%= @product.esg_score %> </p>
+            <p> <%= @product.esg_level %> </p>
+          </div>
+          <div class="esg-properties">
+            <span class="badge truncate">
+            </span>
           </div>
         </div>
       </div>
-      <div class='cardwrap'>
-        <div class='card'>
-          <div class='inner'>
-            <h1><span>ESG SCORE</span>roll me</h1>
-            <div class='text'>
-              <p>
-                <%= @product.esg_score %>
-              </p>
-            </div>
-            <div class='link'>
-              <p>Judging by the hole in the satellite picture</p>
-            </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-between">
+  <div class="esg-card">
+    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
+      <div class="card-esg ">
+        <div class="card-head-esg card-head-esg-env">
+          <div class="back-text truncate">
+          </div>
+        </div>
+        <div class="card-body-esg">
+          <div class="product-desc">
+            <h2 class="product-title truncate">
+              Environmental
+            </h2>
+            <span class="esg-caption">
+            </span>
+          </div>
+          <p> <%= @product.e_grade %> </p>
+          <p> <%= @product.er_score %> </p>
+          <p> <%= @product.e_level %> </p>
+          <div class="esg-properties">
+            <span class="badge truncate">
+            </span>
           </div>
         </div>
       </div>
-      <div class='cardwrap'>
-        <div class='card'>
-          <div class='inner'>
-            <h1><span>ENVIRONMENTAL SCORE</span>roll me</h1>
-            <div class='text'>
-              <p>
-                <ul><%= @product.er_score %></ul>
-              </p>
-            </div>
-            <div class='link'>
-              <p>Judging by the hole in the satellite picture</p>
-            </div>
+    </div>
+  </div>
+  <div class="esg-card">
+    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
+      <div class="card-esg soc">
+        <div class="card-head-esg card-head-esg-soc">
+          <div class="back-text truncate">
+          </div>
+        </div>
+        <div class="card-body-esg">
+          <div class="product-desc">
+            <h2 class="product-title truncate">
+              Social
+            </h2>
+            <span class="esg-caption">
+            </span>
+          </div>
+          <p> <%= @product.s_grade %> </p>
+          <p> <%= @product.sr_score %> </p>
+          <p> <%= @product.s_level %> </p>
+          <div class="esg-properties">
+            <span class="badge truncate">
+            </span>
           </div>
         </div>
       </div>
-      <div class='cardwrap'>
-        <div class='card'>
-          <div class='inner'>
-            <h1><span>SOCIAL SCORE</span>roll me</h1>
-            <div class='text'>
-              <p><%= @product.sr_score %></p>
-            </div>
-            <div class='link'>
-              <p>Judging by the hole in the satellite picture</p>
-            </div>
+    </div>
+  </div>
+  <div class="esg-card">
+    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
+      <div class="card-esg ">
+        <div class="card-head-esg card-head-esg-gov">
+          <div class="back-text truncate">
           </div>
         </div>
-      </div>
-      <div class='cardwrap'>
-        <div class='card'>
-          <div class='inner'>
-            <h1><span>GOVERNANCE SCORE</span>roll me</h1>
-            <div class='text'>
-              <p><%= @product.gr_score %></p>
-            </div>
-            <div class='link'>
-              <p>Judging by the hole in the satellite picture</p>
-            </div>
+        <div class="card-body-esg">
+          <div class="esg-desc">
+            <h2 class="esg-title truncate">
+              Governance
+            </h2>
+            <span class="esg-caption">
+            </span>
           </div>
-        </div>
-      </div>
-      <div class='cardwrap'>
-        <div class='card'>
-          <div class='inner'>
-            <h1><span>SECTOR</span>roll me</h1>
-            <div class='text'>
-              <p><%= @product.sector %></p>
-            </div>
-            <div class='link'>
-              <p>Judging by the hole in the satellite picture</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class='cardwrap'>
-        <div class='card'>
-          <div class='inner'>
-            <h1><span>Hey Now</span>roll me</h1>
-            <div class='text'>
-              <p>You're bundled up now, wait till you git older But the meteor men beg to differ</p>
-            </div>
-            <div class='link'>
-              <p>Judging by the hole in the satellite picture</p>
-            </div>
+          <p> <%= @product.g_grade %> </p>
+          <p> <%= @product.gr_score %> </p>
+          <p> <%= @product.g_level %> </p>
+          <div class="esg-properties">
+            <span class="badge truncate">
+            </span>
           </div>
         </div>
       </div>
