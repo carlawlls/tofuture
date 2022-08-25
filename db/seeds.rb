@@ -131,4 +131,14 @@ User.create!(
   password: "123123"
 )
 
+User.create!(
+  email: "jdchappelow@gmail.com",
+  password: "123123"
+)
+
+User.create!(
+  email: "ayakayakaaaa@gmail.com",
+  password: "123123"
+)
+
 puts "FINISHED! BOY!"
