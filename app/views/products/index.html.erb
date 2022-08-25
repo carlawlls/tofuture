@@ -3,7 +3,7 @@
     <div class="display-cards">
       <h1 class="page-header">Products</h1>
 
-      <div class="form">
+      <div class="search-form">
         <p>Refine your search:</p>
         <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
           <%= f.input :sector, collection: Product::SECTORS, as: :check_boxes, input_html: {value: ""} %>
