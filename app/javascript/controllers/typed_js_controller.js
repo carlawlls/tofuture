@@ -2,11 +2,18 @@ import { Controller } from "@hotwired/stimulus"
 import Typed from "typed.js"
 
 export default class extends Controller {
+  static targets = ["invest", "change"]
   connect() {
-    new Typed(this.element, {
-      strings: ["Invest", "in change", "(投布)"],
+    console.log(this.investTarget)
+    new Typed(this.investTarget, {
+      strings: ["Invest"],
       typeSpeed: 50,
-      loop: true
+    })
+    console.log(this.changeTarget)
+    new Typed(this.changeTarget, {
+      startDelay: 1000,
+      strings: ["in change"],
+      typeSpeed: 50,
     })
   }
 }
