@@ -9,6 +9,18 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if params[:query].present?
+      @products = Product.search_by_name_and_ticker(params[:query])
+    end
+
+   # @search = params[:search]
+    if params[:search].present?
+     # @sectors = @search[:sector].reject(&:blank?)
+     # @products = []
+     # @sectors.each do |sector|
+       @products = Product.where(sector: params[:search][:sector].reject(&:blank?))
+      #end
+     end
   end
 
   def show
