@@ -1,4 +1,4 @@
-import { Controller } from "@hotwired/stimulus"
+/* import { Controller } from "@hotwired/stimulus"
 import Typed from "typed.js"
 
 export default class extends Controller {
@@ -20,3 +20,8 @@ export default class extends Controller {
 
 // paste this into HTML
 //<p><span data-controller="typed-js"></span></p>
+
+/*
+ <div class="banner-information" data-controller="typed-js">
+        <h1 class="banner-h1" data-typed-js-target="invest"></h1>
+        <h1 class="banner-h1" data-typed-js-target="change"></h1>
