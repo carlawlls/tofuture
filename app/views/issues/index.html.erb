@@ -1,18 +1,13 @@
 <div class="container">
-  <div class="display-cards">
-    <h2 class="page-header">Issues</h2>
-    <div class="cards">
-      <% @issues.each do |issue| %>
-        <%= link_to issue_path(issue) do %>
-          <div class="card-product">
-            <div class="card-product-infos">
-              <div>
-                <h2> <%= issue.issue_name %> </h2>
-              </div>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
+  <h2 class="page-header">Issues</h2>
+  <div class="row">
+    <% @issues.each do |issue| %>
+      <div class="card" style="width: 18rem;">
+        <img src="<%= issue.image_url %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"> <%= issue.issue_name %></p>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

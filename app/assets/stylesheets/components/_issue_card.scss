@@ -1,0 +1,24 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+.card-issue {
+  border-radius: 25px;
+  box-shadow: -3px 2px 1px rgba(0, 0, 0, 0.3);
+  height: fit-content;
+  color: white;
+}
+.card-issue-head {
+  position: relative;
+  height: 150px;
+
+  /* Old browsers */
+
+  /* FF3.6-15 */
+
+  /* Chrome10-25,Safari5.1-6 */
+
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius: 25px 25px 0 0;
+}
