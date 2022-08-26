@@ -17,7 +17,7 @@ class Product < ApplicationRecord
     tsearch: { prefix: true }
   }
 
-  SECTORS = ['Healthcare', 'Materials', 'Real Estate', 'Consumer Staples', 'Consumer Discretionary', 'Utilities', 'Energy', 'Industrials', 'Consumer Services', 'Financials', 'Technology', 'Manufacturing']
+  SECTORS = ['Trade & Services', 'Finance', 'Life Sciences', 'Energy & Transportation', 'Consumer Discretionary', 'Utilities', 'Industrials', 'Consumer Services', 'Technology', 'Manufacturing']
 
   SECTORS = SECTORS.map do |sector|
     sector.upcase
