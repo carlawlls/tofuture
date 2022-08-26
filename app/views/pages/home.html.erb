@@ -18,35 +18,100 @@
           <% end %>
         </div>
       </div>
-      <div class="banner-card">
-        <%= link_to product_path(@product) do %>
-          <div class="card-product">
-            <div class="card-head">
-              <div class="back-text truncate">
-                <%= @product.ticker %>
+
+      <!-- Carousel -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= link_to product_path(@products.first) do %>
+              <div class="card-product">
+                <div class="card-head">
+                  <div class="back-text truncate">
+                    <%= @products.first.ticker %>
+                  </div>
+                </div>
+                <div class="card-body-product">
+                  <div class="product-desc">
+                    <h2 class="product-title truncate">
+                      <%= @products.first.name %>
+                    </h2>
+                    <span class="product-caption">
+                    </span>
+                  </div>
+                  <p> <%= @products.first.sector %> </p>
+                  <div class="product-properties">
+                    <% @products.first.issue_list.each do |issue| %>
+                      <span class="badge truncate">
+                        <%= issue %>
+                      </span>
+                    <% end %>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="card-body-product">
-              <div class="product-desc">
-                <h2 class="product-title truncate">
-                  <%= @product.name %>
-                </h2>
-                <span class="product-caption">
-                </span>
-              </div>
-              <p> <%= @product.sector %> </p>
-              <div class="product-properties">
-                <% @product.issue_list.each do |issue| %>
-                  <span class="badge truncate">
-                    <%= issue %>
-                  </span>
-                <% end %>
-              </div>
-            </div>
+            <% end %>
           </div>
-        <% end %>
+
+          <div class="carousel-item">
+            <%= link_to product_path(@products.second) do %>
+              <div class="card-product">
+                <div class="card-head">
+                  <div class="back-text truncate">
+                    <%= @products.second.ticker %>
+                  </div>
+                </div>
+                <div class="card-body-product">
+                  <div class="product-desc">
+                    <h2 class="product-title truncate">
+                      <%= @products.second.name %>
+                    </h2>
+                    <span class="product-caption">
+                    </span>
+                  </div>
+                  <p> <%= @products.second.sector %> </p>
+                  <div class="product-properties">
+                    <% @products.second.issue_list.each do |issue| %>
+                      <span class="badge truncate">
+                        <%= issue %>
+                      </span>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="carousel-item">
+            <%= link_to product_path(@products.third) do %>
+              <div class="card-product">
+                <div class="card-head">
+                  <div class="back-text truncate">
+                    <%= @products.third.ticker %>
+                  </div>
+                </div>
+                <div class="card-body-product">
+                  <div class="product-desc">
+                    <h2 class="product-title truncate">
+                      <%= @products.third.name %>
+                    </h2>
+                    <span class="product-caption">
+                    </span>
+                  </div>
+                  <p> <%= @products.third.sector %> </p>
+                  <div class="product-properties">
+                    <% @products.third.issue_list.each do |issue| %>
+                      <span class="badge truncate">
+                        <%= issue %>
+                      </span>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="trending">
       <h2 class="banner-h2">Trending Topics</h2>
       <div class="trending-btn">
