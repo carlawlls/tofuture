@@ -6,7 +6,7 @@
 
 .banner-content {
   display: flex;
-  padding-top: 64px;
+  padding-top: 48px;
   align-items: center;
   justify-content: center;
 }
@@ -38,6 +38,7 @@
   padding-right: 120px;
   padding-bottom: 0px;
   padding-top: 0px;
+  text-align: left;
 }
 
 .searchbar .form-control {
@@ -51,10 +52,10 @@
 
 .trending h2 {
   text-align: center;
-  padding: 24px;
+  padding: 16px;
   text-transform: uppercase;
   color: white;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 200;
 }
 
