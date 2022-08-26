@@ -1,13 +1,51 @@
 .product-top{
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
 }
 
-#show-header {
-  color: black;
+.show-button-mg {
+  margin-top: 45px;
   margin-left: 30px;
 }
 
+.show-button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+
+ .show-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: blue;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+
+ .show-button:hover {
+  color: #e8e8e8;
+ }
+
+ .show-button:hover::before {
+  width: 100%;
+ }
 
 #like-button {
   color: #888;
@@ -46,9 +84,17 @@
   }
 }
 
-body {
-  text-align: center;
+#show-header {
+  margin-left: 30px;
 }
+
+.product-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+
 
 .description-card {
   overflow: hidden;
@@ -67,6 +113,8 @@ body {
 #description-text {
   display: block;
   margin: 20px 20px 20px 20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 $b: #32cbfb;
@@ -77,17 +125,50 @@ $y: #fefb3a;
 $bl: #222;
 $t: rgba(255,255,255,0.00001);
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
-
 .card-esg {
   border-radius: 25px;
   box-shadow: -3px 2px 1px rgba(0, 0, 0, 0.3);
   height: fit-content;
   margin-bottom: 10px;
+  width: 260px;
+  text-align: center;
+}
+
+.esg-long {
+  overflow: hidden;
+  height: 65px;
+  background: rgb(230, 230, 230);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  width: 600px;
+  max-width: calc(100% -20px);
+  border-radius: 15px;
+  box-shadow: -3px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.esg-long h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.esg-long p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.esg-long .esg-long-infos {
+  padding: 16px;
+}
+
+.esg-info {
+  margin-left: 70px;
 }
 .card-head-esg  {
   position: relative;
@@ -103,19 +184,23 @@ $t: rgba(255,255,255,0.00001);
   border-radius: 25px 25px 0 0;
 }
 
-.card-head-esg-env{
+.card-head-side {
+  width: 150px;
+  height: 150px;
+  }
+
+.card-head-side-env {
   background: #065915;
-  /* Old browsers */
   background: -moz-linear-gradient(-45deg, #065915 8%, #1c7c13 83%);
-  /* FF3.6-15 */
+/* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #065915 8%, #1c7c13 83%);
-  /* Chrome10-25,Safari5.1-6 */
+/* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #065915 8%, #1c7c13 83%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  border-radius: 25px 25px 0 0;
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.card-head-esg-soc{
+
+.card-head-side-soc{
   background: #2ec7ca;
   /* Old browsers */
   background: -moz-linear-gradient(-45deg, #2ec7ca 8%, #327c8f 83%);
@@ -124,10 +209,9 @@ $t: rgba(255,255,255,0.00001);
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #117083 8%, #327c8f 83%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  border-radius: 25px 25px 0 0;
 }
 
-.card-head-esg-gov{
+.card-head-side-gov{
   background: #eb9307;
   /* Old browsers */
   background: -moz-linear-gradient(-45deg, #8f8629 8%, #eb9307  83%);
@@ -136,13 +220,11 @@ $t: rgba(255,255,255,0.00001);
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #8f8629 8%, #eb9307  83%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  border-radius: 25px 25px 0 0;
 }
 .esg-detail {
   padding: 0 20px;
   font-size: 11px;
   color: #fff;
-
   h2 {
     font-size: 18px;
     font-weight: 500;
@@ -156,6 +238,16 @@ $t: rgba(255,255,255,0.00001);
   height: fit-content;
   background: #fff;
   border-radius: 0 0 25px 25px;
+}
+
+.back-text-esg {
+  display: inline-block;
+  font-size: 70px;
+  font-weight: 900;
+  margin-left: 5px;
+  margin-top: 20px;
+  opacity: 0.1;
+  text-align: center;
 }
 
 .esg-title h2{

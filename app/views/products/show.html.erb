@@ -1,119 +1,116 @@
 <div class="product-top">
-  <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></ul>
-</h1>
-<button class="yellow-button">follow</button>
-<button type="button" id="like-button">
-  <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M91.6 13A28.7 28.7 0 0 0 51 13l-1 1-1-1A28.7 28.7 0 0 0 8.4 53.8l1 1L50 95.3l40.5-40.6 1-1a28.6 28.6 0 0 0 0-40.6z"/></svg>
-  Like
-</button>
+  <div>
+    <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></h1>
+  </div>
+  <div class="show-button-mg"><%= link_to "Buy", "https://robinhood.com/us/en/", class: "show-button"%></div>
+  <div class="show-button-mg"><%= link_to "Favourite", "https://robinhood.com/us/en/", class: "show-button"%></div>
 </div>
 <div class="description-card">
   <ul id="description-text"><%= @product.description %></ul>
 </div>
-<div class="d-flex justify-content-center">
-  <div class="esg-card">
-    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
-      <div class="card-esg ">
-        <div class="card-head-esg all">
-          <div class="back-text truncate">
+<div class="container">
+  <div class="d-flex justify-content-center mt-5">
+    <div class="esg-card">
+      <div class="product-cards d-flex flex-wrap gap-3 align-self-start">
+        <div class="card-esg ">
+          <div class="card-head-esg all">
+            <div class="back-text truncate">
+            </div>
           </div>
-        </div>
-        <div class="card-body-esg">
-          <div class="product-desc">
-            <h2 class="esg-title truncate">
-              Overall
-            </h2>
-            <span class="esg-caption">
-            </span>
-          </div>
-          <div class="d-flex flex-column-reverse justify-content-center">
-            <p> <%= @product.esg_grade %> </p>
-            <p> <%= @product.esg_score %> </p>
-            <p> <%= @product.esg_level %> </p>
-          </div>
-          <div class="esg-properties">
-            <span class="badge truncate">
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="d-flex justify-content-between">
-  <div class="esg-card">
-    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
-      <div class="card-esg ">
-        <div class="card-head-esg card-head-esg-env">
-          <div class="back-text truncate">
-          </div>
-        </div>
-        <div class="card-body-esg">
-          <div class="product-desc">
-            <h2 class="product-title truncate">
-              Environmental
-            </h2>
-            <span class="esg-caption">
-            </span>
-          </div>
-          <p> <%= @product.e_grade %> </p>
-          <p> <%= @product.er_score %> </p>
-          <p> <%= @product.e_level %> </p>
-          <div class="esg-properties">
-            <span class="badge truncate">
-            </span>
+          <div class="card-body-esg">
+            <div class="product-desc">
+              <h2 class="esg-title truncate">
+                Overall
+              </h2>
+              <span class="esg-caption">
+              </span>
+            </div>
+            <div class="d-flex flex-column-reverse justify-content-center">
+              <p> <%= @product.esg_grade %> </p>
+              <p> <%= @product.esg_score %> </p>
+              <p> <%= @product.esg_level %> </p>
+            </div>
+            <div class="esg-properties">
+              <span class="badge truncate">
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="esg-card">
-    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
-      <div class="card-esg soc">
-        <div class="card-head-esg card-head-esg-soc">
-          <div class="back-text truncate">
+    <div class="d-flex flex-column ">
+      <div class="esg-long">
+        <div class="card-head-side card-head-side-env">
+          <div class="back-text-esg truncate">
+            <span>E</span>
           </div>
         </div>
-        <div class="card-body-esg">
+        <div class="product-cards d-flex flex-wrap gap-3 align-self-start">
           <div class="product-desc">
-            <h2 class="product-title truncate">
-              Social
-            </h2>
-            <span class="esg-caption">
-            </span>
-          </div>
-          <p> <%= @product.s_grade %> </p>
-          <p> <%= @product.sr_score %> </p>
-          <p> <%= @product.s_level %> </p>
-          <div class="esg-properties">
-            <span class="badge truncate">
-            </span>
+            <div class="esg-long-infos d-flex flex-row">
+              <div class="esg-info">
+                <h2> Grade </h2>
+                <p> <%= @product.e_grade %> </p>
+              </div>
+              <div class="esg-info">
+                <h2>Score</h2>
+                <p> <%= @product.er_score %> </p>
+              </div>
+              <div class="esg-info">
+                <h2>Level</h2>
+                <p> <%= @product.e_level %> </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="esg-card">
-    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
-      <div class="card-esg ">
-        <div class="card-head-esg card-head-esg-gov">
-          <div class="back-text truncate">
+      <div class="esg-long">
+        <div class="card-head-side card-head-side-soc">
+          <div class="back-text-esg  truncate">
+            <span>S</span>
           </div>
         </div>
-        <div class="card-body-esg">
-          <div class="esg-desc">
-            <h2 class="esg-title truncate">
-              Governance
-            </h2>
-            <span class="esg-caption">
-            </span>
+        <div class="product-cards d-flex flex-wrap gap-3 align-self-start">
+          <div class="product-desc">
+            <div class="esg-long-infos d-flex flex-row">
+              <div class="esg-info">
+                <h2> Grade </h2>
+                <p> <%= @product.s_grade %> </p>
+              </div>
+              <div class="esg-info">
+                <h2>Score</h2>
+                <p> <%= @product.sr_score %> </p>
+              </div>
+              <div class="esg-info">
+                <h2>Level</h2>
+                <p> <%= @product.s_level %> </p>
+              </div>
+            </div>
           </div>
-          <p> <%= @product.g_grade %> </p>
-          <p> <%= @product.gr_score %> </p>
-          <p> <%= @product.g_level %> </p>
-          <div class="esg-properties">
-            <span class="badge truncate">
-            </span>
+        </div>
+      </div>
+      <div class="esg-long">
+        <div class="card-head-side card-head-side-gov">
+          <div class="back-text-esg truncate">
+            <span>G</span>
+          </div>
+        </div>
+        <div class="product-cards d-flex flex-wrap gap-3 align-self-start">
+          <div class="product-desc">
+            <div class="esg-long-infos d-flex flex-row">
+              <div class="esg-info">
+                <h2> Grade </h2>
+                <p> <%= @product.g_grade %> </p>
+              </div>
+              <div class="esg-info">
+                <h2>Score</h2>
+                <p> <%= @product.gr_score %> </p>
+              </div>
+              <div class="esg-info">
+                <h2>Level</h2>
+                <p> <%= @product.g_level %> </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
