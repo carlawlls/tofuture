@@ -11,14 +11,8 @@
 .card-head {
   position: relative;
   height: 100px;
-  background: #117083;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #117083 8%, #0808c1 83%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #117083 8%, #0808c1 83%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #117083 8%, #0808c1 83%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: rgb(2,19,48);
+  background: linear-gradient(90deg, rgba(2,19,48,1) 0%, rgba(17,47,82,1) 31%, rgba(155,191,212,1) 100%);
   border-radius: 25px 25px 0 0;
 }
 .truncate {
@@ -47,7 +41,7 @@ text-overflow: ellipsis;
   font-weight: 900;
   margin-left: 5px;
   margin-top: -12px;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .card-product-body {
