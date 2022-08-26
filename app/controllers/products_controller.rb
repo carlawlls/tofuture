@@ -21,6 +21,16 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def toggle_favorite
+    @product = Product.find(params[:id])
+    if current_user.favorited?(@product)
+      current_user.unfavorite(@product)
+    else
+      current_user.favorite(@product)
+    end
+    redirect_to product_path(@product)
+  end
+
   private
 
   def skip_pundit?
