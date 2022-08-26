@@ -18,33 +18,119 @@
           <% end %>
         </div>
       </div>
-      <div class="banner-card">
-        <%= link_to product_path(@product) do %>
-          <div class="card-product">
-            <div class="card-head">
-              <div class="back-text truncate">
-                <%= @product.ticker %>
+
+      <!-- Carousel -->
+      <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 product-carousel" data-ride="carousel">
+
+        <!--Controls-->
+        <div class="controls-top">
+          <a class="btn-floating" href="#carousel-example-multi" data-slide="prev"><i
+              class="fas fa-chevron-left"></i></a>
+          <a class="btn-floating" href="#carousel-example-multi" data-slide="next"><i
+              class="fas fa-chevron-right"></i></a>
+        </div>
+        <!--/.Controls-->
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-multi" data-slide-to="1"></li>
+          <li data-target="#carousel-example-multi" data-slide-to="2"></li>
+          <li data-target="#carousel-example-multi" data-slide-to="3"></li>
+          <li data-target="#carousel-example-multi" data-slide-to="4"></li>
+          <li data-target="#carousel-example-multi" data-slide-to="5"></li>
+        </ol>
+        <!--/.Indicators-->
+
+        <div class="carousel-inner v-2" role="listbox">
+
+          <div class="carousel-item active">
+            <%= link_to product_path(@product) do %>
+              <div class="card-product">
+                <div class="card-head">
+                  <div class="back-text truncate">
+                    <%= @product.ticker %>
+                  </div>
+                </div>
+                <div class="card-body-product">
+                  <div class="product-desc">
+                    <h2 class="product-title truncate">
+                      <%= @product.name %>
+                    </h2>
+                    <span class="product-caption">
+                    </span>
+                  </div>
+                  <p> <%= @product.sector %> </p>
+                  <div class="product-properties">
+                    <% @product.issue_list.each do |issue| %>
+                      <span class="badge truncate">
+                        <%= issue %>
+                      </span>
+                    <% end %>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="card-body-product">
-              <div class="product-desc">
-                <h2 class="product-title truncate">
-                  <%= @product.name %>
-                </h2>
-                <span class="product-caption">
-                </span>
-              </div>
-              <p> <%= @product.sector %> </p>
-              <div class="product-properties">
-                <% @product.issue_list.each do |issue| %>
-                  <span class="badge truncate">
-                    <%= issue %>
-                  </span>
-                <% end %>
-              </div>
-            </div>
+            <% end %>
           </div>
-        <% end %>
+
+          <div class="carousel-item">
+            <%= link_to product_path(@product) do %>
+              <div class="card-product">
+                <div class="card-head">
+                  <div class="back-text truncate">
+                    <%= @product.ticker %>
+                  </div>
+                </div>
+                <div class="card-body-product">
+                  <div class="product-desc">
+                    <h2 class="product-title truncate">
+                      <%= @product.name %>
+                    </h2>
+                    <span class="product-caption">
+                    </span>
+                  </div>
+                  <p> <%= @product.sector %> </p>
+                  <div class="product-properties">
+                    <% @product.issue_list.each do |issue| %>
+                      <span class="badge truncate">
+                        <%= issue %>
+                      </span>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="carousel-item">
+            <%= link_to product_path(@product) do %>
+              <div class="card-product">
+                <div class="card-head">
+                  <div class="back-text truncate">
+                    <%= @product.ticker %>
+                  </div>
+                </div>
+                <div class="card-body-product">
+                  <div class="product-desc">
+                    <h2 class="product-title truncate">
+                      <%= @product.name %>
+                    </h2>
+                    <span class="product-caption">
+                    </span>
+                  </div>
+                  <p> <%= @product.sector %> </p>
+                  <div class="product-properties">
+                    <% @product.issue_list.each do |issue| %>
+                      <span class="badge truncate">
+                        <%= issue %>
+                      </span>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
     <div class="trending">
