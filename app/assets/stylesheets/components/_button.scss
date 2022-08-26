@@ -18,14 +18,15 @@
   padding: 5px 24px;
   border-radius: 20px;
   background: #05284d;
-  transition: background 0.3s ease;
+  transition: background 0.4s ease;
   width: 100%;
   font-size: 14px;
 }
 
 .btn-flat:hover {
-  background: #4D04C4;
+  background: grey;
   color: white;
+  border-color: grey;
 }
 
 /* Yellow Button */
