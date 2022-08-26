@@ -50,7 +50,7 @@
   width: 100%;
  }
 
-.like-button {
+#like-button {
   color: #888;
   font-size: 1.5em;
   font-family: 'Heebo', sans-serif;
@@ -89,6 +89,7 @@
 }
 
 
+
 .red-button {
  background-color: red;
 }
@@ -96,9 +97,9 @@
 body {
   text-align: center;
 }
+
 #show-header {
   margin-left: 30px;
-
 }
 
 .product-intro {
