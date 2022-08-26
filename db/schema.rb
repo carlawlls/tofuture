@@ -59,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_25_103210) do
   end
 
   create_table "prices", force: :cascade do |t|
-    t.integer "price"
+    t.integer "price_cents"
     t.date "date"
     t.bigint "product_id", null: false
     t.datetime "created_at", null: false
@@ -74,6 +74,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_25_103210) do
     t.float "er_score"
     t.float "sr_score"
     t.float "gr_score"
+    t.string "esg_grade"
+    t.string "e_grade"
+    t.string "s_grade"
+    t.string "g_grade"
+    t.string "e_level"
+    t.string "s_level"
+    t.string "g_level"
+    t.string "esg_level"
     t.text "description"
     t.string "name"
     t.string "sector"
