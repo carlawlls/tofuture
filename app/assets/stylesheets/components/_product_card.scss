@@ -54,6 +54,7 @@ text-overflow: ellipsis;
   height: fit-content;
   background: #fff;
   border-radius: 0 0 25px 25px;
+  padding: 16px;
 }
 
 .product-title h2{
@@ -159,6 +160,10 @@ text-overflow: ellipsis;
   object-fit: cover;
 }
 
+.card-body-product {
+  padding: 16px;
+}
+
 .card-product h2 {
   font-size: 18px;
   margin: 0;
@@ -180,6 +185,7 @@ text-overflow: ellipsis;
   opacity: 1;
   margin: 0;
   text-align: left;
+  padding: 5px 0;
 }
 
 .card-product .card-product-infos {
@@ -196,8 +202,8 @@ text-overflow: ellipsis;
 }
 
 .truncate {
-  width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
 }
