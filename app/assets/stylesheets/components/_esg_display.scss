@@ -1,4 +1,4 @@
-.esg-container {
+/* .esg-container {
   position: absolute;
   width: 80vw;
   transform: translate(-50%, -50%);
@@ -7,6 +7,29 @@
   justify-content: space-around;
   gap: 10px;
 }
+*/
+
+.esg-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.esg-rating {
+  height: 28vmin;
+  width: fit-content;
+  background-color: rgb(54, 31, 54);
+  text-align: center;
+  padding: 0 40px;
+  border-bottom: 10px solid rgb(5, 40, 77);
+
+  h2 {
+    color: white;
+    text-align: end;
+    padding-top: 20px;
+  }
+}
+
 .esg-box {
   width: 28vmin;
   height: 28vmin;
@@ -16,12 +39,12 @@
   padding: 1em 0;
   position: relative;
   font-size: 16px;
-  background-color: #21242b;
+  background-color: #212E35;
   border-bottom: 10px solid rgb(5, 40, 77);
 }
-i {
+h3 {
   color: white;
-  font-size: 2.5em;
+  font-size: 24px;
   text-align: center;
 }
 span.num {
@@ -29,13 +52,14 @@ span.num {
   display: grid;
   place-items: center;
   font-weight: 600;
-  font-size: 3em;
+  font-size: 40px;
 }
 span.text {
   color: #e0e0e0;
-  font-size: 1em;
+  font-size: 18px;
   text-align: center;
   pad: 0.7em 0;
   font-weight: 400;
   line-height: 0;
+  margin-bottom: 5px;
 }
