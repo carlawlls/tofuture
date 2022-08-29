@@ -6,3 +6,9 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import ScoresController from "./scores_controller"
+application.register("scores", ScoresController)
+
+import ScrollRevealController from "./scroll_reveal_controller"
+application.register("scroll-reveal", ScrollRevealController)
