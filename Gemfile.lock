@@ -169,6 +169,7 @@ GEM
       digest
       net-protocol
       timeout
+    news-api (0.2.0)
     nio4r (2.5.8)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
@@ -295,6 +296,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   money-rails (~> 1.12)
+  news-api (~> 0.2.0)
   pg (~> 1.1)
   pg_search
   puma (~> 5.0)
