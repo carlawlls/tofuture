@@ -10,12 +10,13 @@
   background-color: rgb(15, 15, 15);
   text-align: center;
   padding: 0 40px;
-  border-bottom: 10px solid rgb(5, 40, 77);
+  border-bottom: 10px solid #031532;
 
   h2 {
     color: white;
     text-align: end;
     padding-top: 20px;
+    font-weight: 300;
   }
 }
 
@@ -28,13 +29,50 @@
   padding: 1em 0;
   position: relative;
   font-size: 16px;
-  background-color: #212E35;
-  border-bottom: 10px solid rgb(5, 40, 77);
+  background-color: #031532;
 }
+
+.esg-box-environment {
+  min-width: 28vmin;
+  height: 28vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  background-color: #031532;
+}
+
+.esg-box-social {
+  min-width: 28vmin;
+  height: 28vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  background-color: #031532;
+}
+
+.esg-box-governance {
+  min-width: 28vmin;
+  height: 28vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  background-color: #031532;
+}
+
 h3 {
   color: white;
   font-size: 24px;
   text-align: center;
+  font-weight: 300;
 }
 span.num {
   color: #ffffff;

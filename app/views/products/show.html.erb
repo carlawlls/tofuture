@@ -1,58 +1,58 @@
 <div class="product-show">
-<div class="product-top">
-  <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></h1>
-  <div class="product-show-buttons">
-    <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
-      <% if current_user  %>
-        <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
-          <%= link_to "", product_path(@product), data: {turbo_method: :toggle_favorite, turbo_confirm: "Added to favorites list"} %>
-          <i class="fa-solid fa-heart"></i>
-        <% end %>
-      <% else %>
-        <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
-          <i class="fa-solid fa-heart"></i>
+  <div class="product-top">
+    <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></h1>
+    <div class="product-show-buttons">
+      <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
+        <% if current_user  %>
+          <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
+            <%= link_to "", product_path(@product), data: {turbo_method: :toggle_favorite, turbo_confirm: "Added to favorites list"} %>
+            <i class="fa-solid fa-heart"></i>
+          <% end %>
+        <% else %>
+          <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
+            <i class="fa-solid fa-heart"></i>
+          <% end %>
         <% end %>
       <% end %>
-    <% end %>
-    <div class="show-button-mg"><a href="https://robinhood.com/us/en/" class="show-button">Buy</a></div>
-  </div>
-</div>
-<div class="container">
-  <div class="product-info">
-    <div class="esg-container" data-controller="scores">
-      <div class="esg-rating">
-        <h2>ESG <br>
-          RATINGS</h2>
-      </div>
-      <div class="esg-box">
-        <h3>OVERALL</h3>
-        <span class="num" data-scores-target="num" data-val="<%= @product.esg_score %>">000</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
-      </div>
-      <div class="esg-box">
-        <h3>ENVIRONMENT</h3>
-        <span class="num" data-scores-target="num" data-val="<%= @product.er_score %>">000</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
-      </div>
-      <div class="esg-box">
-        <h3>SOCIAL</h3>
-        <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
-      </div>
-      <div class="esg-box">
-        <h3>GOVERNANCE</h3>
-        <span class="num" data-scores-target="num" data-val="<%= @product.gr_score %> ">000</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
-      </div>
-    </div>
-    <div class="stock-info">
-      <div id="container" style="height: 400px; width: 400px"></div>
-      <div class="description-card">
-        <p id="description-text"><%= @product.description %></p>
-      </div>
+      <div class="show-button-mg"><a href="https://robinhood.com/us/en/" class="show-button">Buy</a></div>
     </div>
   </div>
-</div>
+  <div class="container">
+    <div class="product-info">
+      <div class="esg-container" data-controller="scores">
+        <div class="esg-rating">
+          <h2>ESG <br>
+            RATINGS</h2>
+        </div>
+        <div class="esg-box">
+          <h3>OVERALL</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.esg_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
+        </div>
+        <div class="esg-box-environment">
+          <h3>ENVIRONMENT</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.er_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
+        </div>
+        <div class="esg-box-social">
+          <h3>SOCIAL</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
+        </div>
+        <div class="esg-box-governance">
+          <h3>GOVERNANCE</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.gr_score %> ">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
+        </div>
+      </div>
+      <div class="stock-info">
+        <div id="container" style="height: 400px; width: 400px"></div>
+        <div class="description-card">
+          <p id="description-text"><%= @product.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script>
   anychart.onDocumentReady(function () {
