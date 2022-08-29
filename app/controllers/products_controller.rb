@@ -4,17 +4,20 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     if params[:query].present?
-      @products = Product.search_by_name_and_ticker(params[:query])
+      @products = @products.search_by_name_and_ticker(params[:query])
     end
 
    # @search = params[:search]
-    if params[:search].present?
+    if params[:sectors]&.any?
      # @sectors = @search[:sector].reject(&:blank?)
      # @products = []
      # @sectors.each do |sector|
-       @products = Product.where(sector: params[:search][:sector].reject(&:blank?))
+       @products = @products.where(sector: params[:sectors])
       #end
      end
+    if params[:product_types]&.any?
+      @products = @products.where(product_type: params[:product_types])
+    end
   end
 
   def show
