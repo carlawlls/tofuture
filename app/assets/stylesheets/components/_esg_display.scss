@@ -51,12 +51,19 @@ span.num {
   color: #ffffff;
   display: grid;
   place-items: center;
-  font-weight: 600;
   font-size: 40px;
+  font-family: 'Oswald';
+  font-weight: 300;
 }
+
+.esg-text {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 span.text {
   color: #e0e0e0;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
   pad: 0.7em 0;
   font-weight: 400;

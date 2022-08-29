@@ -38,8 +38,10 @@
     <div class="esg-box">
       <h3>SOCIAL</h3>
       <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
-      <span class="text"><%= @product.s_grade %></span>
-      <span class="text"><%= @product.s_level %></span>
+      <div class="esg-text">
+        <span class="text"><%= @product.s_level %></span>
+        <span class="text"><%= @product.s_grade %></span>
+      </div>
     </div>
     <div class="esg-box">
       <h3>GOVERNANCE</h3>
