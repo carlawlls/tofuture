@@ -1,17 +1,25 @@
-<style>
-  body {
-    background: rgba(240,240,240,0.8)
-  }
-</style>
 <div class="container">
   <h1 class="page-header">Products</h1>
   <div class="d-flex justify-content-center">
     <div class="main-grid d-flex">
       <div class="search-form mb-5">
         <h4>Refine your search:</h4>
-        <%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-          <%= f.input :sector, collection: Product::SECTORS, as: :check_boxes, input_html: {value: ""}, label: "Choose an industry" %>
-          <%= f.submit 'Search', class: "btn btn-flat"%>
+        <%= form_tag products_path, method: "GET", html: { class: 'form-inline' } do %>
+          <p class="form-sub-heading">Sector:</p>
+          <% Product::SECTORS.each do |sector| %>
+            <div class="checkbox-style">
+              <%= check_box_tag "sectors[]",sector, params[:sectors]&.include?(sector) %>
+              <%= label_tag "sectors[]", sector %>
+            </div>
+          <% end %>
+          <p class="form-sub-heading">Products:</p>
+          <% Product.product_types.keys.each do |product| %>
+            <div class="checkbox-style">
+              <%= check_box_tag "product_types[]",product, params[:product_types]&.include?(product) %>
+              <%= label_tag "product_types[]", product %>
+            </div>
+          <% end %>
+          <%= submit_tag 'Search', class: "btn btn-flat mt-2" %>
         <% end %>
       </div>
       <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
@@ -47,3 +55,5 @@
     </div>
   </div>
 </div>
+<%#= collection_check_boxes :sector,  as: :check_boxes, input_html: {value: ""}, label: "Choose an industry" %>
+<%#= f.input :product_type, collection: Product.product_types.keys, as: :check_boxes, input_html: {value: ""}, label: "Choose a product type" %>

@@ -8,7 +8,7 @@ class Product < ApplicationRecord
   has_many :issues, through: :issue_relationships, source: :issue
   include PgSearch::Model
   multisearchable against: [:name, :ticker]
-  enum product_type: [ :company, :stock, :fund]
+  enum product_type: [ "Company", "Stock", "Fund"]
 
 
   pg_search_scope :search_by_name_and_ticker,
@@ -23,5 +23,5 @@ class Product < ApplicationRecord
     sector.upcase
   end
 
-  TYPES = ['Stock', 'Fund']
+  TYPES = ['Company', 'Stock', 'Fund']
 end

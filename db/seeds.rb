@@ -1,3 +1,4 @@
+require 'news-api'
 require "uri"
 require "json"
 require "open-uri"
@@ -41,6 +42,7 @@ Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
     exchange: product_info["Exchange"],
     description: product_info["Description"],
     sector: product_info["Sector"],
+    product_type: 1,
     issue_list: issue_tags.sample(3)
   )
 end
@@ -71,6 +73,89 @@ response.each do |esg_info|
   product.g_level = esg_info["governance_level"]
   product.save
 end
+
+
+# COMPANY SEEDS -----------------------------------------------
+
+# ETFs --------------------------------------------------------
+
+Product.create!(
+  ticker: "ERTH",
+  name: "Invesco MSCI Sustainable Future ETF",
+  exchange: "NYSE",
+  description: "The Invesco MSCI Sustainable Future ETF invests in companies from around the world that offer products and services that contribute to a more environmentally sustainable economy. The fund invests in small-, mid- and large-cap companies from around the world. Companies are eligible for inclusion in the index if they derive 75% or more of their cumulative revenue from six areas: alternative energy, energy efficiency, green building, sustainable water, pollution prevention and control, and sustainable agriculture. The index excludes companies that faced very severe controversies related to environmental, social and governance issues in the last three years, as well as companies involved in controversial weapons. The fund is among dozens of ETFs that target companies that compare favorably on environmental, social and governance criteria, also known as ESG. ESG funds are an increasingly popular segment of the ETF marketplace, offering values-driven investors a diverse portfolio of U.S. stocks without compromising their conscience. ERTH is part of a narrower subset of ESG known as impact funds, whose goal is to invest in companies that try to bring about a measurable, beneficial social or environmental impact. Invesco’s fund fees are reasonable for the segment, though fees for impact ETFs tend to be significantly higher than plain-vanilla index funds and some broad-based ESG funds. The holdings are also significantly narrower. Due to the increased diversification and concentration risk of its portfolio, ERTH is not a good replacement for a core global equity position though it may be a good complement for investors committed to sustainable businesses.",
+  sector: "Alternative Energy Equities",
+  esg_score: 7.8,
+  product_type: 2,
+  issue_list: ["Green Energy", "Water Pollution", "Water Management"]
+)
+
+Product.create!(
+  ticker: "ACES",
+  name: "ALPS",
+  exchange: "NYSE",
+  sector: "Alternative Energy Equities",
+  description: "The ALPS Clean Energy ETF (ACES) seeks investment results that correspond (before fees and expenses) generally to the performance of its underlying index, the CIBC Atlas Clean Energy Index (NACEX).The ALPS Clean Energy ETF (ACES) delivers exposure to a diverse set of US and Canadian companies involved in the clean energy sector including renewables and clean technology. The clean energy sector is comprised of companies that provide the products and services that enable the evolution of a more sustainable energy sector.",
+  esg_score: 8.43,
+  product_type: 2,
+  issue_list: ["Green Energy", "Water Pollution", "Water Management"]
+)
+
+Product.create!(
+  ticker: "HYDR",
+  name: "Global X Hydrogen ETF",
+  sector: "Alternative Energy Equities",
+  exchange: "NYSE",
+  description: "The Global X Hydrogen ETF (HYDR) seeks to invest in companies that stand to benefit from the advancement of the global hydrogen industry. This includes companies involved in hydrogen production; the integration of hydrogen into energy systems; and the development/manufacturing of hydrogen fuel cells, electrolyzers, and other technologies related to the utilization of hydrogen as an energy source.",
+  esg_score: 6.96,
+  product_type: 2,
+  issue_list: ["Carbon Emissions", "Labor Standards", "Employee Diversity"]
+)
+
+Product.create!(
+  ticker: "IYZ",
+  name: "iShares U.S. Telecommunications ETF",
+  sector: "Technology",
+  exchange: "NYSE",
+  description: "This ETF offers exposure to the U.S. telecom market, making it one option available to investors implementing a sector rotation strategy or focusing on corners of the domestic stock market that generally offer attractive dividend yields. Like most other telecom ETFs, IYZ is concentrated in a relatively small number of mega cap companies, resulting in a top heavy structure (State Street’s XTL is linked to an equal-weighted index, delivering more balanced exposure to the telecom sector). Another drawback of this ETF is expenses. IYZ is not competitive on price; both VOX and FCQ offer similar exposure with a much lower price tag. Those looking to achieve exposure to the global telecom market may consider IYZ, while those looking to steer clear of the U.S. altogether might like IST or AXTE.",
+  esg_score: 8.0,
+  product_type: 2,
+  issue_list: ["Human Rights", "Labor Standards", "Political Lobbying"]
+)
+
+Product.create!(
+  ticker: "BSCE",
+  name: "Invesco BulletShares 2023 USD Emerging Markets Debt ETF",
+  exchange: "NYSE",
+  sector: "Emerging Markets Bonds",
+  description: "BSCE offers focused exposure to investment grade corporate bonds maturing in 2014, making it much more granular than many other products. Most bond ETFs focus on securities maturing within a certain number of years (such as 1-5 year Treasuries or 20+ year corporate bonds). These bond ETFs generally operate indefinitely, maintaining a similar duration and interest rate risk across time and reinvesting any proceeds from the sale of component bonds into new securities. BSCE is different in that it has a target maturity date and will eventually close down after the underlying bonds have reached maturity and the principal has been distributed to shareholders (over time, BSCE’s portfolio will gradually shift to cash).",
+  esg_score: 8.0,
+  product_type: 2,
+  issue_list: ["Carbon Emissions", "Labor Standards", "Deforestation"]
+)
+
+Product.create!(
+  ticker: "BBH",
+  name: "VanEck Biotech ETF",
+  sector: "Health & Biotech Equities",
+  exchange: "NYSE",
+  description: "This ETF offers targeted exposure to the biotech industry, a corner of the health care sector that is capable of delivering big returns but also exhibiting significant volatility. Given that risk/return profile, accessing biotech through the exchange-traded wrapper has some obvious appeal; it allows investors to spread out exposure, thereby increasing the opportunity of holding a stock that hits it big. Given that targeted objective, this ETF is probably most useful for those seeking tactical exposure to this corner of the market; the underlying holdings are generally found in broad-based equity ETFs, so there should be little appeal to buy-and-holders.",
+  esg_score: 7.41,
+  product_type: 2,
+  issue_list: ["Human Rights", "Labor Standards", "Political Lobbying"]
+)
+
+Product.create!(
+  ticker: "JHMS",
+  name: "John Hancock Multifactor Consumer Staples ETF",
+  sector: "Consumer Staples Equities",
+  exchange: "NYSE",
+  description: "The Fund seeks to provide investment results that closely correspond, before fees and expenses, to the performance of the John Hancock Dimensional Consumer Staples Index. The Fund invests at least 80% of its net assets (plus any borrowings for investment purposes) in securities that compose the fund's benchmark index.",
+  esg_score: 9.56,
+  product_type: 2,
+  issue_list: ["Air Pollution", "Green Energy", "Water Pollution"]
+)
+
 
 # ISSUES SEED -------------------------------------------------
 
@@ -129,6 +214,26 @@ Issue.create!(
   explanation: "Human rights are moral principles or norms for certain standards of human behaviour and are regularly protected in municipal and international law. They are commonly understood as inalienable, fundamental rights to which a person is inherently entitled simply because she or he is a human being and which are inherent in all human beings, regardless of their age, ethnic origin, location, language, religion, ethnicity, or any other status",
   image_url: "https://www.airbus.com/sites/g/files/jlcbta136/files/styles/airbus_480x480/public/2021-06/human-rights-illustration.jpg?itok=FgBpQEO2"
 )
+
+Issue.create!(
+  issue_name: "Labor standards",
+  explanation: "Labour laws (also known as labor laws or employment laws) are those that mediate the relationship between workers, employing entities, trade unions, and the government. Collective labour law relates to the tripartite relationship between employee, employer, and union. Individual labour law concerns employees' rights at work also through the contract for work.",
+  image_url: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_533979847_128300.jpg"
+)
+
+Issue.create!(
+  issue_name: "Political lobbying",
+  explanation: "In politics, lobbying, persuasion or interest representation is the act of lawfully attempting to influence the actions, policies, or decisions of government officials, most often legislators or members of regulatory agencies. Lobbying, which usually involves direct, face-to-face contact, is done by many types of people, associations and organized groups, including individuals in the private sector, corporations, fellow legislators or government officials, or advocacy groups (interest groups).",
+  image_url: "https://images.theconversation.com/files/434574/original/file-20211129-25-1xtkgx6.jpg?ixlib=rb-1.1.0&rect=8%2C601%2C5982%2C2991&q=45&auto=format&w=668&h=324&fit=crop"
+)
+
+Issue.create!(
+  issue_name: "Animal Welfare",
+  explanation: "In politics, lobbying, persuasion or interest representation is the act of lawfully attempting to influence the actions, policies, or decisions of government officials, most often legislators or members of regulatory agencies. Lobbying, which usually involves direct, face-to-face contact, is done by many types of people, associations and organized groups, including individuals in the private sector, corporations, fellow legislators or government officials, or advocacy groups.",
+  image_url: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg"
+)
+
+
 User.create!(
   email: "billcook8122@gmail.com",
   password: "123123"
@@ -148,5 +253,24 @@ User.create!(
   email: "ayakayakaaaa@gmail.com",
   password: "123123"
 )
+
+newsapi = News.new("1eaedf572be74827bce43637e0c790c8")
+
+Issue.all.each do |issue|
+  issue_news = newsapi.get_everything(q: issue.issue_name, from: "2022-07-29&to=2022-08-26", sortBy: "popularity")
+  issue_news.each do |news|
+    NewsStory.create!(
+      author: news.author,
+      company: news.name,
+      description: news.description,
+      content: news.content,
+      url: news.url,
+      image_url: news.urlToImage,
+      title: news.title,
+      publishing_time: news.publishedAt,
+      issue: issue
+    )
+  end
+end
 
 puts "FINISHED! BOY!"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_25_103210) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_29_044452) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,6 +47,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_25_103210) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_url"
+  end
+
+  create_table "news_stories", force: :cascade do |t|
+    t.string "author"
+    t.text "content"
+    t.text "description"
+    t.string "company"
+    t.datetime "publishing_time"
+    t.string "title"
+    t.string "url"
+    t.string "image_url"
+    t.bigint "issue_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["issue_id"], name: "index_news_stories_on_issue_id"
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -135,6 +150,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_25_103210) do
 
   add_foreign_key "issue_relationships", "issues"
   add_foreign_key "issue_relationships", "products"
+  add_foreign_key "news_stories", "issues"
   add_foreign_key "prices", "products"
   add_foreign_key "taggings", "tags"
 end
