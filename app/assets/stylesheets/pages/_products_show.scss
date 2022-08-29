@@ -37,8 +37,16 @@ body {
 
 .description-card {
   width: 400px;
+  height: fit-content;
   text-align: start;
   font-size: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
+}
+
+#description-text {
+  padding: 32px;
 }
 
 $b: #32cbfb;
