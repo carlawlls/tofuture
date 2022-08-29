@@ -41,6 +41,7 @@ Dir[File.join(dir, "test_stocks/*.json")].sort.each do |file1|
     exchange: product_info["Exchange"],
     description: product_info["Description"],
     sector: product_info["Sector"],
+    product_type: 1,
     issue_list: issue_tags.sample(3)
   )
 end
@@ -71,6 +72,56 @@ response.each do |esg_info|
   product.g_level = esg_info["governance_level"]
   product.save
 end
+
+
+# COMPANY SEEDS -----------------------------------------------
+
+# ETFs --------------------------------------------------------
+
+Product.create!(
+  ticker: "ERTH",
+  name: "Invesco MSCI Sustainable Future ETF",
+  exchange: "NYSE",
+  description: "The Invesco MSCI Sustainable Future ETF invests in companies from around the world that offer products and services that contribute to a more environmentally sustainable economy. The fund invests in small-, mid- and large-cap companies from around the world. Companies are eligible for inclusion in the index if they derive 75% or more of their cumulative revenue from six areas: alternative energy, energy efficiency, green building, sustainable water, pollution prevention and control, and sustainable agriculture. The index excludes companies that faced very severe controversies related to environmental, social and governance issues in the last three years, as well as companies involved in controversial weapons. The fund is among dozens of ETFs that target companies that compare favorably on environmental, social and governance criteria, also known as ESG. ESG funds are an increasingly popular segment of the ETF marketplace, offering values-driven investors a diverse portfolio of U.S. stocks without compromising their conscience. ERTH is part of a narrower subset of ESG known as impact funds, whose goal is to invest in companies that try to bring about a measurable, beneficial social or environmental impact. Invesco’s fund fees are reasonable for the segment, though fees for impact ETFs tend to be significantly higher than plain-vanilla index funds and some broad-based ESG funds. The holdings are also significantly narrower. Due to the increased diversification and concentration risk of its portfolio, ERTH is not a good replacement for a core global equity position though it may be a good complement for investors committed to sustainable businesses.",
+  sector: "Alternative Energy Equities",
+  esg_score: 7.8,
+  product_type: 2,
+  issue_list: ["Green Energy", "Water Pollution", "Water Management"]
+)
+
+Product.create!(
+  ticker: "ACES",
+  name: "ALPS",
+  exchange: "NYSE",
+  description: "The ALPS Clean Energy ETF (ACES) seeks investment results that correspond (before fees and expenses) generally to the performance of its underlying index, the CIBC Atlas Clean Energy Index (NACEX).The ALPS Clean Energy ETF (ACES) delivers exposure to a diverse set of US and Canadian companies involved in the clean energy sector including renewables and clean technology. The clean energy sector is comprised of companies that provide the products and services that enable the evolution of a more sustainable energy sector.",
+  esg_score: 8.43,
+  product_type: 2,
+  issue_list: ["Green Energy", "Water Pollution", "Water Management"]
+)
+
+Product.create!(
+  ticker: "HYDR",
+  name: "Global X Hydrogen ETF",
+  exchange: "NYSE",
+  description: "The Global X Hydrogen ETF (HYDR) seeks to invest in companies that stand to benefit from the advancement of the global hydrogen industry. This includes companies involved in hydrogen production; the integration of hydrogen into energy systems; and the development/manufacturing of hydrogen fuel cells, electrolyzers, and other technologies related to the utilization of hydrogen as an energy source.",
+  esg_score: 6.96,
+  product_type: 2,
+  issue_list: ["Carbon Emissions", "Labor Standards", "Employee Diversity"]
+)
+
+Product.create!(
+  ticker: "IYZ",
+  name: "iShares U.S. Telecommunications ETF",
+  exchange: "NYSE",
+  description: "This ETF offers exposure to the U.S. telecom market, making it one option available to investors implementing a sector rotation strategy or focusing on corners of the domestic stock market that generally offer attractive dividend yields. Like most other telecom ETFs, IYZ is concentrated in a relatively small number of mega cap companies, resulting in a top heavy structure (State Street’s XTL is linked to an equal-weighted index, delivering more balanced exposure to the telecom sector). Another drawback of this ETF is expenses. IYZ is not competitive on price; both VOX and FCQ offer similar exposure with a much lower price tag. Those looking to achieve exposure to the global telecom market may consider IYZ, while those looking to steer clear of the U.S. altogether might like IST or AXTE.",
+  esg_score: 8.0,
+  product_type: 2,
+  issue_list: ["Carbon Emissions", "Labor Standards", "Employee Diversity"]
+)
+
+
+
+
 
 # ISSUES SEED -------------------------------------------------
 
