@@ -1,0 +1,42 @@
+.news-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+
+.card-news {
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  height: fit-content;
+  color: white;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+}
+.card-news-head {
+  position: relative;
+  height: 200px;
+  width: 200px;
+
+  /* Old browsers */
+
+  /* FF3.6-15 */
+
+  /* Chrome10-25,Safari5.1-6 */
+
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius: 25px 25px 25px 25px;
+  object-fit: cover;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.card-news h1 {
+  height: 20px;
+  color: black;
+}
+
+.card-news p {
+  color: black;
+  word-wrap: none;
+}
