@@ -1,6 +1,5 @@
 <div class="product-top">
   <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></h1>
-  <button class="yellow-button">follow</button>
   <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
     <% if current_user  %>
       <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
@@ -18,117 +17,43 @@
 <div class="description-card">
   <ul id="description-text"><%= @product.description %></ul>
 </div>
-<div class="container">
-  <div class="d-flex justify-content-center mt-5">
-    <div class="esg-card">
-      <div class="product-cards d-flex flex-wrap gap-3 align-self-start">
-        <div class="card-esg ">
-          <div class="card-head-esg all">
-            <div class="back-text truncate">
-            </div>
-          </div>
-          <div class="card-body-esg">
-            <div class="product-desc">
-              <h2 class="esg-title truncate">
-                Overall
-              </h2>
-              <span class="esg-caption">
-              </span>
-            </div>
-            <div class="d-flex flex-column-reverse justify-content-center">
-              <p> <%= @product.esg_grade %> </p>
-              <p> <%= @product.esg_score %> </p>
-              <p> <%= @product.esg_level %> </p>
-            </div>
-            <div class="esg-properties">
-              <span class="badge truncate">
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="stock-info">
+  <div class="esg-container" data-controller="scores">
+    <div class="esg-rating">
+      <h2>ESG <br>
+        RATINGS</h2>
     </div>
-    <div class="d-flex flex-column ">
-      <div class="esg-long">
-        <div class="card-head-side card-head-side-env">
-          <div class="back-text-esg truncate">
-            <span>E</span>
-          </div>
-        </div>
-        <div class="product-cards d-flex flex-wrap gap-3 align-self-start">
-          <div class="product-desc">
-            <div class="esg-long-infos d-flex flex-row">
-              <div class="esg-info">
-                <h2> Grade </h2>
-                <p> <%= @product.e_grade %> </p>
-              </div>
-              <div class="esg-info">
-                <h2>Score</h2>
-                <p> <%= @product.er_score %> </p>
-              </div>
-              <div class="esg-info">
-                <h2>Level</h2>
-                <p> <%= @product.e_level %> </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="esg-long">
-        <div class="card-head-side card-head-side-soc">
-          <div class="back-text-esg  truncate">
-            <span>S</span>
-          </div>
-        </div>
-        <div class="product-cards d-flex flex-wrap gap-3 align-self-start">
-          <div class="product-desc">
-            <div class="esg-long-infos d-flex flex-row">
-              <div class="esg-info">
-                <h2> Grade </h2>
-                <p> <%= @product.s_grade %> </p>
-              </div>
-              <div class="esg-info">
-                <h2>Score</h2>
-                <p> <%= @product.sr_score %> </p>
-              </div>
-              <div class="esg-info">
-                <h2>Level</h2>
-                <p> <%= @product.s_level %> </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="esg-long">
-        <div class="card-head-side card-head-side-gov">
-          <div class="back-text-esg truncate">
-            <span>G</span>
-          </div>
-        </div>
-        <div class="product-cards d-flex flex-wrap gap-3 align-self-start">
-          <div class="product-desc">
-            <div class="esg-long-infos d-flex flex-row">
-              <div class="esg-info">
-                <h2> Grade </h2>
-                <p> <%= @product.g_grade %> </p>
-              </div>
-              <div class="esg-info">
-                <h2>Score</h2>
-                <p> <%= @product.gr_score %> </p>
-              </div>
-              <div class="esg-info">
-                <h2>Level</h2>
-                <p> <%= @product.g_level %> </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="esg-box">
+      <h3>OVERALL</h3>
+      <span class="num" data-scores-target="num" data-val="<%= @product.esg_score %>">000</span>
+      <span class="text"><%= @product.esg_grade %></span>
+      <span class="text"><%= @product.esg_level %></span>
+    </div>
+    <div class="esg-box">
+      <h3>ENVIRONMENT</h3>
+      <span class="num" data-scores-target="num" data-val="<%= @product.er_score %>">000</span>
+      <span class="text"><%= @product.e_grade %></span>
+      <span class="text"><%= @product.e_level %></span>
+    </div>
+    <div class="esg-box">
+      <h3>SOCIAL</h3>
+      <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
+      <span class="text"><%= @product.s_grade %></span>
+      <span class="text"><%= @product.s_level %></span>
+    </div>
+    <div class="esg-box">
+      <h3>GOVERNANCE</h3>
+      <span class="num" data-scores-target="num" data-val="<%= @product.gr_score %> ">000</span>
+      <span class="text"><%= @product.g_grade %></span>
+      <span class="text"><%= @product.g_level %></span>
     </div>
   </div>
+  <%# <p>graphs, scores, issues etc</p> %>
+  <div id="container" style="height: 600px"></div>
 </div>
-<%# <p>graphs, scores, issues etc</p> %>
-<div id="container" style="height: 600px"></div>
+<div class="description-card">
+  <ul id="description-text"><%= @product.description %></ul>
+</div>
 <script>
   anychart.onDocumentReady(function () {
     anychart.data.loadCsvFile('/AAPL.csv',
@@ -185,4 +110,6 @@
   }
     );
   });
+
+  // ESG
 </script>

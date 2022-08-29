@@ -214,6 +214,26 @@ Issue.create!(
   explanation: "Human rights are moral principles or norms for certain standards of human behaviour and are regularly protected in municipal and international law. They are commonly understood as inalienable, fundamental rights to which a person is inherently entitled simply because she or he is a human being and which are inherent in all human beings, regardless of their age, ethnic origin, location, language, religion, ethnicity, or any other status",
   image_url: "https://www.airbus.com/sites/g/files/jlcbta136/files/styles/airbus_480x480/public/2021-06/human-rights-illustration.jpg?itok=FgBpQEO2"
 )
+
+Issue.create!(
+  issue_name: "Labor standards",
+  explanation: "Labour laws (also known as labor laws or employment laws) are those that mediate the relationship between workers, employing entities, trade unions, and the government. Collective labour law relates to the tripartite relationship between employee, employer, and union. Individual labour law concerns employees' rights at work also through the contract for work.",
+  image_url: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_533979847_128300.jpg"
+)
+
+Issue.create!(
+  issue_name: "Political lobbying",
+  explanation: "In politics, lobbying, persuasion or interest representation is the act of lawfully attempting to influence the actions, policies, or decisions of government officials, most often legislators or members of regulatory agencies. Lobbying, which usually involves direct, face-to-face contact, is done by many types of people, associations and organized groups, including individuals in the private sector, corporations, fellow legislators or government officials, or advocacy groups (interest groups).",
+  image_url: "https://images.theconversation.com/files/434574/original/file-20211129-25-1xtkgx6.jpg?ixlib=rb-1.1.0&rect=8%2C601%2C5982%2C2991&q=45&auto=format&w=668&h=324&fit=crop"
+)
+
+Issue.create!(
+  issue_name: "Animal Welfare",
+  explanation: "In politics, lobbying, persuasion or interest representation is the act of lawfully attempting to influence the actions, policies, or decisions of government officials, most often legislators or members of regulatory agencies. Lobbying, which usually involves direct, face-to-face contact, is done by many types of people, associations and organized groups, including individuals in the private sector, corporations, fellow legislators or government officials, or advocacy groups.",
+  image_url: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg"
+)
+
+
 User.create!(
   email: "billcook8122@gmail.com",
   password: "123123"
@@ -236,6 +256,21 @@ User.create!(
 
 newsapi = News.new("1eaedf572be74827bce43637e0c790c8")
 
-deforestation_news = newsapi.get_everything(q: "deforestation", from: "2022-07-29&to=2022-08-26", sortBy: "popularity")
+Issue.all.each do |issue|
+  issue_news = newsapi.get_everything(q: issue.issue_name, from: "2022-07-29&to=2022-08-26", sortBy: "popularity")
+  issue_news.each do |news|
+    NewsStory.create!(
+      author: news.author,
+      company: news.name,
+      description: news.description,
+      content: news.content,
+      url: news.url,
+      image_url: news.urlToImage,
+      title: news.title,
+      publishing_time: news.publishedAt,
+      issue: issue
+    )
+  end
+end
 
 puts "FINISHED! BOY!"
