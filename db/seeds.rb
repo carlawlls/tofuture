@@ -76,7 +76,33 @@ end
 
 
 # COMPANY SEEDS -----------------------------------------------
+Product.create!(
+  ticker: "",
+  name: "Who Gives a Crap",
+  exchange: "",
+  description: "Who Gives a Crap is an Australian startup that develops forest friendly toilet paper, paper towels, and tissues. It also donates a portion of the profits to water/sanitation projects in the developing world. Founded in 2012, Who Gives a Crap is based in Melbourne, Victoria.",
+  sector: "Wholesale/Retail",
+  product_type: 0,
+  issue_list: ["Green Energy", "Water Pollution", "Deforestation"]
+)
 
+Product.create!(
+  ticker: "",
+  name: "Plamil Foods Ltd",
+  exchange: "",
+  description: "Plamil is a pioneering ethical company, producing vegan, organic and Fairtrade products since the 1960's. It is an ethical leader in the food industry, and one the most ethical companies that Ethical Consumer rates and ranks in its product guides.",
+  product_type: 0,
+  issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"]
+)
+
+Product.create!(
+  ticker: "",
+  name: "Plamil Foods Ltd",
+  exchange: "",
+  description: "Plamil is a pioneering ethical company, producing vegan, organic and Fairtrade products since the 1960's. It is an ethical leader in the food industry, and one the most ethical companies that Ethical Consumer rates and ranks in its product guides.",
+  product_type: 0,
+  issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"]
+)
 # ETFs --------------------------------------------------------
 
 Product.create!(
