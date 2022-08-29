@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :products, only: [:index, :show] do
     member do
-      post "toggle_favorite", to: "products#toggle_favorite", as: :toggle_favorite
+    post "toggle_favorite", to: "products#toggle_favorite", as: :toggle_favorite
     end
   end
   resources :issues, only: [:index, :show]

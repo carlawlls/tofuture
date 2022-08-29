@@ -31,8 +31,6 @@ class ProductsController < ApplicationController
     redirect_to product_path(@product)
   end
 
-  private
-
   def skip_pundit?
     devise_controller? || params[:controller]
   end

@@ -1,6 +1,7 @@
 <div class="product-top">
-  <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></ul>
-</h1>
+
+  <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></h1>
+
 <button class="yellow-button">follow</button>
 <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
   <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
@@ -8,11 +9,11 @@
       <path d="M91.6 13A28.7 28.7 0 0 0 51 13l-1 1-1-1A28.7 28.7 0 0 0 8.4 53.8l1 1L50 95.3l40.5-40.6 1-1a28.6 28.6 0 0 0 0-40.6z"/></svg>
   <% end %>
 <% end %>
-<div>
-  <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></h1>
-</div>
+
 <div class="show-button-mg"><%= link_to "Buy", "https://robinhood.com/us/en/", class: "show-button"%></div>
 <div class="show-button-mg"><%= link_to "Favourite", "https://robinhood.com/us/en/", class: "show-button"%></div>
+
+
 </div>
 <div class="description-card">
   <ul id="description-text"><%= @product.description %></ul>
