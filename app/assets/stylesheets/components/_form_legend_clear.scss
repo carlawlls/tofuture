@@ -8,3 +8,19 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.form-sub-heading {
+  margin-top: 10px;
+  border-top: solid black 1px;
+}
+
+[type="checkbox"]
+{
+  vertical-align: middle;
+}
+
+// .checkbox-style {
+//   display: flex;
+//   justify-content: space-around;
+
+// }
