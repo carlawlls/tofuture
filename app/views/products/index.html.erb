@@ -1,8 +1,3 @@
-<style>
-  body {
-    background: rgba(240,240,240,0.8)
-  }
-</style>
 <div class="container">
   <h1 class="page-header">Products</h1>
   <div class="d-flex justify-content-center">
@@ -14,17 +9,17 @@
           <% Product::SECTORS.each do |sector| %>
             <div class="checkbox-style">
               <%= check_box_tag "sectors[]",sector, params[:sectors]&.include?(sector) %>
-              <%= label_tag "sectors[]", sector, style: "word-wrap:break-word"%>
+              <%= label_tag "sectors[]", sector %>
             </div>
           <% end %>
           <p class="form-sub-heading">Products:</p>
           <% Product.product_types.keys.each do |product| %>
             <div class="checkbox-style">
               <%= check_box_tag "product_types[]",product, params[:product_types]&.include?(product) %>
-              <%= label_tag "product_types[]", product, style: "word-wrap:break-word" %>
+              <%= label_tag "product_types[]", product %>
             </div>
           <% end %>
-          <%= submit_tag 'Search', class: "btn btn-flat" %>
+          <%= submit_tag 'Search', class: "btn btn-flat mt-2" %>
         <% end %>
       </div>
       <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
