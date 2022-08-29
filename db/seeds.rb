@@ -1,3 +1,4 @@
+require 'news-api'
 require "uri"
 require "json"
 require "open-uri"
@@ -232,5 +233,9 @@ User.create!(
   email: "ayakayakaaaa@gmail.com",
   password: "123123"
 )
+
+newsapi = News.new("1eaedf572be74827bce43637e0c790c8")
+
+deforestation_news = newsapi.get_everything(q: "deforestation", from: "2022-07-29&to=2022-08-26", sortBy: "popularity")
 
 puts "FINISHED! BOY!"
