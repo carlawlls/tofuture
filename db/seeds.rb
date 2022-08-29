@@ -93,6 +93,7 @@ Product.create!(
   ticker: "ACES",
   name: "ALPS",
   exchange: "NYSE",
+  sector: "Alternative Energy Equities",
   description: "The ALPS Clean Energy ETF (ACES) seeks investment results that correspond (before fees and expenses) generally to the performance of its underlying index, the CIBC Atlas Clean Energy Index (NACEX).The ALPS Clean Energy ETF (ACES) delivers exposure to a diverse set of US and Canadian companies involved in the clean energy sector including renewables and clean technology. The clean energy sector is comprised of companies that provide the products and services that enable the evolution of a more sustainable energy sector.",
   esg_score: 8.43,
   product_type: 2,
@@ -102,6 +103,7 @@ Product.create!(
 Product.create!(
   ticker: "HYDR",
   name: "Global X Hydrogen ETF",
+  sector: "Alternative Energy Equities",
   exchange: "NYSE",
   description: "The Global X Hydrogen ETF (HYDR) seeks to invest in companies that stand to benefit from the advancement of the global hydrogen industry. This includes companies involved in hydrogen production; the integration of hydrogen into energy systems; and the development/manufacturing of hydrogen fuel cells, electrolyzers, and other technologies related to the utilization of hydrogen as an energy source.",
   esg_score: 6.96,
@@ -112,15 +114,46 @@ Product.create!(
 Product.create!(
   ticker: "IYZ",
   name: "iShares U.S. Telecommunications ETF",
+  sector: "Technology",
   exchange: "NYSE",
   description: "This ETF offers exposure to the U.S. telecom market, making it one option available to investors implementing a sector rotation strategy or focusing on corners of the domestic stock market that generally offer attractive dividend yields. Like most other telecom ETFs, IYZ is concentrated in a relatively small number of mega cap companies, resulting in a top heavy structure (State Street’s XTL is linked to an equal-weighted index, delivering more balanced exposure to the telecom sector). Another drawback of this ETF is expenses. IYZ is not competitive on price; both VOX and FCQ offer similar exposure with a much lower price tag. Those looking to achieve exposure to the global telecom market may consider IYZ, while those looking to steer clear of the U.S. altogether might like IST or AXTE.",
   esg_score: 8.0,
   product_type: 2,
-  issue_list: ["Carbon Emissions", "Labor Standards", "Employee Diversity"]
+  issue_list: ["Human Rights", "Labor Standards", "Political Lobbying"]
 )
 
+Product.create!(
+  ticker: "BSCE",
+  name: "Invesco BulletShares 2023 USD Emerging Markets Debt ETF",
+  exchange: "NYSE",
+  sector: "Emerging Markets Bonds",
+  description: "BSCE offers focused exposure to investment grade corporate bonds maturing in 2014, making it much more granular than many other products. Most bond ETFs focus on securities maturing within a certain number of years (such as 1-5 year Treasuries or 20+ year corporate bonds). These bond ETFs generally operate indefinitely, maintaining a similar duration and interest rate risk across time and reinvesting any proceeds from the sale of component bonds into new securities. BSCE is different in that it has a target maturity date and will eventually close down after the underlying bonds have reached maturity and the principal has been distributed to shareholders (over time, BSCE’s portfolio will gradually shift to cash).",
+  esg_score: 8.0,
+  product_type: 2,
+  issue_list: ["Carbon Emissions", "Labor Standards", "Deforestation"]
+)
 
+Product.create!(
+  ticker: "BBH",
+  name: "VanEck Biotech ETF",
+  sector: "Health & Biotech Equities",
+  exchange: "NYSE",
+  description: "This ETF offers targeted exposure to the biotech industry, a corner of the health care sector that is capable of delivering big returns but also exhibiting significant volatility. Given that risk/return profile, accessing biotech through the exchange-traded wrapper has some obvious appeal; it allows investors to spread out exposure, thereby increasing the opportunity of holding a stock that hits it big. Given that targeted objective, this ETF is probably most useful for those seeking tactical exposure to this corner of the market; the underlying holdings are generally found in broad-based equity ETFs, so there should be little appeal to buy-and-holders.",
+  esg_score: 7.41,
+  product_type: 2,
+  issue_list: ["Human Rights", "Labor Standards", "Political Lobbying"]
+)
 
+Product.create!(
+  ticker: "JHMS",
+  name: "John Hancock Multifactor Consumer Staples ETF",
+  sector: "Consumer Staples Equities",
+  exchange: "NYSE",
+  description: "The Fund seeks to provide investment results that closely correspond, before fees and expenses, to the performance of the John Hancock Dimensional Consumer Staples Index. The Fund invests at least 80% of its net assets (plus any borrowings for investment purposes) in securities that compose the fund's benchmark index.",
+  esg_score: 9.56,
+  product_type: 2,
+  issue_list: ["Air Pollution", "Green Energy", "Water Pollution"]
+)
 
 
 # ISSUES SEED -------------------------------------------------
