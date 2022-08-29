@@ -1,0 +1,58 @@
+.issues-title {
+  margin: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 40px;
+}
+
+.card {
+  overflow: hidden;
+  background: rgb(240, 240, 240);
+  width: 500px;
+  height: 300px;
+  -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  &:hover{
+    -webkit-transform: translate(0, -8px);
+    -moz-transform: translate(0, -8px);
+    -ms-transform: translate(0, -8px);
+    -o-transform: translate(0, -8px);
+    transform: translate(0, -8px);
+    box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
+    margin-bottom: 16px; -webkit-transform: translate(0, -8px);
+    -moz-transform: translate(0, -8px);
+    -ms-transform: translate(0, -8px);
+    -o-transform: translate(0, -8px);
+    transform: translate(0, -8px);
+    box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
+    margin-bottom: 16px;
+  }
+}
+
+.issue-text{
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+.issue-text::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(5, 5, 238, 0.791);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.issue-text:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
