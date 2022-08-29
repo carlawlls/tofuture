@@ -152,6 +152,19 @@ User.create!(
 
 newsapi = News.new("1eaedf572be74827bce43637e0c790c8")
 
-deforestation_news = newsapi.get_everything(q: "deforestation", from: "2022-07-29&to=2022-08-26", sortBy: "popularity")
+Issue.all.each do |issue|
+  issue_news = newsapi.get_everything(q: issue.issue_name, from: "2022-07-29&to=2022-08-26", sortBy: "popularity")
+  issue_news.each do |news|
+    NewsStory.create!(
+      name: news.name,
+      title: news.title,
+      description: news.description,
+      news_url: news.url,
+      url_to_image: news.urlToImage,
+      author: news.author,
+      issue: issue
+    )
+  end
+end
 
 puts "FINISHED! BOY!"
