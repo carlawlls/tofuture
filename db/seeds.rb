@@ -83,7 +83,17 @@ Product.create!(
   description: "Who Gives a Crap is an Australian startup that develops forest friendly toilet paper, paper towels, and tissues. It also donates a portion of the profits to water/sanitation projects in the developing world. Founded in 2012, Who Gives a Crap is based in Melbourne, Victoria.",
   sector: "Wholesale/Retail",
   product_type: 0,
-  issue_list: ["Green Energy", "Water Pollution", "Deforestation"]
+  issue_list: ["Green Energy", "Water Pollution", "Deforestation"],
+  web_url: 'https://au.whogivesacrap.org/'
+)
+
+Product.create!(
+  ticker: "",
+  name: "Teapigs",
+  description: "Teapigs is a UK-based tea company owned by Tata Global Beverages Ltd, founded in November 2006. They produce a wide range of teas, including black, green, oolong, white, rooibos, Herbal teas, and Matcha tea.",
+  product_type: 0,
+  issue_list: ["Labor Standards", "Human Rights", "Employee Diversity"],
+  web_url: 'https://www.teapigs.co.uk/'
 )
 
 Product.create!(
@@ -92,16 +102,8 @@ Product.create!(
   exchange: "",
   description: "Plamil is a pioneering ethical company, producing vegan, organic and Fairtrade products since the 1960's. It is an ethical leader in the food industry, and one the most ethical companies that Ethical Consumer rates and ranks in its product guides.",
   product_type: 0,
-  issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"]
-)
-
-Product.create!(
-  ticker: "",
-  name: "Plamil Foods Ltd",
-  exchange: "",
-  description: "Plamil is a pioneering ethical company, producing vegan, organic and Fairtrade products since the 1960's. It is an ethical leader in the food industry, and one the most ethical companies that Ethical Consumer rates and ranks in its product guides.",
-  product_type: 0,
-  issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"]
+  issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"],
+  web_url: 'https://www.plamilfoods.co.uk/'
 )
 # ETFs --------------------------------------------------------
 

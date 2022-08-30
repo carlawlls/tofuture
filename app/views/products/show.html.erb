@@ -14,7 +14,13 @@
           <% end %>
         <% end %>
       <% end %>
-      <div class="show-button-mg"><a href="https://robinhood.com/us/en/" class="show-button">Buy</a></div>
+      <% if @product.product_type == "Company"  %>
+        <div class="show-button-mg">
+          <%= link_to 'Support', @product.web_url, class: "show-button" %>
+        </div>
+      <% else %>
+        <div class="show-button-mg"><a href="https://robinhood.com/us/en/" class="show-button">Buy</a></div>
+      <% end %>
     </div>
   </div>
   <div class="container">
