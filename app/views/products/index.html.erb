@@ -22,10 +22,10 @@
           <%= submit_tag 'Search', class: "btn btn-flat mt-2" %>
         <% end %>
       </div>
-      <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5">
+      <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5" data-controller="scroll-reveal">
         <% @products.each do |product| %>
           <%= link_to product_path(product) do %>
-            <div class="card-product ">
+            <div class="card-product reveal" data-scroll-reveal-target="item">
               <div class="card-head">
                 <div class="back-text truncate">
                   <%= product.ticker %>
@@ -40,6 +40,7 @@
                   </span>
                 </div>
                 <p> <%= product.sector %> </p>
+                <p><%= product.product_type %></p>
                 <div class="product-properties">
                   <% product.issue_list.each do |issue| %>
                     <span class="badge truncate">
