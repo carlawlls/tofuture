@@ -1,5 +1,7 @@
+<div class="view-banner">
+  <h1 class="banner-h1">My favorites</h1>
+</div>
 <div class="favorites">
-  <h1 class="title">My favorites</h1>
   <div class="container">
     <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5" data-controller="scroll-reveal">
       <% @favorites.each do |product| %>
@@ -33,5 +35,5 @@
       <% end %>
     </div>
   </div>
-  <%= link_to "back", root_path, class: "yellow-button"%>
+  <%= link_to "Home", root_path, class: "show-button" %>
 </div>
