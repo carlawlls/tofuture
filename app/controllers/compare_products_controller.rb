@@ -1,14 +1,11 @@
 class CompareProductsController < ApplicationController
  def create
-
  @new_product = Product.new(compare_products_params)
-
  end
 
  def show
   product = Product.find(params[:id])
   render json: product
-
  end
 
 
