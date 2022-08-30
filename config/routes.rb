@@ -15,5 +15,5 @@ Rails.application.routes.draw do
 
   get "/favorites", to: "users#favorites", as: :favorites
 
-resources :compare_products, only: [:destroy, :index, :show]
+resources :compare_products, only: [:destroy, :index]
 end

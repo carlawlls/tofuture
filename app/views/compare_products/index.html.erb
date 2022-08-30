@@ -1,9 +1,15 @@
-<%= @compare_product.name %>
-<h1>Add a product to compare stocks</h1>
-<% @compare_products.each do |product| %>
-  <div class="product">
-    <ul><%= product.name %></ul>
-    <ul><%= product.ticker %></ul>
-    <ul><%= product.esg_score %></ul>
-  </div>
-<% end %>
+<h1>comparing products...</h1>
+<div class="product-container">
+  <% @compare_products.each do |compare_product| %>
+    <div class="product">
+      <% product = compare_product.product %>
+      <%= product.name %> / <%= product.ticker %>
+      <ul><%= product.esg_score %></ul>
+      <ul><%= product.er_score %></ul>
+      <ul><%= product.sr_score %></ul>
+      <ul><%= product.gr_score %></ul>
+      <%= link_to "delete", compare_product_path(compare_product), data: {turbo_method: :delete} %>
+    </div>
+  <% end %>
+</div>
+</div>

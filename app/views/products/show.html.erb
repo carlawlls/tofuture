@@ -20,7 +20,9 @@
         </div>
       <% else %>
         <div class="show-button-mg"><a href="https://robinhood.com/us/en/" class="show-button">Buy</a></div>
-        <%= link_to "compare", compare_products_path(:p1=> @product.id) %>
+        <%= simple_form_for([@product, @compare_product]) do |f| %>
+          <%= f.submit "compare" %>
+        <% end %>
       <% end %>
     </div>
   </div>
