@@ -1,5 +1,8 @@
 <div class="container">
-  <h1 class="page-header">Issues</h1>
+  <div class="issues-title">
+    <h2 class="page-header">Issues</h2>
+  </div>
+  <div class="display-issues">
   <div class="cards" data-controller="scroll-reveal" >
     <% @issues.each do |issue| %>
       <%= link_to issue_path(issue) do %>
@@ -10,8 +13,9 @@
               <p class="card-text"> <%= issue.issue_name %></p>
             </div>
           </div>
-        </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
