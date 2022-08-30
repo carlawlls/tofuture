@@ -25,10 +25,11 @@
   margin: 0;
 }
 
-
-
 .product-show-buttons {
   display: flex;
+  justify-content: end;
+  margin: 32px;
+  gap: 10px;
 }
 
 body {
