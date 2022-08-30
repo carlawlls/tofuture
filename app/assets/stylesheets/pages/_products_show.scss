@@ -1,5 +1,15 @@
-.product-show {
-  padding: 0 56px;
+
+.product-banner {
+  background: rgb(2,19,48);
+  background: linear-gradient(90deg, rgba(2,19,48,1) 0%, rgba(17,47,82,1) 31%, rgba(155,191,212,1) 100%);
+  min-height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  opacity: 0.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .product-info {
@@ -15,11 +25,7 @@
   margin: 0;
 }
 
-.product-top{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+
 
 .product-show-buttons {
   display: flex;

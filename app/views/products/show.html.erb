@@ -2,8 +2,8 @@
   <%= render "shared/company" %>
 <% else %>
   <div class="product-show">
-    <div class="product-top">
-      <h1 id="show-header"><%= @product.name %> / <%= @product.ticker %></h1>
+    <div class="product-banner">
+      <h1 class="banner-h1"><%= @product.name %> / <%= @product.ticker %></h1>
       <div class="product-show-buttons">
         <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
           <% if current_user  %>
