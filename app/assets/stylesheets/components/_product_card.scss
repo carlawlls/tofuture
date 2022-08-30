@@ -62,14 +62,23 @@ text-overflow: ellipsis;
 
 .badge {
   position: relative;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 300;
   color: #fff;
-  background: #1a761a;
-  padding: 2px 5px;
+  background: #11e95b;
+  padding: 10px 10px;
   border-radius: 4px;
   top: -2px;
   margin-left: 5px;
+  // position: relative;
+  // font-size: 10px;
+  // font-weight: 300;
+  // color: #fff;
+  // background: #1a761a;
+  // padding: 2px 5px;
+  // border-radius: 4px;
+  // top: -2px;
+  // margin-left: 5px;
 }
 .card-remove-link {
   position: absolute;
