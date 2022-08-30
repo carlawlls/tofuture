@@ -1,7 +1,7 @@
 .banner {
   background: rgb(2,19,48);
   background: linear-gradient(90deg, rgba(2,19,48,1) 0%, rgba(17,47,82,1) 31%, rgba(155,191,212,1) 100%);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .banner-content {
@@ -28,6 +28,13 @@
 }
 
 */
+.banner-information {
+  text-transform: uppercase;
+  padding-right: 120px;
+  padding-bottom: 24px;
+  padding-top: 0px;
+  text-align: left;
+}
 
 .banner-h1 {
   margin: 0;
@@ -35,10 +42,6 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 88px;
   text-transform: uppercase;
-  padding-right: 120px;
-  padding-bottom: 24px;
-  padding-top: 0px;
-  text-align: left;
 }
 
 .searchbar .form-control {
@@ -47,6 +50,7 @@
 
 .trending {
   padding: 0 32px;
+  padding-bottom: 40px;
   margin-top: 32px;
 }
 
