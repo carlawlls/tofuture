@@ -2,18 +2,23 @@
   <h1 class="banner-h1"> <%= @issue.issue_name %></h1>
 </div>
 <div class="container">
-  <h2 class="page-header">News</h2>
-  <div class="news-cards">
-    <% @issue.news_stories.first(5).each do |news| %>
-      <div class="card-news">
-        <div class="card-news-head flex-shrink-0" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= news.image_url %>) ">
+  <div class="issue-info">
+    <div class="issue-explanation">
+      <p><%= @issue.explanation %></p>
+    </div>
+    <div class="news-cards">
+      <h1 class="news-header"> Recent News</h1>
+      <% @issue.news_stories.first(5).each do |news| %>
+        <div class="card-news">
+          <div class="card-news-head " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= news.image_url %>) ">
+          </div>
+          <div class="news-card-body">
+            <h1><%= news.company  %></h1>
+            <p><%= news.title %></p>
+            <%= link_to "Read more", news.url %>
+          </div>
         </div>
-        <div class="news-card-body d-flex flex-column ">
-          <h1><%= news.company  %></h1>
-          <p><%= news.title %></p>
-          <%= link_to "Read more", news.url %>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
