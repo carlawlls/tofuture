@@ -1,60 +1,59 @@
-.product-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
+table 			      {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 97%;
+  width: 100%;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 12px 12px 2px 1px rgb(218, 215, 215);
+  *               { position:relative }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .product-container{
-    grid-template-columns: 1fr;
+  td,th           { padding-left:8px}
+
+  thead tr        {
+    height:60px;
+    background:rgb(5, 40, 77);
+    font-size:16px;
+    color: white;
   }
-}
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .product-container{
-    grid-template-columns: 1fr;
+  tbody tr        { height:48px; border-bottom:1px solid #E3F1D5 ;
+    &:last-child  { border:0; }
+    padding-left: 20px;
   }
-}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .product-container{
-    grid-template-columns: 1fr 1fr;
-  }
-}
+ 	td,th 					{ text-align:left;
+		&.l 					{ text-align:right }
+		&.c 					{ text-align:center }
+		&.r 					{ text-align:center }
+	}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .product-container{
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .product-container{
-    grid-template-columns: 1fr 1fr 1fr;
+  td {
+    width: 1000px;
   }
 }
 
 .product {
-  overflow: hidden;
-  background: rgb(240, 240, 240);
-  width: 300px;
-  height: 300px;
-  -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
-  &:hover{
-    -webkit-transform: translate(0, -8px);
-    -moz-transform: translate(0, -8px);
-    -ms-transform: translate(0, -8px);
-    -o-transform: translate(0, -8px);
-    transform: translate(0, -8px);
-    box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
-    margin-bottom: 16px;
-  }
+  border-radius: 6px;
+}
+
+.er_score {
+  background-color: rgb(103, 145, 103);
+}
+
+.sr_score {
+  background-color: rgb(188, 141, 52);
+}
+
+.gr_score {
+  background-color: rgb(128, 8, 8);
+}
+
+.delete-button {
+  margin-left: 15px;
+ &:hover {
+  color: red;
+ }
 }
