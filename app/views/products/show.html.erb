@@ -2,28 +2,28 @@
   <%= render "shared/company" %>
 <% else %>
   <div class="product-show">
-    <div class="product-banner">
+    <div class="view-banner">
       <h1 class="banner-h1"><%= @product.name %> / <%= @product.ticker %></h1>
     </div>
-    <div class="product-show-buttons">
-      <a href="https://robinhood.com/us/en/" target="_blank" class="show-button">Buy</a>
-      <%= simple_form_for([@product, @compare_product]) do |f| %>
-        <%= f.submit "Compare", class: "show-button" %>
-      <% end %>
-      <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
-        <% if current_user  %>
-          <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
-            <%= link_to "", product_path(@product), data: {turbo_method: :toggle_favorite, turbo_confirm: "Added to favorites list"} %>
-            <i class="fa-solid fa-heart"></i>
-          <% end %>
-        <% else %>
-          <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
-            <i class="fa-solid fa-heart"></i>
+    <div class="container">
+      <div class="product-show-buttons">
+        <a href="https://robinhood.com/us/en/" target="_blank" class="show-button">Buy</a>
+        <%= simple_form_for([@product, @compare_product]) do |f| %>
+          <%= f.submit "Compare", class: "show-button" %>
+        <% end %>
+        <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
+          <% if current_user  %>
+            <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
+              <%= link_to "", product_path(@product), data: {turbo_method: :toggle_favorite, turbo_confirm: "Added to favorites list"} %>
+              <i class="fa-solid fa-heart"></i>
+            <% end %>
+          <% else %>
+            <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
+              <i class="fa-solid fa-heart"></i>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
-    </div>
-    <div class="container">
+      </div>
       <div class="product-info">
         <div class="esg-container" data-controller="scores">
           <div class="esg-rating">
@@ -62,6 +62,10 @@
         </div>
       </div>
     <% end %>
+    <div class="back-btn">
+      <%= link_to "Home", root_path, class: "show-button" %>
+      <%= link_to "Back", :back, class: "show-button" %>
+    </div>
   </div>
 </div>
 <!-- Modal -->

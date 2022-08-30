@@ -1,7 +1,7 @@
 <% if @issues.any? %>
-  <div class="container">
-    <div class="issue-cards">
-      <h2 class="page-header">Issues</h2>
+  <div class="issue-cards">
+    <h2 class="page-header">Issues</h2>
+    <div class="container">
       <div class="cards">
         <% @issues.each do |issue| %>
           <%= link_to issue_path(issue) do %>
@@ -51,5 +51,9 @@
         <% end %>
       </div>
     </div>
+  <% end %>
+  <div class="back-btn">
+    <%= link_to "Home", root_path, class: "show-button" %>
+    <%= link_to "Back", :back, class: "show-button" %>
   </div>
-<% end %>
+</div>
