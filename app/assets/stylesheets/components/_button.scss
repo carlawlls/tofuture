@@ -182,3 +182,19 @@
 .red-button {
  background-color: red;
 }
+
+
+.modal-btn {
+  background-color: rgb(15, 15, 15);;
+  color: white;
+  font-size: 10px;
+  border: 1px solid white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-top: 24px;
+  transition: 0.5s ease;
+}
+
+.modal-btn:hover {
+  background-color: #031532;;
+}

@@ -30,6 +30,9 @@
         <div class="esg-rating">
           <h2>ESG <br>
             RATINGS</h2>
+          <button type="button" class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Read more
+          </button>
         </div>
         <div class="esg-box">
           <h3>OVERALL</h3>
@@ -57,6 +60,23 @@
         <div class="description-card">
           <p id="description-text"><%= @product.description %></p>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">What are ESG scores?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Enivronmental, Social and Governance or ESG scores are a framework used by many companies to assess and understand a company's priorities as well as long term risks.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="show-button" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
