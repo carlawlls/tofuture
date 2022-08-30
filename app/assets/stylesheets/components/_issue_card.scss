@@ -5,6 +5,7 @@
   color: white;
   width: 275px;
 }
+
 .card-issue-head {
   position: relative;
   height: 165px;
@@ -25,4 +26,25 @@
   position: absolute;
   left: 90px;
   bottom: 5px;
+}
+
+.issue-info {
+  margin-top: 30px;
+  color: white;
+  opacity: 0.7;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.issue-explanation {
+  background-color: #031532;
+  color: white;
+  width: 700px;
+  height: 170px;
+  padding: 10px;
+}
+
+.issue-image {
+  margin-top: 30px;
 }
