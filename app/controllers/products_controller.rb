@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @compare_product = CompareProduct.new
     # if params[:query]
     #   @comparsion_product = Product.find(params[:query])
     # end
