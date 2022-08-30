@@ -1,30 +1,36 @@
-<h1>comparing products...</h1>
-<table>
-  <thead>
-    <tr>
-      <th>COMPANY</th>
-      <th>ESG SCORE (OVERALL)</th>
-      <th>ENVIRONMENT</th>
-      <th>SOCIAL</th>
-      <th>GOVERNANCE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @compare_products.each do |compare_product| %>
+<div class="container">
+  <h1>Comparing products...</h1>
+  <table>
+    <thead>
       <tr>
-        <div class="product">
-          <% product = compare_product.product %>
-          <td> <%= product.name %> / <%= product.ticker %>
-            <%= link_to compare_product_path(compare_product), data: {turbo_method: :delete} do %>
-              <i class="fa fa-trash delete-button" aria-hidden="true"></i>
-            <% end %>
-          </td>
-          <td> <%= product.esg_score %></td>
-          <td class="er_score">  <%= product.er_score %></td>
-          <td class="sr_score">  <%= product.sr_score %></td>
-          <td class="gr_score">  <%= product.gr_score %></td>
-        </div>
+        <th>COMPANY</th>
+        <th>ESG SCORE (OVERALL)</th>
+        <th>ENVIRONMENT</th>
+        <th>SOCIAL</th>
+        <th>GOVERNANCE</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @compare_products.each do |compare_product| %>
+        <tr>
+          <div class="product">
+            <% product = compare_product.product %>
+            <td> <%= product.name %> / <%= product.ticker %>
+              <%= link_to compare_product_path(compare_product), data: {turbo_method: :delete} do %>
+                <i class="fa fa-trash delete-button" aria-hidden="true"></i>
+              <% end %>
+            </td>
+            <td> <%= product.esg_score %></td>
+            <td class="er_score">  <%= product.er_score %></td>
+            <td class="sr_score">  <%= product.sr_score %></td>
+            <td class="gr_score">  <%= product.gr_score %></td>
+          </div>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="back-btn">
+    <%= link_to "Home", root_path, class: "show-button" %>
+    <%= link_to "Back", :back, class: "show-button" %>
+  </div>
+</div>

@@ -1,39 +1,44 @@
 <div class="view-banner">
   <h1 class="banner-h1">My favorites</h1>
 </div>
-<div class="favorites">
-  <div class="container">
-    <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5" data-controller="scroll-reveal">
-      <% @favorites.each do |product| %>
-        <%= link_to product_path(product) do %>
-          <div class="card-product reveal" data-scroll-reveal-target="item">
-            <div class="card-head">
-              <div class="back-text truncate">
-                <%= product.ticker %>
+<div class="container">
+  <div class="favorites">
+    <div class="container">
+      <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5" data-controller="scroll-reveal">
+        <% @favorites.each do |product| %>
+          <%= link_to product_path(product) do %>
+            <div class="card-product reveal" data-scroll-reveal-target="item">
+              <div class="card-head">
+                <div class="back-text truncate">
+                  <%= product.ticker %>
+                </div>
               </div>
-            </div>
-            <div class="card-body-product">
-              <div class="product-desc">
-                <h2 class="product-title truncate">
-                  <%= product.name %>
-                </h2>
-                <span class="product-caption">
-                </span>
-              </div>
-              <p> <%= product.sector %> </p>
-              <p><%= product.product_type %></p>
-              <div class="product-properties">
-                <% product.issue_list.each do |issue| %>
-                  <span class="badge truncate">
-                    <%= issue %>
+              <div class="card-body-product">
+                <div class="product-desc">
+                  <h2 class="product-title truncate">
+                    <%= product.name %>
+                  </h2>
+                  <span class="product-caption">
                   </span>
-                <% end %>
+                </div>
+                <p> <%= product.sector %> </p>
+                <p><%= product.product_type %></p>
+                <div class="product-properties">
+                  <% product.issue_list.each do |issue| %>
+                    <span class="badge truncate">
+                      <%= issue %>
+                    </span>
+                  <% end %>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
-  <%= link_to "Home", root_path, class: "show-button" %>
+  <div class="back-btn">
+    <%= link_to "Home", root_path, class: "show-button" %>
+    <%= link_to "Back", :back, class: "show-button" %>
+  </div>
 </div>
