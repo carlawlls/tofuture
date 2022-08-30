@@ -4,21 +4,24 @@
 <div class="container-liquid">
   <div class="issue-info">
     <div class="issue-explanation">
-      <h1 class="news-header"> About</h1>
-      <p class="explanation"><%= @issue.explanation %></p>
-      <h1 class="news-header"> Related Issues</h1>
-      <div class="row cards">
-        <% Issue.all.first(3).each do |issue| %>
-          <div class="card" style="width: 18rem;">
-            <img src="<%= issue.image_url %>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="issue-text">
-                <p class="card-text"> <%= issue.issue_name %></p>
-                <%= link_to "", issue_path(issue) %>
+      <div class="d-flex flex-column align-items-center">
+        <h1 class="news-header"> About</h1>
+        <p class="explanation"><%= @issue.explanation %></p>
+        <h1 class="news-header"> Related Issues</h1>
+        <div class="cards" >
+          <% Issue.all.sample(3).each do |issue| %>
+            <%= link_to issue_path(issue) do %>
+              <div class="issue-index-card" style="width: 220px; height 275px" >
+                <img src="<%= issue.image_url %>" class="issue-img" alt="...">
+                <div class="card-body" >
+                  <div class="issue-text">
+                    <p class="card-text"> <%= issue.issue_name %></p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        <% end %>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
     <div class="news-cards">
