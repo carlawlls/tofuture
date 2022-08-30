@@ -92,6 +92,7 @@ Product.create!(
   name: "Teapigs",
   description: "Teapigs is a UK-based tea company owned by Tata Global Beverages Ltd, founded in November 2006. They produce a wide range of teas, including black, green, oolong, white, rooibos, Herbal teas, and Matcha tea.",
   product_type: 0,
+  sector: "Wholesale/Retail",
   issue_list: ["Labor Standards", "Human Rights", "Employee Diversity"],
   web_url: 'https://www.teapigs.co.uk/'
 )
@@ -102,6 +103,7 @@ Product.create!(
   exchange: "",
   description: "Plamil is a pioneering ethical company, producing vegan, organic and Fairtrade products since the 1960's. It is an ethical leader in the food industry, and one the most ethical companies that Ethical Consumer rates and ranks in its product guides.",
   product_type: 0,
+  sector: "Wholesale/Retail",
   issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"],
   web_url: 'https://www.plamilfoods.co.uk/'
 )
