@@ -2,12 +2,12 @@
   margin: 40px;
 }
 
-.cards {
-  display: grid;
-  grid-gap: 40px;
+.issue-index-card .issue-img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover
 }
-
-.card {
+.issue-index-card {
   overflow: hidden;
   background: rgb(240, 240, 240);
   width: 500px;
@@ -37,6 +37,7 @@
   position: relative;
   color: black;
   text-decoration: none;
+  margin-top: 25px;
 }
 
 .issue-text::after{

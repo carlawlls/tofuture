@@ -2,17 +2,18 @@
   <div class="issues-title">
     <h2 class="page-header">Issues</h2>
   </div>
-  <div class="row cards">
+  <div class="cards">
     <% @issues.each do |issue| %>
-      <div class="card" style="width: 18rem;">
-        <img src="<%= issue.image_url %>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <div class="issue-text">
-            <p class="card-text"> <%= issue.issue_name %></p>
-            <%= link_to "", issue_path(issue) %>
+      <%= link_to issue_path(issue) do %>
+        <div class="issue-index-card" style="width: 18rem;">
+          <img src="<%= issue.image_url %>" class="issue-img" alt="...">
+          <div class="card-body">
+            <div class="issue-text">
+              <p class="card-text"> <%= issue.issue_name %></p>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
