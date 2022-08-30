@@ -10,5 +10,5 @@ application.register("hello", HelloController)
 import ScoresController from "./scores_controller"
 application.register("scores", ScoresController)
 
-import ScrollRevealController from "./scroll_reveal_controller"
-application.register("scroll-reveal", ScrollRevealController)
+import ScrollReveal from 'stimulus-scroll-reveal'
+application.register('scroll-reveal', ScrollReveal)
