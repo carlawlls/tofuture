@@ -92,3 +92,93 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+
+
+.show-button-mg {
+  margin-top: 45px;
+  margin-left: 30px;
+}
+
+.show-button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: rgb(230, 230, 230);
+  z-index: 1;
+  background: #212E35;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+
+.button-form{
+  display: flex;
+}
+
+ .show-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+
+ .show-button:hover {
+  color: #e8e8e8;
+ }
+
+ .show-button:hover::before {
+  width: 100%;
+ }
+
+.like-button {
+  color: #888;
+  font-size: 1.5em;
+  font-family: 'Heebo', sans-serif;
+  background-color: transparent;
+  border: 0.1em solid;
+  border-radius: 15px;
+  padding: 0.333em 1em 0.25em;
+  line-height: auto;
+  box-shadow: 0 0.25em 1em -0.25em;
+  cursor: pointer;
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out, transform 150ms ease-in-out;
+  outline: 0;
+  margin-top: 30px;
+  margin-left: 20px;
+  &:hover {
+    color: indianred;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.selected {
+    color: #FFF;
+    background-color: $red;
+    border-color: $red;
+  }
+
+  .heart-icon {
+    display: inline-block;
+    fill: currentColor;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 0.2em;
+  }
+}
+
+.red-button {
+ background-color: red;
+}
