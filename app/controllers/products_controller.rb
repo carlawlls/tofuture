@@ -17,9 +17,9 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    if params[:query]
-      @comparsion_product = Product.find(params[:query])
-    end
+    # if params[:query]
+    #   @comparsion_product = Product.find(params[:query])
+    # end
   end
 
   def toggle_favorite

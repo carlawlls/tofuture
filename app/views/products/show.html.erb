@@ -13,6 +13,7 @@
     <% end %>
   <% end %>
   <div class="show-button-mg"><a href="https://robinhood.com/us/en/" class="show-button">Buy</a></div>
+  <%= link_to "compare", compare_products_path(:p1=> @product.id) %>
 </div>
 <div class="description-card">
   <ul id="description-text"><%= @product.description %></ul>
@@ -129,4 +130,3 @@
   }, duration);
   });
 </script>
-<%=  %>
