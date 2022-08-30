@@ -1,10 +1,25 @@
 <div class="index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%="http://source.unsplash.com/featured/?pollution&#{rand(10000)}" %>)">
   <h1 class="banner-h1"> <%= @issue.issue_name %></h1>
 </div>
-<div class="container">
+<div class="container-liquid">
   <div class="issue-info">
     <div class="issue-explanation">
-      <p><%= @issue.explanation %></p>
+      <h1 class="news-header"> About</h1>
+      <p class="explanation"><%= @issue.explanation %></p>
+      <h1 class="news-header"> Related Issues</h1>
+      <div class="row cards">
+        <% Issue.all.first(3).each do |issue| %>
+          <div class="card" style="width: 18rem;">
+            <img src="<%= issue.image_url %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="issue-text">
+                <p class="card-text"> <%= issue.issue_name %></p>
+                <%= link_to "", issue_path(issue) %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
     <div class="news-cards">
       <h1 class="news-header"> Recent News</h1>
