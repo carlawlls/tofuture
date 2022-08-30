@@ -17,6 +17,9 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    # if params[:query]
+    #   @comparsion_product = Product.find(params[:query])
+    # end
   end
 
   def toggle_favorite
@@ -28,6 +31,7 @@ class ProductsController < ApplicationController
     end
     redirect_to product_path(@product)
   end
+
 
   def skip_pundit?
     devise_controller? || params[:controller]

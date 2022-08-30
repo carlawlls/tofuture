@@ -1,0 +1,9 @@
+<%= @compare_product.name %>
+<h1>Add a product to compare stocks</h1>
+<% @compare_products.each do |product| %>
+  <div class="product">
+    <ul><%= product.name %></ul>
+    <ul><%= product.ticker %></ul>
+    <ul><%= product.esg_score %></ul>
+  </div>
+<% end %>

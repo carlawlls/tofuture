@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :products, only: [:index, :show] do
+    resources :compare_products, only: [:create]
     member do
-    post "toggle_favorite", to: "products#toggle_favorite", as: :toggle_favorite
+      post "toggle_favorite", to: "products#toggle_favorite", as: :toggle_favorite
     end
   end
   resources :issues, only: [:index, :show]
@@ -13,4 +14,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/favorites", to: "users#favorites", as: :favorites
+
+resources :compare_products, only: [:destroy, :index, :show]
 end
