@@ -5,8 +5,7 @@ export default class extends Controller {
   static targets = ["num"];
 
   connect() {
-    console.log("gee");
-    this.element.textContent = "Hello World!";
+    this.element.textContent = "";
     anychart.onDocumentReady(function () {
       anychart.data.loadCsvFile("/AAPL.csv", function (data) {
         // create data table on loaded data
@@ -59,6 +58,6 @@ export default class extends Controller {
         chart.draw();
       });
     });
-    console.log("Hello world");
+    console.log("");
   }
 }

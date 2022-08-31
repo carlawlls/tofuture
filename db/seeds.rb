@@ -343,10 +343,13 @@ end
 
 # Limit on the news API
 # newsapi = News.new("1eaedf572be74827bce43637e0c790c8")
-# # bill 2123f459a20a43a48a4ae71a94917dda
-# # josh 1eaedf572be74827bce43637e0c790c8
+
+
+# bill 2123f459a20a43a48a4ae71a94917dda
+# josh 1eaedf572be74827bce43637e0c790c8
+
 # Issue.all.each do |issue|
-#   issue_news = newsapi.get_everything(q: issue.issue_name, from: "2022-08-01&to=2022-08-29", sortBy: "popularity")
+#   issue_news = newsapi.get_top_headlines(q: issue.issue_name, from: "2022-08-01&to=2022-08-29", sortBy: "popularity")
 #   issue_news.each do |news|
 #     NewsStory.create!(
 #       author: news.author,
