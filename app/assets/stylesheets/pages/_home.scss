@@ -3,36 +3,29 @@
   background: linear-gradient(90deg, rgba(2,19,48,1) 0%, rgba(17,47,82,1) 31%, rgba(155,191,212,1) 100%);
   min-height: 100vh;
 }
-
 .banner-content {
-  display: flex;
-  padding-top: 48px;
-  align-items: center;
-  justify-content: center;
-}
-/*
-.banner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner-content {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 90vh;
+  justify-content: center;
 }
 
-*/
-.banner-information {
+.banner-top {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 260px;
+}
+
+@media (max-width: 800px) {
+  .banner-top {
+    flex-direction: column;
+  }
+}
+
+.banner-text {
   text-transform: uppercase;
-  padding-right: 120px;
-  padding-bottom: 24px;
-  padding-top: 0px;
   text-align: left;
 }
 
@@ -44,14 +37,12 @@
   text-transform: uppercase;
 }
 
-.searchbar .form-control {
-  width: 260px;
+.carousel {
+  margin-top: 32px;
 }
 
 .trending {
-  padding: 0 32px;
-  padding-bottom: 40px;
-  margin-top: 32px;
+  margin: 40px 0;
 }
 
 .trending h2 {
