@@ -30,30 +30,35 @@
         <%= image_tag ("rainforest.jpg"), alt: "invest image", class: "company-images-grid" %>
       </div>
     </div>
-    <div class="stock-info">
-      <div class="container" style="height: 500px; width: 500px"></div>
-      <div class="description-card">
-        <p id="description-text"><%= @product.description %></p>
+    <div class="company-info-flex d-flex flex-column">
+      <div class="stock-info">
+        <div class="container" style="height: 500px; width: 500px"></div>
+        <div class="description-card">
+          <p id="description-text"><%= @product.description %></p>
+        </div>
+      </div>
+      <div>
+        <iframe class="company-video" width="490" height="275" src="https://www.youtube.com/embed/9_oGPywjwo8" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
   <div class="container" data-controller="scroll-reveal">
     <div class="about-us-section reveal" data-scroll-reveal-target="item">
       <div class="about-us-img-div">
-        <%= image_tag ("undraw_environment_iaus.png"), alt: "invest image", class: "about-us-img" %>
+        <%= image_tag ("pickers.jpg"), alt: "invest image", class: "about-us-img" %>
       </div>
       <div class="about-us-information">
-        <h2>About us</h2>
-        <p>At toFuture we use ESG scores to help find you the most ethically sustainable investment opportuinties. </p>
+        <h2>About <%= @product.name %></h2>
+        <p>Teapig's focus is on real, quality tea, sourced sustainably, in packaging that’s better for the environment. They give back to the communities that source their tea. Teapigs is very proud to be a B Corp certified.</p>
       </div>
     </div>
     <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
       <div class="about-us-information">
-        <h2>What are ESG Scores?</h2>
-        <p>Enivronmental, Social and Governance or ESG scores are a framework used by many companies to assess and understand a company's priorities as well as long term risks.</p>
+        <h2>Certified Plastic Free</h2>
+        <p>Teapigs are the first tea company awarded the Plastic-Free trustmark from A Plastic Planet. This certifies packaging which is free of conventional plastic derived from fossil fuels. Our 15s and 50s packs of tea temples, our tins of tea and matcha tins are certified plastic-free. You can read more about this here.</p>
       </div>
       <div class="about-us-img-div">
-        <%= image_tag ("undraw_The_world_is_mine_re_j5cr.png"), alt: "invest image", class: "about-us-img" %>
+        <%= image_tag ("product_content.jpg"), alt: "invest image", class: "about-us-img" %>
       </div>
     </div>
     <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
