@@ -21,6 +21,6 @@ export default class extends Controller {
         }
       }, duration);
     });
-    console.log("Hello world");
+    console.log("");
   }
 }

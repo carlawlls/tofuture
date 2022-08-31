@@ -5,7 +5,7 @@ class CompareProductsController < ApplicationController
   @new_compare_product.product = @product
   @new_compare_product.user = current_user
   @new_compare_product.save
-  redirect_to compare_products_path
+  redirect_to product_path(@product)
  end
 
 
