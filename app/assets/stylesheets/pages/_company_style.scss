@@ -11,6 +11,19 @@
   padding: 0 4px;
 }
 
+.company-description-card {
+  min-width: 400px;
+  height: fit-content;
+  text-align: start;
+  font-size: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
+}
+
+.company-description-text {
+  padding: 32px;
+}
 
 
 .column-company img {
@@ -19,16 +32,53 @@
   width: 100%;
 }
 
+.company-grid {
+  display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 16px;
+
+}
+.company-info-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
 
 .company-video {
   margin-top: -10px;
 }
 
+
+.company-about-us-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.company-about-us-img-div {
+  width: 500px;
+  height: auto;
+  text-align: center;
+
+}
+
+.company-about-us-img {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+.company-about-us-information {
+  padding: 50px;
+}
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column-company {
-    flex: 50%;
-    max-width: 50%;
+    flex: 100%;
+    max-width: 100%;
   }
 }
 
