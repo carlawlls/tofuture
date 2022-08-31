@@ -19,40 +19,51 @@
       </div>
     </div>
   </div>
-  <div class="product-info">
-    <div class="esg-container" data-controller="scores">
-      <div class="esg-rating">
-        <h2>ESG <br>
-          RATINGS</h2>
-        <button type="button" class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Read more
-        </button>
+  <div class="container d-flex justify-content-between">
+    <div class="row-company">
+      <div class="column-company d-flex">
+        <%= image_tag ("certified_b_coporation.jpg"), alt: "invest image", class: "company-images-grid" %>
+        <%= image_tag ("plastic_free.jpg"), alt: "invest image", class: "company-images-grid" %>
       </div>
-      <div class="esg-box">
-        <h3>OVERALL</h3>
-        <span class="num">N/A</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
-      </div>
-      <div class="esg-box-environment">
-        <h3>ENVIRONMENT</h3>
-        <span class="num">N/A</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
-      </div>
-      <div class="esg-box-social">
-        <h3>SOCIAL</h3>
-        <span class="num">N/A</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
-      </div>
-      <div class="esg-box-governance">
-        <h3>GOVERNANCE</h3>
-        <span class="num">N/A</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
+      <div class="column-company d-flex">
+        <%= image_tag ("susinstable_restaurant_association.jpg"), alt: "invest image", class: "company-images-grid" %>
+        <%= image_tag ("rainforest.jpg"), alt: "invest image", class: "company-images-grid" %>
       </div>
     </div>
     <div class="stock-info">
-      <div id="container" style="height: 500px; width: 500px"></div>
+      <div class="container" style="height: 500px; width: 500px"></div>
       <div class="description-card">
         <p id="description-text"><%= @product.description %></p>
       </div>
     </div>
   </div>
+  <div class="container" data-controller="scroll-reveal">
+    <div class="about-us-section reveal" data-scroll-reveal-target="item">
+      <div class="about-us-img-div">
+        <%= image_tag ("undraw_environment_iaus.png"), alt: "invest image", class: "about-us-img" %>
+      </div>
+      <div class="about-us-information">
+        <h2>About us</h2>
+        <p>At toFuture we use ESG scores to help find you the most ethically sustainable investment opportuinties. </p>
+      </div>
+    </div>
+    <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+      <div class="about-us-information">
+        <h2>What are ESG Scores?</h2>
+        <p>Enivronmental, Social and Governance or ESG scores are a framework used by many companies to assess and understand a company's priorities as well as long term risks.</p>
+      </div>
+      <div class="about-us-img-div">
+        <%= image_tag ("undraw_The_world_is_mine_re_j5cr.png"), alt: "invest image", class: "about-us-img" %>
+      </div>
+    </div>
+    <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+      <div class="about-us-img-div">
+        <%= image_tag ("undraw_Tree.png"), alt: "invest image", class: "about-us-img" %>
+      </div>
+      <div class="about-us-information" >
+        <h2>Why sustainable investment?</h2>
+        <p>Sustainable investing is important because it can help contribute to a better world. Investors can put their capital to work in a way that positively influences society so that we move towards a more sustainable future.</p>
+      </div>
+    </div>
+  </div>
+</div>
