@@ -11,6 +11,25 @@
   padding: 0 4px;
 }
 
+.show-button-mg23{
+  margin-top: 11px;
+  margin-left: 0px;
+}
+
+.show-button {
+  padding: 10px 24px;
+  border: unset;
+  border-radius: 10px;
+  color: rgb(230, 230, 230);
+  background: #02162a;
+  position: relative;
+  font-size: 16px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+
 .company-description-card {
   min-width: 400px;
   height: fit-content;
