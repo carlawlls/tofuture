@@ -7,33 +7,11 @@
       <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5" data-controller="scroll-reveal">
         <% @favorites.each do |product| %>
           <%= link_to product_path(product) do %>
-            <div class="card-product reveal" data-scroll-reveal-target="item">
-              <div class="card-head">
-                <div class="back-text truncate">
-                  <%= product.ticker %>
-                </div>
-              </div>
-              <div class="card-body-product">
-                <div class="product-desc">
-                  <h2 class="product-title truncate">
-                    <%= product.name %>
-                  </h2>
-                  <span class="product-caption">
-                  </span>
-                </div>
-                <p> <%= product.sector %> </p>
-                <p><%= product.product_type %></p>
-                <div class="product-properties">
-                  <% product.issue_list.each do |issue| %>
-                    <span class="badge truncate">
-                      <%= issue %>
-                    </span>
-                  <% end %>
-                  <%= link_to  product_favorites_path(product), data: {turbo_method: :delete} do %>
-                    <i class="fa fa-trash delete-button" aria-hidden="true"></i>
-                  <% end %>
-                </div>
-              </div>
+            <div class="position-relative">
+              <%= render "shared/card_product", product: product %>
+              <%= link_to  product_favorites_path(product), style: "top: 5px; right: 8px;", class: "position-absolute", data: {turbo_method: :delete} do %>
+                <i class="fa fa-trash delete-button" aria-hidden="true"></i>
+              <% end %>
             </div>
           <% end %>
         <% end %>
