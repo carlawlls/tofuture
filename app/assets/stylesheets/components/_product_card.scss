@@ -9,26 +9,28 @@
   height: fit-content;
 }
 
-.product-title h2 {
-  padding: 20px 20px 5px 20px;
-  display: block;
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.issue-icons {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px 0 4px 0;
 }
 
-.card-head {
-  position: relative;
-  height: 100px;
-  background: rgb(2, 19, 48);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 19, 48, 1) 0%,
-    rgba(17, 47, 82, 1) 31%,
-    rgba(155, 191, 212, 1) 100%
-  );
-  border-radius: 25px 25px 0 0;
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.ticker-h1 {
+  text-align: start;
+  padding: 10px 0;
+  font-weight: 300;
+}
+
+.esg-h1 {
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'Oswald';
 }
 
 .truncate {
@@ -42,13 +44,7 @@
   color: #fff;
 }
 
-.product-detail h2 {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-}
+
 
 .back-text {
   display: inline-block;

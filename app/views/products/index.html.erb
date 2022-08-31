@@ -29,20 +29,24 @@
           <%= link_to product_path(product) do %>
             <div class="card-product reveal" data-scroll-reveal-target="item">
               <div class="card-body-product">
-                <div class="product-desc">
-                  <h2 class="product-title truncate">
-                    <%= product.name %> / <%= product.ticker %>
-                  </h2>
-                  <span class="product-caption">
-                  </span>
+                <div class="card-top">
+                  <div>
+                    <h1 class="ticker-h1"> <%= product.ticker %> </h1>
+                  </div>
+                  <div>
+                    <h1 class="esg-h1"> <%= product.esg_score %> </h1>
+                  </div>
                 </div>
+                <h2 class="product-title truncate">
+                  <%= product.name %>
+                </h2>
                 <p> <%= product.sector %> </p>
                 <p><%= product.product_type %></p>
-                <div class="product-properties">
-                  <% product.issue_list.each do |issue| %>
-                    <span class="badge truncate">
-                      <%= issue %>
-                    </span>
+                <div class="issue-icons">
+                  <% product.issues.each do |issue| %>
+                    <% if issue.icon %>
+                      <img src="<%= asset_path issue.icon %>"/>
+                    <% end %>
                   <% end %>
                 </div>
               </div>
