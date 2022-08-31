@@ -3,9 +3,8 @@ class UsersController < ApplicationController
     @favorites = current_user.favorited_by_type('Product')
   end
 
-  def delete_favorites
-    @favorites = current_user.favorited_by_type('Product')
-    @favorites.remove_favorite
-    redirect_to favorites_path
-  end
 end
+
+# @compare_product = CompareProduct.find(params[:id])
+# @compare_product.destroy
+# redirect_to compare_products_pathv
