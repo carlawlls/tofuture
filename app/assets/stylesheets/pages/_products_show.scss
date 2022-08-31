@@ -1,14 +1,19 @@
-.product-info {
+/*.product-info {
   background-color: #e5e5e5;
   padding: 56px 40px;
-  width: fit-content;
-}
+}*/
 
 .stock-info {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
   margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .stock-info {
+    flex-direction: column;
+  }
 }
 
 .product-show-buttons {
@@ -29,7 +34,7 @@ body {
 }
 
 .description-card {
-  width: 400px;
+  min-width: 400px;
   height: fit-content;
   text-align: start;
   font-size: 20px;

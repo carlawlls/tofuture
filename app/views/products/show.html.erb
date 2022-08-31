@@ -1,73 +1,71 @@
- <% if @product.product_type == "Company"  %>
+<% if @product.product_type == "Company"  %>
   <%= render "shared/company" %>
 <% else %>
-  <div class="product-show">
-    <div class="view-banner">
-      <h1 class="banner-h1"><%= @product.name %> / <%= @product.ticker %></h1>
-    </div>
-    <div class="container">
-      <div class="product-show-buttons">
-        <a href="https://robinhood.com/us/en/" target="_blank" class="show-button">Buy</a>
-        <% if CompareProduct.where(product: @product).empty? %>
-          <%= simple_form_for([@product, @compare_product]) do |f| %>
-            <%= f.submit "Compare", class: "show-button" %>
+
+  <div class="view-banner">
+    <h1 class="banner-h1"><%= @product.name %> / <%= @product.ticker %></h1>
+  </div>
+  <div class="container">
+    <div class="product-show-buttons">
+      <a href="https://robinhood.com/us/en/" target="_blank" class="show-button">Buy</a>
+           <% if CompareProduct.where(product: @product).empty? %>
+      <%= simple_form_for([@product, @compare_product]) do |f| %>
+        <%= f.submit "Compare", class: "show-button" %>
+      <% end %>
+          <% end %>
+      <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
+        <% if current_user  %>
+          <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
+            <%= link_to "", product_path(@product), data: {turbo_method: :toggle_favorite, turbo_confirm: "Added to favorites list"} %>
+            <i class="fa-solid fa-heart"></i>
+          <% end %>
+        <% else %>
+          <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
+            <i class="fa-solid fa-heart"></i>
+
           <% end %>
         <% end %>
-        <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
-          <% if current_user  %>
-            <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
-              <%= link_to "", product_path(@product), data: {turbo_method: :toggle_favorite, turbo_confirm: "Added to favorites list"} %>
-              <i class="fa-solid fa-heart"></i>
-            <% end %>
-          <% else %>
-            <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
-              <i class="fa-solid fa-heart"></i>
-            <% end %>
-          <% end %>
-        <% end %>
-      </div>
-      <div class="product-info">
-        <div class="esg-container" data-controller="scores">
-          <div class="esg-rating">
-            <h2>ESG <br>
-              RATINGS</h2>
-            <button type="button" class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Read more
-            </button>
-          </div>
-          <div class="esg-box">
-            <h3>OVERALL</h3>
-            <span class="num" data-scores-target="num" data-val="<%= @product.esg_score %>">000</span>
-            <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
-          </div>
-          <div class="esg-box-environment">
-            <h3>ENVIRONMENT</h3>
-            <span class="num" data-scores-target="num" data-val="<%= @product.er_score %>">000</span>
-            <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
-          </div>
-          <div class="esg-box-social">
-            <h3>SOCIAL</h3>
-            <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
-            <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
-          </div>
-          <div class="esg-box-governance">
-            <h3>GOVERNANCE</h3>
-            <span class="num" data-scores-target="num" data-val="<%= @product.gr_score %> ">000</span>
-            <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
-          </div>
-        </div>
-        <div class="stock-info">
-          <div id="container" style="height: 500px; width: 500px"></div>
-          <div class="description-card">
-            <p id="description-text"><%= @product.description %></p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    <div class="back-btn">
-      <%= link_to "Home", root_path, class: "show-button" %>
-      <%= link_to "Back", :back, class: "show-button" %>
+      <% end %>
     </div>
+    <div class="esg-container" data-controller="scores">
+      <div class="esg-rating">
+        <h2>ESG <br>
+          RATINGS</h2>
+        <button type="button" class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Read more
+        </button>
+      </div>
+      <div class="esg-box">
+        <h3>OVERALL</h3>
+        <span class="num" data-scores-target="num" data-val="<%= @product.esg_score %>">000</span>
+        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
+      </div>
+      <div class="esg-box">
+        <h3>ENVIRONMENT</h3>
+        <span class="num" data-scores-target="num" data-val="<%= @product.er_score %>">000</span>
+        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
+      </div>
+      <div class="esg-box">
+        <h3>SOCIAL</h3>
+        <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
+        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
+      </div>
+      <div class="esg-box">
+        <h3>GOVERNANCE</h3>
+        <span class="num" data-scores-target="num" data-val="<%= @product.gr_score %> ">000</span>
+        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
+      </div>
+    </div>
+    <div class="stock-info">
+      <div id="container" style="height: 500px; min-width: 500px"></div>
+      <div class="description-card">
+        <p id="description-text"><%= @product.description %></p>
+      </div>
+    </div>
+  <% end %>
+  <div class="back-btn">
+    <%= link_to "Home", root_path, class: "show-button" %>
+    <%= link_to "Back", :back, class: "show-button" %>
   </div>
 </div>
 <!-- Modal -->
