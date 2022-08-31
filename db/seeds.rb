@@ -102,7 +102,35 @@ Product.create!(
   youtube_url: '9_oGPywjwo8',
   company_desc_1: "Teapig's focus is on real, quality tea, sourced sustainably, in packaging that’s better for the environment. They give back to the communities that source their tea. Teapigs is very proud to be a B Corp certified.",
   company_desc_2: "Teapigs is the first tea company awarded the Plastic-Free trustmark from A Plastic Planet. This certifies packaging which is free of conventional plastic derived from fossil fuels. Our 15s and 50s packs of tea temples, our tins of tea and matcha tins are certified plastic-free.",
-  company_desc_3: "Teapigs is proud to be a certified B Corp; joining a wonderful global community committed to using business as a force for good. B Corp is about purpose, and the overall positive impact of a company. Rather than focusing on a product, B Corp analyse a company’s impact on its workers, customers, community, and environment. To become B Corp certified, companies are assessed and audited, and have to meet the highest standards of social and environmental performance, accountability, and transparency. "
+  company_desc_3: "Teapigs is proud to be a certified B Corp; joining a wonderful global community committed to using business as a force for good. B Corp is about purpose, and the overall positive impact of a company. Rather than focusing on a product, B Corp analyse a company’s impact on its workers, customers, community, and environment. To become B Corp certified, companies are assessed and audited, and have to meet the highest standards of social and environmental performance, accountability, and transparency. ",
+  img_url_1: "pickers.jpg",
+  img_url_2: "product_content.jpg",
+  img_url_3: "donation.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "rainforest.jpg",
+  img_grid_3: "plastic_free.jpg",
+  img_grid_4: "susinstable_restaurant_association.jpg"
+)
+
+Product.create!(
+  ticker: "",
+  name: "Gorongosa",
+  description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
+  product_type: 0,
+  sector: "Wholesale/Retail",
+  issue_list: ["Labor Standards", "Human Rights", "Deforestation"],
+  web_url: 'https://gorongosa.org/coffee/',
+  youtube_url: 'iT7yHG01_UI',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, we teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "plastic_free.jpg",
+  img_grid_4: "susinstable_restaurant_association.jpg"
 )
 
 Product.create!(
@@ -314,11 +342,14 @@ Product.all.each do |product|
 end
 
 # Limit on the news API
-# newsapi = News.new("2123f459a20a43a48a4ae71a94917dda")
+# newsapi = News.new("1eaedf572be74827bce43637e0c790c8")
+
+
 # bill 2123f459a20a43a48a4ae71a94917dda
 # josh 1eaedf572be74827bce43637e0c790c8
+
 # Issue.all.each do |issue|
-#   issue_news = newsapi.get_everything(q: issue.issue_name, from: "2022-08-01&to=2022-08-29", sortBy: "popularity")
+#   issue_news = newsapi.get_top_headlines(q: issue.issue_name, from: "2022-08-01&to=2022-08-29", sortBy: "popularity")
 #   issue_news.each do |news|
 #     NewsStory.create!(
 #       author: news.author,
