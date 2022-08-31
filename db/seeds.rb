@@ -311,13 +311,3 @@ User.create!(
 # end
 
 puts "FINISHED! BOY!"
-
-<div class="row-company">
-      <div class="column-company d-flex">
-        <%= image_tag ("plastic_free.jpg"), alt: "invest image", class: "company-images-grid" %>
-      </div>
-      <div class="column-company d-flex">
-        <%= image_tag ("susinstable_restaurant_association.jpg"), alt: "invest image", class: "company-images-grid" %>
-        <%= image_tag ("rainforest.jpg"), alt: "invest image", class: "company-images-grid" %>
-      </div>
-    </div>
