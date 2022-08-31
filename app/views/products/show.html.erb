@@ -8,8 +8,10 @@
     <div class="container">
       <div class="product-show-buttons">
         <a href="https://robinhood.com/us/en/" target="_blank" class="show-button">Buy</a>
-        <%= simple_form_for([@product, @compare_product]) do |f| %>
-          <%= f.submit "Compare", class: "show-button" %>
+        <% if CompareProduct.where(product: @product).empty? %>
+          <%= simple_form_for([@product, @compare_product]) do |f| %>
+            <%= f.submit "Compare", class: "show-button" %>
+          <% end %>
         <% end %>
         <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
           <% if current_user  %>

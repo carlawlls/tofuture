@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container" data-controller="compare-products">
   <h1>Comparing products...</h1>
-  <table>
+  <table class="sortable">
     <thead>
-      <tr>
-        <th>COMPANY</th>
-        <th>ESG SCORE (OVERALL)</th>
-        <th>ENVIRONMENT</th>
-        <th>SOCIAL</th>
-        <th>GOVERNANCE</th>
+      <tr class="title">
+        <th><%=  "COMPANY" + '<i class="fa-solid fa-sort-down"></i>'.html_safe %> </th>
+        <th><%= "ESG SCORE (OVERALL)" + '<i class="fa-solid fa-sort-down"></i>'.html_safe %></th>
+        <th><%= "ENVIRONMENT" + '<i class="fa-solid fa-sort-down"></i>'.html_safe %></th>
+        <th><%= "SOCIAL" + '<i class="fa-solid fa-sort-down"></i>'.html_safe %></th>
+        <th><%= "GOVERNANCE" + '<i class="fa-solid fa-sort-down"></i>'.html_safe %></th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
                 <i class="fa fa-trash delete-button" aria-hidden="true"></i>
               <% end %>
             </td>
-            <td> <%= product.esg_score %></td>
+            <td class="esg_score"> <%= product.esg_score %></td>
             <td class="er_score">  <%= product.er_score %></td>
             <td class="sr_score">  <%= product.sr_score %></td>
             <td class="gr_score">  <%= product.gr_score %></td>
