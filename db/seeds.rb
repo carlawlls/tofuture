@@ -94,7 +94,11 @@ Product.create!(
   product_type: 0,
   sector: "Wholesale/Retail",
   issue_list: ["Labor Standards", "Human Rights", "Employee Diversity"],
-  web_url: 'https://www.teapigs.co.uk/'
+  web_url: 'https://www.teapigs.co.uk/',
+  youtube_url: '9_oGPywjwo8',
+  company_desc_1: "Teapig's focus is on real, quality tea, sourced sustainably, in packaging that’s better for the environment. They give back to the communities that source their tea. Teapigs is very proud to be a B Corp certified.",
+  company_desc_2: "Teapigs is the first tea company awarded the Plastic-Free trustmark from A Plastic Planet. This certifies packaging which is free of conventional plastic derived from fossil fuels. Our 15s and 50s packs of tea temples, our tins of tea and matcha tins are certified plastic-free.",
+  company_desc_3: "Teapigs is proud to be a certified B Corp; joining a wonderful global community committed to using business as a force for good. B Corp is about purpose, and the overall positive impact of a company. Rather than focusing on a product, B Corp analyse a company’s impact on its workers, customers, community, and environment. To become B Corp certified, companies are assessed and audited, and have to meet the highest standards of social and environmental performance, accountability, and transparency. "
 )
 
 Product.create!(
@@ -263,7 +267,6 @@ Issue.create!(
   image_url: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg"
 )
 
-
 User.create!(
   email: "billcook8122@gmail.com",
   password: "123123"
@@ -287,24 +290,34 @@ User.create!(
 
 
 # Limit on the news API
-newsapi = News.new("2123f459a20a43a48a4ae71a94917dda")
+# newsapi = News.new("2123f459a20a43a48a4ae71a94917dda")
 # bill 2123f459a20a43a48a4ae71a94917dda
 # josh 1eaedf572be74827bce43637e0c790c8
-Issue.all.each do |issue|
-  issue_news = newsapi.get_everything(q: issue.issue_name, from: "2022-08-01&to=2022-08-29", sortBy: "popularity")
-  issue_news.each do |news|
-    NewsStory.create!(
-      author: news.author,
-      company: news.name,
-      description: news.description,
-      content: news.content,
-      url: news.url,
-      image_url: news.urlToImage,
-      title: news.title,
-      publishing_time: news.publishedAt,
-      issue: issue
-    )
-  end
-end
+# Issue.all.each do |issue|
+#   issue_news = newsapi.get_everything(q: issue.issue_name, from: "2022-08-01&to=2022-08-29", sortBy: "popularity")
+#   issue_news.each do |news|
+#     NewsStory.create!(
+#       author: news.author,
+#       company: news.name,
+#       description: news.description,
+#       content: news.content,
+#       url: news.url,
+#       image_url: news.urlToImage,
+#       title: news.title,
+#       publishing_time: news.publishedAt,
+#       issue: issue
+#     )
+#   end
+# end
 
 puts "FINISHED! BOY!"
+
+<div class="row-company">
+      <div class="column-company d-flex">
+        <%= image_tag ("plastic_free.jpg"), alt: "invest image", class: "company-images-grid" %>
+      </div>
+      <div class="column-company d-flex">
+        <%= image_tag ("susinstable_restaurant_association.jpg"), alt: "invest image", class: "company-images-grid" %>
+        <%= image_tag ("rainforest.jpg"), alt: "invest image", class: "company-images-grid" %>
+      </div>
+    </div>

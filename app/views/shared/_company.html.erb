@@ -22,19 +22,23 @@
     </div>
   </div>
   <div class="container company-grid">
-    <div class="row-company">
-      <div class="column-company d-flex">
-        <%= image_tag ("certified_b_coporation.jpg"), alt: "invest image", class: "company-images-grid" %>
-        <%= image_tag ("plastic_free.jpg"), alt: "invest image", class: "company-images-grid" %>
+    <div class="certifications-container">
+      <div class="company-images-grid company-images-grid-1">
+        <%= image_tag ("certified_b_coporation.jpg"), alt: "invest image"%>
       </div>
-      <div class="column-company d-flex">
-        <%= image_tag ("susinstable_restaurant_association.jpg"), alt: "invest image", class: "company-images-grid" %>
-        <%= image_tag ("rainforest.jpg"), alt: "invest image", class: "company-images-grid" %>
+      <div class="company-images-grid company-images-grid-2">
+        <%= image_tag ("rainforest.jpg"), alt: "invest image"%>
+      </div>
+      <div class="company-images-grid company-images-grid-3">
+        <%= image_tag ("plastic_free.jpg"), alt: "invest image"%>
+      </div>
+      <div class="company-images-grid company-images-grid-4">
+        <%= image_tag ("susinstable_restaurant_association.jpg"), alt: "invest image"%>
       </div>
     </div>
     <div class="company-info-flex">
       <div>
-        <iframe class="company-video" width="490" height="275" src="https://www.youtube.com/embed/9_oGPywjwo8?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allowfullscreen autoplay="autoplay" loop="loop" ></iframe>
+        <iframe class="company-video" width="490" height="275" src="https://www.youtube.com/embed/<%= @product.youtube_url%>?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allowfullscreen autoplay="autoplay" loop="loop" ></iframe>
       </div>
       <div class="stock-info">
         <div class="company-description-card">
@@ -50,13 +54,13 @@
       </div>
       <div class="company-about-us-information">
         <h2>About <%= @product.name %></h2>
-        <p>Teapig's focus is on real, quality tea, sourced sustainably, in packaging that’s better for the environment. They give back to the communities that source their tea. Teapigs is very proud to be a B Corp certified.</p>
+        <p><%= @product.company_desc_1 %></p>
       </div>
     </div>
     <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
       <div class="company-about-us-information">
         <h2>Certified Plastic Free</h2>
-        <p>Teapigs are the first tea company awarded the Plastic-Free trustmark from A Plastic Planet. This certifies packaging which is free of conventional plastic derived from fossil fuels. Our 15s and 50s packs of tea temples, our tins of tea and matcha tins are certified plastic-free. You can read more about this here.</p>
+        <p><%= @product.company_desc_2 %></p>
       </div>
       <div class="company-about-us-img-div">
         <%= image_tag ("product_content.jpg"), alt: "invest image", class: "about-us-img" %>
@@ -64,11 +68,11 @@
     </div>
     <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
       <div class="company-about-us-img-div">
-        <%= image_tag ("undraw_Tree.png"), alt: "invest image", class: "about-us-img" %>
+        <%= image_tag ("donation.jpg"), alt: "invest image", class: "about-us-img" %>
       </div>
       <div class="company-about-us-information" >
         <h2>Why sustainable investment?</h2>
-        <p>Sustainable investing is important because it can help contribute to a better world. Investors can put their capital to work in a way that positively influences society so that we move towards a more sustainable future.</p>
+        <p><%= @product.company_desc_3 %></p>
       </div>
     </div>
   </div>
