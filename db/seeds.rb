@@ -128,7 +128,7 @@ Product.create!(
   img_url_2: "project.jpg",
   img_url_3: "schools.jpg",
   img_grid_1: "certified_b_coporation.jpg",
-  img_grid_2: "direct_trade_logo.jpeg",
+  img_grid_2: "direct_trade_logo.png",
   img_grid_3: "plastic_free.jpg",
   img_grid_4: "susinstable_restaurant_association.jpg"
 )
