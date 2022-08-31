@@ -28,15 +28,10 @@
         <% @products.each do |product| %>
           <%= link_to product_path(product) do %>
             <div class="card-product reveal" data-scroll-reveal-target="item">
-              <div class="card-head">
-                <div class="back-text truncate">
-                  <%= product.ticker %>
-                </div>
-              </div>
               <div class="card-body-product">
                 <div class="product-desc">
                   <h2 class="product-title truncate">
-                    <%= product.name %>
+                    <%= product.name %> / <%= product.ticker %>
                   </h2>
                   <span class="product-caption">
                   </span>
