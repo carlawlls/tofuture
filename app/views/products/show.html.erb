@@ -1,15 +1,18 @@
 <% if @product.product_type == "Company"  %>
   <%= render "shared/company" %>
 <% else %>
+
   <div class="view-banner">
     <h1 class="banner-h1"><%= @product.name %> / <%= @product.ticker %></h1>
   </div>
   <div class="container">
     <div class="product-show-buttons">
       <a href="https://robinhood.com/us/en/" target="_blank" class="show-button">Buy</a>
+           <% if CompareProduct.where(product: @product).empty? %>
       <%= simple_form_for([@product, @compare_product]) do |f| %>
         <%= f.submit "Compare", class: "show-button" %>
       <% end %>
+          <% end %>
       <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
         <% if current_user  %>
           <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
@@ -19,6 +22,7 @@
         <% else %>
           <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
             <i class="fa-solid fa-heart"></i>
+
           <% end %>
         <% end %>
       <% end %>

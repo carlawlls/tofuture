@@ -11,7 +11,7 @@ class CompareProductsController < ApplicationController
 
   def index
     # page where you can display all the comparison
-    @compare_products = current_user.compare_products
+    @compare_products = current_user.compare_products.includes(:product).order("products.name ASC")
   end
 
   def destroy
