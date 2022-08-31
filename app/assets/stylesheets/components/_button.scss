@@ -39,7 +39,7 @@
   color: #111;
   cursor: pointer;
   display: flex;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -64,14 +64,12 @@
   position: absolute;
   top: -2px;
   transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   z-index: -1;
 }
 .yellow-button a {
   display: inline;
 }
-
-
 
 .yellow-button:hover:after {
   transform: translate(0, 0);
@@ -86,13 +84,11 @@
   outline: 0;
 }
 
-
 .trending-btn {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
-
 
 .show-button-mg {
   margin-top: 45px;
@@ -107,17 +103,17 @@
   background: #02162a;
   position: relative;
   font-size: 16px;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  -webkit-box-shadow: 2px 2px 2px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 2px 2px 2px -3px rgba(0, 0, 0, 0.27);
   transition: all 250ms;
   overflow: hidden;
- }
+}
 
-.button-form{
+.button-form {
   display: flex;
 }
 
- .show-button::before {
+.show-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -125,18 +121,18 @@
   height: 100%;
   width: 0;
   border-radius: 15px;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  transition: all 250ms
- }
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
 
- .show-button:hover {
+.show-button:hover {
   color: #e8e8e8;
- }
+}
 
- .show-button:hover::before {
+.show-button:hover::before {
   width: 100%;
- }
+}
 
 .like-button {
   color: #888;
@@ -146,9 +142,10 @@
   border-radius: 15px;
   padding: 10px 24px;
   line-height: auto;
-  box-shadow: 0 0.25em 1em -0.25em;
+  box-shadow: 0 0.25em 0.5em -0.25em;
   cursor: pointer;
-  transition: color 150ms ease-in-out, background-color 150ms ease-in-out, transform 150ms ease-in-out;
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
+    transform 150ms ease-in-out;
   outline: 0;
   &:hover {
     color: indianred;
@@ -159,7 +156,7 @@
   }
 
   &.selected {
-    color: #FFF;
+    color: #fff;
     background-color: $red;
     border-color: $red;
   }
@@ -174,12 +171,11 @@
 }
 
 .red-button {
- background-color: red;
+  background-color: red;
 }
 
-
 .modal-btn {
-  background-color: rgb(15, 15, 15);;
+  background-color: rgb(15, 15, 15);
   color: white;
   font-size: 10px;
   border: 1px solid white;
@@ -190,5 +186,5 @@
 }
 
 .modal-btn:hover {
-  background-color: #031532;;
+  background-color: #031532;
 }
