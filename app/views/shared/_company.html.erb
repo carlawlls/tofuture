@@ -16,24 +16,24 @@
           <% end %>
         <% end %>
       <% end %>
-      <div class="show-button-mg">
-        <%= link_to 'Support', @product.web_url, class: "show-button" %>
+      <div class="show-button-mg23">
+        <%= link_to 'Engage', @product.web_url, class: "show-button" %>
       </div>
     </div>
   </div>
   <div class="container company-grid">
     <div class="certifications-container">
       <div class="company-images-grid company-images-grid-1">
-        <%= image_tag ("certified_b_coporation.jpg"), alt: "invest image"%>
+        <%= image_tag (@product.img_grid_1), alt: "invest image"%>
       </div>
       <div class="company-images-grid company-images-grid-2">
-        <%= image_tag ("rainforest.jpg"), alt: "invest image"%>
+        <%= image_tag (@product.img_grid_2), alt: "invest image"%>
       </div>
       <div class="company-images-grid company-images-grid-3">
-        <%= image_tag ("plastic_free.jpg"), alt: "invest image"%>
+        <%= image_tag (@product.img_grid_3), alt: "invest image"%>
       </div>
       <div class="company-images-grid company-images-grid-4">
-        <%= image_tag ("susinstable_restaurant_association.jpg"), alt: "invest image"%>
+        <%= image_tag (@product.img_grid_4), alt: "invest image"%>
       </div>
     </div>
     <div class="company-info-flex">
@@ -50,7 +50,7 @@
   <div class="container" data-controller="scroll-reveal">
     <div class="company-about-us-section reveal" data-scroll-reveal-target="item">
       <div class="company-about-us-img-div">
-        <%= image_tag ("pickers.jpg"), alt: "invest image", class: "about-us-img" %>
+        <%= image_tag (@product.img_url_1), alt: "invest image", class: "about-us-img" %>
       </div>
       <div class="company-about-us-information">
         <h2>About <%= @product.name %></h2>
@@ -63,12 +63,12 @@
         <p><%= @product.company_desc_2 %></p>
       </div>
       <div class="company-about-us-img-div">
-        <%= image_tag ("product_content.jpg"), alt: "invest image", class: "about-us-img" %>
+        <%= image_tag (@product.img_url_2), alt: "invest image", class: "about-us-img" %>
       </div>
     </div>
     <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
       <div class="company-about-us-img-div">
-        <%= image_tag ("donation.jpg"), alt: "invest image", class: "about-us-img" %>
+        <%= image_tag (@product.img_url_3), alt: "invest image", class: "about-us-img" %>
       </div>
       <div class="company-about-us-information" >
         <h2>Why sustainable investment?</h2>
