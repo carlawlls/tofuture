@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   acts_as_favoritable
 
   has_many :prices
-  has_many :issue_relationships
+  has_many :issue_relationships, dependent: :destroy
   has_many :issues, through: :issue_relationships, source: :issue
   include PgSearch::Model
   multisearchable against: [:name, :ticker]
