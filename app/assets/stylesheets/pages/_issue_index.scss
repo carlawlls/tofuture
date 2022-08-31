@@ -2,46 +2,48 @@
   margin: 40px;
 }
 
-.issue-index-card .issue-img{
+.issue-index-card .issue-img {
   height: 200px;
   width: 100%;
-  object-fit: cover
+  object-fit: cover;
 }
 .issue-index-card {
+  border-radius: 5px;
   overflow: hidden;
-  background: #02162A;
+  background: #02162a;
   width: 500px;
   height: 300px;
   -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-	-o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
-  &:hover{
+  &:hover {
     -webkit-transform: translate(0, -8px);
     -moz-transform: translate(0, -8px);
     -ms-transform: translate(0, -8px);
     -o-transform: translate(0, -8px);
     transform: translate(0, -8px);
-    box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
-    margin-bottom: 16px; -webkit-transform: translate(0, -8px);
+    box-shadow: 10px 10px rgba(0, 0, 0, 1);
+    margin-bottom: 16px;
+    -webkit-transform: translate(0, -8px);
     -moz-transform: translate(0, -8px);
     -ms-transform: translate(0, -8px);
     -o-transform: translate(0, -8px);
     transform: translate(0, -8px);
-    box-shadow: 10px 10px rgba(235, 235, 235, 1.0);
+    box-shadow: 10px 10px rgba(235, 235, 235, 1);
     margin-bottom: 16px;
   }
 }
 
-.issue-text{
+.issue-text {
   position: relative;
   color: white;
   text-decoration: none;
   margin-top: 25px;
 }
 
-.issue-text::after{
-  content: '';
+.issue-text::after {
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
