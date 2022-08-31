@@ -25,25 +25,25 @@
             <div class="carousel-item active">
               <%= link_to product_path(@products.first) do %>
                 <div class="card-product">
-                  <div class="card-head">
-                    <div class="back-text truncate">
-                      <%= @products.first.ticker %>
-                    </div>
-                  </div>
                   <div class="card-body-product">
-                    <div class="product-desc">
-                      <h2 class="product-title truncate">
-                        <%= @products.first.name %>
-                      </h2>
-                      <span class="product-caption">
-                      </span>
+                    <div class="card-top">
+                      <div>
+                        <h1 class="ticker-h1"> <%= @products.first.ticker %> </h1>
+                      </div>
+                      <div>
+                        <h1 class="esg-h1"> <%= @products.first.esg_score %> </h1>
+                      </div>
                     </div>
+                    <h2 class="product-title truncate">
+                      <%= @products.first.name %>
+                    </h2>
                     <p> <%= @products.first.sector %> </p>
-                    <div class="product-properties">
-                      <% @products.first.issue_list.each do |issue| %>
-                        <span class="badge truncate">
-                          <%= issue %>
-                        </span>
+                    <p><%= @products.first.product_type %></p>
+                    <div class="issue-icons">
+                      <% @products.first.issues.each do |issue| %>
+                        <% if issue.icon %>
+                          <img src="<%= asset_path issue.icon %>"/>
+                        <% end %>
                       <% end %>
                     </div>
                   </div>
@@ -53,25 +53,25 @@
             <div class="carousel-item">
               <%= link_to product_path(@products.second) do %>
                 <div class="card-product">
-                  <div class="card-head">
-                    <div class="back-text truncate">
-                      <%= @products.second.ticker %>
-                    </div>
-                  </div>
                   <div class="card-body-product">
-                    <div class="product-desc">
-                      <h2 class="product-title truncate">
-                        <%= @products.second.name %>
-                      </h2>
-                      <span class="product-caption">
-                      </span>
+                    <div class="card-top">
+                      <div>
+                        <h1 class="ticker-h1"> <%= @products.second.ticker %> </h1>
+                      </div>
+                      <div>
+                        <h1 class="esg-h1"> <%= @products.second.esg_score %> </h1>
+                      </div>
                     </div>
+                    <h2 class="product-title truncate">
+                      <%= @products.second.name %>
+                    </h2>
                     <p> <%= @products.second.sector %> </p>
-                    <div class="product-properties">
-                      <% @products.second.issue_list.each do |issue| %>
-                        <span class="badge truncate">
-                          <%= issue %>
-                        </span>
+                    <p><%= @products.second.product_type %></p>
+                    <div class="issue-icons">
+                      <% @products.second.issues.each do |issue| %>
+                        <% if issue.icon %>
+                          <img src="<%= asset_path issue.icon %>"/>
+                        <% end %>
                       <% end %>
                     </div>
                   </div>
@@ -81,25 +81,25 @@
             <div class="carousel-item">
               <%= link_to product_path(@products.third) do %>
                 <div class="card-product">
-                  <div class="card-head">
-                    <div class="back-text truncate">
-                      <%= @products.third.ticker %>
-                    </div>
-                  </div>
                   <div class="card-body-product">
-                    <div class="product-desc">
-                      <h2 class="product-title truncate">
-                        <%= @products.third.name %>
-                      </h2>
-                      <span class="product-caption">
-                      </span>
+                    <div class="card-top">
+                      <div>
+                        <h1 class="ticker-h1"> <%= @products.third.ticker %> </h1>
+                      </div>
+                      <div>
+                        <h1 class="esg-h1"> <%= @products.third.esg_score %> </h1>
+                      </div>
                     </div>
+                    <h2 class="product-title truncate">
+                      <%= @products.third.name %>
+                    </h2>
                     <p> <%= @products.third.sector %> </p>
-                    <div class="product-properties">
-                      <% @products.third.issue_list.each do |issue| %>
-                        <span class="badge truncate">
-                          <%= issue %>
-                        </span>
+                    <p><%= @products.third.product_type %></p>
+                    <div class="issue-icons">
+                      <% @products.third.issues.each do |issue| %>
+                        <% if issue.icon %>
+                          <img src="<%= asset_path issue.icon %>"/>
+                        <% end %>
                       <% end %>
                     </div>
                   </div>
