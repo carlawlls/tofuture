@@ -1,6 +1,8 @@
 <div class="product-show">
   <div class="product-top">
-    <h1 id="show-header"><%= @product.name %></h1>
+    <div class="view-banner">
+      <h1 class="banner-h1"><%= @product.name %></h1>
+    </div>
     <div class="product-show-buttons">
       <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
         <% if current_user  %>
@@ -19,40 +21,59 @@
       </div>
     </div>
   </div>
-  <div class="product-info">
-    <div class="esg-container" data-controller="scores">
-      <div class="esg-rating">
-        <h2>ESG <br>
-          RATINGS</h2>
-        <button type="button" class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Read more
-        </button>
+  <div class="container company-grid">
+    <div class="certifications-container">
+      <div class="company-images-grid company-images-grid-1">
+        <%= image_tag ("certified_b_coporation.jpg"), alt: "invest image"%>
       </div>
-      <div class="esg-box">
-        <h3>OVERALL</h3>
-        <span class="num">N/A</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
+      <div class="company-images-grid company-images-grid-2">
+        <%= image_tag ("rainforest.jpg"), alt: "invest image"%>
       </div>
-      <div class="esg-box-environment">
-        <h3>ENVIRONMENT</h3>
-        <span class="num">N/A</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
+      <div class="company-images-grid company-images-grid-3">
+        <%= image_tag ("plastic_free.jpg"), alt: "invest image"%>
       </div>
-      <div class="esg-box-social">
-        <h3>SOCIAL</h3>
-        <span class="num">N/A</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
-      </div>
-      <div class="esg-box-governance">
-        <h3>GOVERNANCE</h3>
-        <span class="num">N/A</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
+      <div class="company-images-grid company-images-grid-4">
+        <%= image_tag ("susinstable_restaurant_association.jpg"), alt: "invest image"%>
       </div>
     </div>
-    <div class="stock-info">
-      <div id="container" style="height: 500px; width: 500px"></div>
-      <div class="description-card">
-        <p id="description-text"><%= @product.description %></p>
+    <div class="company-info-flex">
+      <div>
+        <iframe class="company-video" width="490" height="275" src="https://www.youtube.com/embed/<%= @product.youtube_url%>?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allowfullscreen autoplay="autoplay" loop="loop" ></iframe>
+      </div>
+      <div class="stock-info">
+        <div class="company-description-card">
+          <p class="company-description-text"><%= @product.description %></p>
+        </div>
       </div>
     </div>
   </div>
+  <div class="container" data-controller="scroll-reveal">
+    <div class="company-about-us-section reveal" data-scroll-reveal-target="item">
+      <div class="company-about-us-img-div">
+        <%= image_tag ("pickers.jpg"), alt: "invest image", class: "about-us-img" %>
+      </div>
+      <div class="company-about-us-information">
+        <h2>About <%= @product.name %></h2>
+        <p><%= @product.company_desc_1 %></p>
+      </div>
+    </div>
+    <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+      <div class="company-about-us-information">
+        <h2>Certified Plastic Free</h2>
+        <p><%= @product.company_desc_2 %></p>
+      </div>
+      <div class="company-about-us-img-div">
+        <%= image_tag ("product_content.jpg"), alt: "invest image", class: "about-us-img" %>
+      </div>
+    </div>
+    <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+      <div class="company-about-us-img-div">
+        <%= image_tag ("donation.jpg"), alt: "invest image", class: "about-us-img" %>
+      </div>
+      <div class="company-about-us-information" >
+        <h2>Why sustainable investment?</h2>
+        <p><%= @product.company_desc_3 %></p>
+      </div>
+    </div>
+  </div>
+</div>

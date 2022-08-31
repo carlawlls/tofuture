@@ -19,6 +19,15 @@ table 			      {
     color: white;
   }
 
+  .title a {
+    color: white;
+  }
+
+  .fa-sort-down {
+    margin-left: 10px;
+    margin-bottom: 4px;;
+  }
+
   tbody tr        { height:48px; border-bottom:1px solid #E3F1D5 ;
     &:last-child  { border:0; }
     padding-left: 20px;
@@ -30,25 +39,32 @@ table 			      {
 		&.r 					{ text-align:center }
 	}
 
-  td {
-    width: 1000px;
-  }
+
+
 }
 
 .product {
   border-radius: 6px;
 }
 
+.esg_score {
+  width: 180px;
+  background-color: rgba(50, 50, 110, 0.8);
+}
+
 .er_score {
+  width: 180px;
   background-color: rgb(103, 145, 103);
 }
 
 .sr_score {
+  width: 180px;
   background-color: rgb(188, 141, 52);
 }
 
 .gr_score {
-  background-color: rgb(128, 8, 8);
+  width: 180px;
+  background-color: rgba(128, 8, 8, 0.8);
 }
 
 .delete-button {

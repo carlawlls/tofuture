@@ -1,0 +1,124 @@
+.row-company {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-company {
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+
+.company-description-card {
+  min-width: 400px;
+  height: fit-content;
+  text-align: start;
+  font-size: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
+}
+
+.company-description-text {
+  padding: 32px;
+}
+
+
+.column-company img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.company-grid {
+  display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 16px;
+
+}
+.company-info-flex {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.company-video {
+  margin-top: -10px;
+}
+
+
+.company-about-us-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.company-about-us-img-div {
+  width: 500px;
+  height: auto;
+  text-align: center;
+
+}
+
+.company-about-us-img {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+.company-about-us-information {
+  padding: 50px;
+}
+
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(50px, auto);
+  grid-gap: 5px;
+}
+
+.company-images-grid-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.company-images-grid-2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.company-images-grid-3 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.company-images-grid-4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.company-images-grid > img {
+  width:  150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column-company {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-company {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

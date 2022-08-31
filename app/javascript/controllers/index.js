@@ -13,5 +13,10 @@ application.register("graph", GraphController);
 import ScoresController from "./scores_controller";
 application.register("scores", ScoresController);
 
-import ScrollReveal from "stimulus-scroll-reveal";
-application.register("scroll-reveal", ScrollReveal);
+
+import ScrollReveal from 'stimulus-scroll-reveal'
+application.register('scroll-reveal', ScrollReveal)
+
+import CompareProducts from './compare_products_controller'
+application.register('compare-products', CompareProducts)
+
