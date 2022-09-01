@@ -1,3 +1,10 @@
+<style>
+  .product-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+  }
+</style>
 <div class="view-banner">
   <h1 class="banner-h1"><%= @user.board_label %></h1>
 </div>
@@ -7,17 +14,14 @@
 </div>
 <div class="container">
   <div class="favorites">
-    <div class="container">
-      <div class="product-cards d-flex flex-wrap gap-3 align-self-start ms-5" data-controller="scroll-reveal">
+    <div class="container d-flex justify-content-center">
+      <div class="product-cards-grid" data-controller="scroll-reveal">
         <% @products.each do |product| %>
-          <%= link_to product_path(product) do %>
-            <div class="position-relative">
+          <div class="position-relative">
+            <%= link_to product_path(product) do %>
               <%= render "shared/card_product", product: product %>
-              <%= link_to  product_favorites_path(product), style: "top: 5px; right: 8px;", class: "position-absolute", data: {turbo_method: :delete} do %>
-                <i class="fa fa-trash delete-button" aria-hidden="true"></i>
-              <% end %>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>
