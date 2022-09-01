@@ -14,33 +14,35 @@
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Discover", products_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "My Boards", favorites_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Comparison", compare_products_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item text-body" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
             <%= link_to "Products", products_path, class: "nav-link" %>
             <li class="nav-item active">
-              <%= link_to "Issues", issues_path, class: "nav-link" %>
-              <li class="nav-item">
-                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-              </li>
-            <% end %>
-          </ul>
+              <%= link_to "Discover", users_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Favorites", favorites_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Comparison", compare_products_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item dropdown">
+              <%= image_tag "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item text-body" %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item active">
+              <%= link_to "Home", root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Products", products_path, class: "nav-link" %>
+              <li class="nav-item active">
+                <%= link_to "Discover", users_path, class: "nav-link" %>
+                <li class="nav-item">
+                  <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>

@@ -9,6 +9,12 @@ Rails.application.routes.draw do
     end
     delete "/favorites", to: "products#delete_favorites"
   end
+  resources :users, only: [:index, :show] do
+    member do
+      get "board"
+    end
+
+  end
   resources :issues, only: [:index, :show]
   get "search", to: "pages#search"
   # Defines the root path route ("/")

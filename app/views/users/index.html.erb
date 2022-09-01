@@ -1,0 +1,25 @@
+<div class="view-banner">
+  <h1 class="banner-h1">Discover</h1>
+</div>
+<div class="container">
+  <div class="display-issues">
+    <div class="cards" data-controller="scroll-reveal" >
+      <% @users.each do |user| %>
+        <%= link_to  board_user_path(user) do %>
+          <div class="issue-index-card reveal" data-scroll-reveal-target="item"style="width: 260px;">
+            <img src="<%= user.board_user_image%>" class="issue-img" alt="...">
+            <div class="card-body" >
+              <div class="issue-text">
+                <h2 class="issue-h2"> <%= user.board_label %></h2>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="back-btn">
+    <%= link_to "Home", root_path, class: "show-button" %>
+    <%= link_to "Back", :back, class: "show-button" %>
+  </div>
+</div>

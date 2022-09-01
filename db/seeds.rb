@@ -312,23 +312,40 @@ Issue.create!(
 
 User.create!(
   email: "billcook8122@gmail.com",
-  password: "123123"
+  password: "123123",
+  board_user_image: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg",
+  board_label: "Animal Welfare",
+  username: "billcookie",
+  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
 )
 
 User.create!(
   email: "willmes.carla@gmail.com",
-  password: "123123"
+  password: "123123",
+  board_user_image: "https://images.theconversation.com/files/434574/original/file-20211129-25-1xtkgx6.jpg?ixlib=rb-1.1.0&rect=8%2C601%2C5982%2C2991&q=45&auto=format&w=668&h=324&fit=crop",
+  board_label: "Political Lobbying",
+  username: "C-Dog",
+  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
 )
 
 User.create!(
   email: "jdchappelow@gmail.com",
-  password: "123123"
+  password: "123123",
+  board_user_image: "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg",
+  board_label: "Human Rights",
+  username: "Joshy Woshy",
+  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
 )
 
 User.create!(
   email: "ayakayakaaaa@gmail.com",
-  password: "123123"
+  password: "123123",
+  board_user_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU",
+  board_label: "Waste Management",
+  username: "AyakaAyaka",
+  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
 )
+
 
 Product.all.each do |product|
   Issue.all.each do |issue|

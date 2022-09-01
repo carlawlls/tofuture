@@ -9,6 +9,9 @@ class IssuesController < ApplicationController
   end
 
   def show
+    @user =
     @issue = Issue.find(params[:id])
   end
+
+
 end
