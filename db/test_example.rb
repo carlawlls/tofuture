@@ -35,3 +35,4 @@ Product.create!(
   er_score: 555,
   sr_score: 160,
   gr_score: 278
+)
