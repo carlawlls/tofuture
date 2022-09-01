@@ -8,11 +8,11 @@
         <% if current_user  %>
           <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
             <%= link_to "", product_path(@product), data: {turbo_method: :toggle_favorite, turbo_confirm: "Added to favorites list"} %>
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-thumbtack pin-button"></i>
           <% end %>
         <% else %>
           <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-thumbtack pin-button"></i>
           <% end %>
         <% end %>
       <% end %>
@@ -21,59 +21,57 @@
       </div>
     </div>
   </div>
-  <div class="container company-grid">
-    <div class="certifications-container">
-      <div class="company-images-grid company-images-grid-1">
-        <%= image_tag (@product.img_grid_1), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-2">
-        <%= image_tag (@product.img_grid_2), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-3">
-        <%= image_tag (@product.img_grid_3), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-4">
-        <%= image_tag (@product.img_grid_4), alt: "invest image"%>
-      </div>
+  <div class="d-flex justify-content-around">
+    <div class="description-card">
+      <h2>About</h2>
+      <p id="description-text"><%= @product.description %></p>
     </div>
-    <div class="company-info-flex">
-      <div>
-        <iframe class="company-video" width="490" height="275" src="https://www.youtube.com/embed/<%= @product.youtube_url%>?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allowfullscreen autoplay="autoplay" loop="loop" ></iframe>
-      </div>
-      <div class="stock-info">
-        <div class="company-description-card">
-          <p class="company-description-text"><%= @product.description %></p>
-        </div>
-      </div>
+    <div>
+      <iframe class="company-video" width="490" height="275" src="https://www.youtube.com/embed/<%= @product.youtube_url%>?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allowfullscreen autoplay="autoplay" loop="loop" ></iframe>
     </div>
   </div>
-  <div class="container" data-controller="scroll-reveal">
-    <div class="company-about-us-section reveal" data-scroll-reveal-target="item">
-      <div class="company-about-us-img-div">
-        <%= image_tag (@product.img_url_1), alt: "invest image", class: "about-us-img" %>
-      </div>
-      <div class="company-about-us-information">
-        <h2>About <%= @product.name %></h2>
-        <p><%= @product.company_desc_1 %></p>
-      </div>
+</div>
+<div class="container mt-3" data-controller="scroll-reveal">
+  <div class="company-about-us-section reveal" data-scroll-reveal-target="item">
+    <div class="company-about-us-img-div">
+      <%= image_tag (@product.img_url_1), alt: "invest image", class: "about-us-img" %>
     </div>
-    <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
-      <div class="company-about-us-information">
-        <h2>Certified Plastic Free</h2>
-        <p><%= @product.company_desc_2 %></p>
-      </div>
-      <div class="company-about-us-img-div">
-        <%= image_tag (@product.img_url_2), alt: "invest image", class: "about-us-img" %>
-      </div>
-    </div>
-    <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
-      <div class="company-about-us-img-div">
-        <%= image_tag (@product.img_url_3), alt: "invest image", class: "about-us-img" %>
-      </div>
-      <div class="company-about-us-information" >
-        <h2>Why sustainable investment?</h2>
-        <p><%= @product.company_desc_3 %></p>
-      </div>
+    <div class="company-about-us-information">
+      <h2>At <%= @product.name %></h2>
+      <p><%= @product.company_desc_1 %></p>
     </div>
   </div>
+  <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+    <div class="company-about-us-information">
+      <h2>Certified Plastic Free</h2>
+      <p><%= @product.company_desc_2 %></p>
+    </div>
+    <div class="company-about-us-img-div">
+      <%= image_tag (@product.img_url_2), alt: "invest image", class: "about-us-img" %>
+    </div>
+  </div>
+  <div class="company-about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+    <div class="company-about-us-img-div">
+      <%= image_tag (@product.img_url_3), alt: "invest image", class: "about-us-img" %>
+    </div>
+    <div class="company-about-us-information" >
+      <h2>Why sustainable investment?</h2>
+      <p><%= @product.company_desc_3 %></p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-around reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+    <div class="company-about-us-img-div">
+      <%= image_tag (@product.img_grid_1), alt: "invest image", class: "company-us-img"%>
+    </div>
+    <div class="company-about-us-img-div">
+      <%= image_tag (@product.img_grid_2), alt: "invest image", class: "company-us-img"%>
+    </div>
+    <div class="company-about-us-img-div">
+      <%= image_tag (@product.img_grid_3), alt: "invest image", class: "company-us-img"%>
+    </div>
+    <div class="company-about-us-img-div">
+      <%= image_tag (@product.img_grid_4), alt: "invest image", class: "company-us-img"%>
+    </div>
+  </div>
+</div>
 </div>

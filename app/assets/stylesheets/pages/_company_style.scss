@@ -16,6 +16,11 @@
   margin-left: 0px;
 }
 
+.company-us-img {
+  height: 150px;
+  width: 150px;
+}
+
 .show-button {
   padding: 10px 24px;
   border: unset;
@@ -57,10 +62,12 @@
     grid-gap: 16px;
 
 }
-.company-info-flex {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+.company-info {
+  direction: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 25px;
+  margin-left: 10px;
 }
 
 .company-video {
