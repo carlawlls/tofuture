@@ -116,12 +116,3 @@
   </div>
 </div>
 <div class="graph-container" style="width: 900px" data-controller="graph"></div>
-<h1 class="focus-heading">Issue Focus</h1>
-<div class="d-flex justify-content-center gap-3 m-1 ">
-  <% @product.issues.each do |issue| %>
-    <% if issue.icon %>
-      <img src="<%= asset_path issue.icon %>" title="<%= issue.issue_name %>"/>
-      <p><%= issue.issue_name %></p>
-    <% end %>
-  <% end %>
-</div>
