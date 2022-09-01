@@ -94,6 +94,17 @@ Product.create!(
 
 Product.create!(
   ticker: "",
+  name: "Woshy Electrics",
+  exchange: "",
+  description: "Who Gives a Crap is an Australian startup that develops forest friendly toilet paper, paper towels, and tissues. It also donates a portion of the profits to water/sanitation projects in the developing world. Founded in 2012, Who Gives a Crap is based in Melbourne, Victoria.",
+  sector: "Wholesale/Retail",
+  product_type: 0,
+  issue_list: ["Green Energy", "Water Pollution", "Human Rights"],
+  web_url: 'https://au.whogivesacrap.org/'
+)
+
+Product.create!(
+  ticker: "",
   name: "Teapigs",
   description: "Teapigs is a UK-based tea company owned by Tata Global Beverages Ltd, founded in November 2006. They produce a wide range of teas, including black, green, oolong, white, rooibos, Herbal teas, and Matcha tea.",
   product_type: 0,
@@ -136,6 +147,28 @@ Product.create!(
 
 Product.create!(
   ticker: "",
+  name: "Lush",
+  description: "Lush Retail Ltd. is a British cosmetics retailer which is headquartered in Poole, Dorset, United Kingdom. It was founded in 1995 by trichologist Mark Constantine, his wife Mo Constantine and five other founders. Lush has 951 stores globally. It produces and sells creams, soaps, shampoos, shower gels, lotions, moisturisers, scrubs, masks, and other cosmetics for the face and hair.",
+  product_type: 0,
+  sector: "Wholesale/Retail",
+  issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"],
+  web_url: 'https://www.lush.com/uk/en',
+  youtube_url: 'fPZleg-MkD0',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
+)
+
+
+Product.create!(
+  ticker: "",
   name: "Plamil Foods Ltd",
   exchange: "",
   description: "Plamil is a pioneering ethical company, producing vegan, organic and Fairtrade products since the 1960's. It is an ethical leader in the food industry, and one the most ethical companies that Ethical Consumer rates and ranks in its product guides.",
@@ -144,6 +177,19 @@ Product.create!(
   issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"],
   web_url: 'https://www.plamilfoods.co.uk/'
 )
+
+Product.create!(
+  ticker: "",
+  name: "Papa Tony's Pizza",
+  exchange: "",
+  description: "Plamil is a pioneering ethical company, producing vegan, organic and Fairtrade products since the 1960's. It is an ethical leader in the food industry, and one the most ethical companies that Ethical Consumer rates and ranks in its product guides.",
+  product_type: 0,
+  sector: "Wholesale/Retail",
+  issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"],
+  web_url: 'https://www.plamilfoods.co.uk/'
+)
+
+
 # ETFs --------------------------------------------------------
 
 Product.create!(
@@ -152,7 +198,7 @@ Product.create!(
   exchange: "NYSE",
   description: "The Invesco MSCI Sustainable Future ETF invests in companies from around the world that offer products and services that contribute to a more environmentally sustainable economy. The fund invests in small-, mid- and large-cap companies from around the world. Companies are eligible for inclusion in the index if they derive 75% or more of their cumulative revenue from six areas: alternative energy, energy efficiency, green building, sustainable water, pollution prevention and control, and sustainable agriculture. The index excludes companies that faced very severe controversies related to environmental, social and governance issues in the last three years, as well as companies involved in controversial weapons. The fund is among dozens of ETFs that target companies that compare favorably on environmental, social and governance criteria, also known as ESG. ESG funds are an increasingly popular segment of the ETF marketplace, offering values-driven investors a diverse portfolio of U.S. stocks without compromising their conscience. ERTH is part of a narrower subset of ESG known as impact funds, whose goal is to invest in companies that try to bring about a measurable, beneficial social or environmental impact. Invesco’s fund fees are reasonable for the segment, though fees for impact ETFs tend to be significantly higher than plain-vanilla index funds and some broad-based ESG funds. The holdings are also significantly narrower. Due to the increased diversification and concentration risk of its portfolio, ERTH is not a good replacement for a core global equity position though it may be a good complement for investors committed to sustainable businesses.",
   sector: "Alternative Energy Equities",
-  esg_score: 7.8,
+  esg_score: 780.0,
   product_type: 2,
   issue_list: ["Green Energy", "Water Pollution", "Deforestation"]
 )
@@ -163,7 +209,7 @@ Product.create!(
   exchange: "NYSE",
   sector: "Alternative Energy Equities",
   description: "The ALPS Clean Energy ETF (ACES) seeks investment results that correspond (before fees and expenses) generally to the performance of its underlying index, the CIBC Atlas Clean Energy Index (NACEX).The ALPS Clean Energy ETF (ACES) delivers exposure to a diverse set of US and Canadian companies involved in the clean energy sector including renewables and clean technology. The clean energy sector is comprised of companies that provide the products and services that enable the evolution of a more sustainable energy sector.",
-  esg_score: 8.43,
+  esg_score: 843.0,
   product_type: 2,
   issue_list: ["Green Energy", "Water Pollution", "Carbon Emissions"]
 )
@@ -174,7 +220,7 @@ Product.create!(
   sector: "Alternative Energy Equities",
   exchange: "NYSE",
   description: "The Global X Hydrogen ETF (HYDR) seeks to invest in companies that stand to benefit from the advancement of the global hydrogen industry. This includes companies involved in hydrogen production; the integration of hydrogen into energy systems; and the development/manufacturing of hydrogen fuel cells, electrolyzers, and other technologies related to the utilization of hydrogen as an energy source.",
-  esg_score: 6.96,
+  esg_score: 680.0,
   product_type: 2,
   issue_list: ["Carbon Emissions", "Labor Standards", "Employee Diversity"]
 )
@@ -185,7 +231,7 @@ Product.create!(
   sector: "Technology",
   exchange: "NYSE",
   description: "This ETF offers exposure to the U.S. telecom market, making it one option available to investors implementing a sector rotation strategy or focusing on corners of the domestic stock market that generally offer attractive dividend yields. Like most other telecom ETFs, IYZ is concentrated in a relatively small number of mega cap companies, resulting in a top heavy structure (State Street’s XTL is linked to an equal-weighted index, delivering more balanced exposure to the telecom sector). Another drawback of this ETF is expenses. IYZ is not competitive on price; both VOX and FCQ offer similar exposure with a much lower price tag. Those looking to achieve exposure to the global telecom market may consider IYZ, while those looking to steer clear of the U.S. altogether might like IST or AXTE.",
-  esg_score: 8.0,
+  esg_score: 820.0,
   product_type: 2,
   issue_list: ["Human Rights", "Labor Standards", "Political Lobbying"]
 )
@@ -196,7 +242,7 @@ Product.create!(
   exchange: "NYSE",
   sector: "Emerging Markets Bonds",
   description: "BSCE offers focused exposure to investment grade corporate bonds maturing in 2014, making it much more granular than many other products. Most bond ETFs focus on securities maturing within a certain number of years (such as 1-5 year Treasuries or 20+ year corporate bonds). These bond ETFs generally operate indefinitely, maintaining a similar duration and interest rate risk across time and reinvesting any proceeds from the sale of component bonds into new securities. BSCE is different in that it has a target maturity date and will eventually close down after the underlying bonds have reached maturity and the principal has been distributed to shareholders (over time, BSCE’s portfolio will gradually shift to cash).",
-  esg_score: 8.0,
+  esg_score: 809.0,
   product_type: 2,
   issue_list: ["Carbon Emissions", "Labor Standards", "Deforestation"]
 )
@@ -207,7 +253,7 @@ Product.create!(
   sector: "Health & Biotech Equities",
   exchange: "NYSE",
   description: "This ETF offers targeted exposure to the biotech industry, a corner of the health care sector that is capable of delivering big returns but also exhibiting significant volatility. Given that risk/return profile, accessing biotech through the exchange-traded wrapper has some obvious appeal; it allows investors to spread out exposure, thereby increasing the opportunity of holding a stock that hits it big. Given that targeted objective, this ETF is probably most useful for those seeking tactical exposure to this corner of the market; the underlying holdings are generally found in broad-based equity ETFs, so there should be little appeal to buy-and-holders.",
-  esg_score: 7.41,
+  esg_score: 741.0,
   product_type: 2,
   issue_list: ["Human Rights", "Labor Standards", "Political Lobbying"]
 )
@@ -218,7 +264,7 @@ Product.create!(
   sector: "Consumer Staples Equities",
   exchange: "NYSE",
   description: "The Fund seeks to provide investment results that closely correspond, before fees and expenses, to the performance of the John Hancock Dimensional Consumer Staples Index. The Fund invests at least 80% of its net assets (plus any borrowings for investment purposes) in securities that compose the fund's benchmark index.",
-  esg_score: 9.56,
+  esg_score: 956.0,
   product_type: 2,
   issue_list: ["Air Pollution", "Green Energy", "Water Pollution"]
 )
@@ -322,13 +368,15 @@ Product.all.each do |product|
   end
 end
 
+user_icon_generate = ["https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png", "https://i.pinimg.com/originals/34/62/d2/3462d27440aa255b1c314ff16f4032b4.png", "https://ih0.redbubble.net/image.618379802.1473/flat,1000x1000,075,f.u2.jpg", "https://i.pinimg.com/originals/7a/78/cc/7a78cc67e4dbc13e8b5b92f89d09002a.png"]
+
 User.create!(
   email: "billcook8122@gmail.com",
   password: "123123",
   board_user_image: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg",
   board_label: "Animal Welfare",
   username: "billcookie",
-  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
+  user_icon: user_icon_generate.sample
 )
 
 User.create!(
@@ -336,8 +384,8 @@ User.create!(
   password: "123123",
   board_user_image: "https://images.theconversation.com/files/434574/original/file-20211129-25-1xtkgx6.jpg?ixlib=rb-1.1.0&rect=8%2C601%2C5982%2C2991&q=45&auto=format&w=668&h=324&fit=crop",
   board_label: "Political Lobbying",
-  username: "C-Dog",
-  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
+  username: "carlawlls",
+  user_icon: user_icon_generate.sample
 )
 
 User.create!(
@@ -345,8 +393,8 @@ User.create!(
   password: "123123",
   board_user_image: "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg",
   board_label: "Human Rights",
-  username: "Joshy Woshy",
-  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
+  username: "jchapps",
+  user_icon: user_icon_generate.sample
 )
 
 User.create!(
@@ -354,19 +402,19 @@ User.create!(
   password: "123123",
   board_user_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU",
   board_label: "Waste Management",
-  username: "AyakaAyaka",
-  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
+  username: "ayakayaka",
+  user_icon: user_icon_generate.sample
 )
 
-board_user_image_generate = ["https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg", "https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg", "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg"]
+board_user_image_generate = ["https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg", "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg", "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg", "https://www.incimages.com/uploaded_files/image/1920x1080/getty_533979847_128300.jpg", "https://www.niehs.nih.gov/health/assets/images/air_pollution_og.jpg"]
 
 shuffled_board_user_image_generate = board_user_image_generate.shuffle
 
-board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", "Deforestation", "Green Energy"]
+board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", "Deforestation", "Green Energy", "Air Pollution"]
 
 shuffled_board_tag_generate = board_tag_generate.shuffle
 
-user_icon_generate = ["https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png", "https://i.pinimg.com/originals/34/62/d2/3462d27440aa255b1c314ff16f4032b4.png", "https://ih0.redbubble.net/image.618379802.1473/flat,1000x1000,075,f.u2.jpg", "https://i.pinimg.com/originals/7a/78/cc/7a78cc67e4dbc13e8b5b92f89d09002a.png"]
+
 
 shuffled_user_icon_generate = user_icon_generate.shuffle
 
@@ -380,10 +428,14 @@ shuffled_user_icon_generate = user_icon_generate.shuffle
     password: "123123",
     user_icon: user_icon_generate.sample
   )
-  rand(5..10).times do
+  rand(10..15).times do
     rand_user.favorite(Product.all.sample)
   end
 end
+
+
+
+
 # Limit on the news API
 # newsapi = News.new("1eaedf572be74827bce43637e0c790c8")
 
