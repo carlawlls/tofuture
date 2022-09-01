@@ -5,9 +5,10 @@
 
 .stock-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 40px;
   margin: 0;
+  gap: 10px;
 }
 
 @media (max-width: 1000px) {
@@ -34,17 +35,13 @@ body {
 }
 
 .description-card {
-  min-width: 400px;
   height: fit-content;
   text-align: start;
-  font-size: 20px;
+  font-size: 16px;
   overflow: hidden;
   background: white;
-  box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
-}
-
-#description-text {
-  padding: 32px;
+  padding-top: 32px;
+  max-width: 500px;
 }
 
 $b: #32cbfb;
