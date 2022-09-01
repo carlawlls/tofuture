@@ -1,18 +1,20 @@
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
 .card-product {
+  overflow: hidden;
+  background: rgb(240, 240, 240);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 260px;
+  height: auto;
+  margin-bottom: 16px;
+  position: relative;
+  padding: 16px;
   border-radius: 5px;
-  box-shadow: -3px 2px 1px rgba(0, 0, 0, 0.3);
-  height: fit-content;
 }
 
-.issue-icons {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 16px 0 4px 0;
+.card-product-body {
+  height: fit-content;
+  background: #fff;
+  border-radius: 0 0 25px 25px;
+  padding: 16px;
 }
 
 .card-top {
@@ -34,90 +36,42 @@
   font-family: 'Oswald';
 }
 
+.card-product h2 {
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.card-product p {
+  font-size: 16px;
+  opacity: 1;
+  margin: 0;
+  text-align: left;
+  padding: 5px 0;
+}
+
 .truncate {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.product-detail {
-  padding: 0 20px;
-  font-size: 11px;
-  color: #fff;
-}
 
-
-
-.back-text {
-  display: inline-block;
-  font-size: 100px;
-  font-weight: 900;
-  margin-left: 5px;
-  margin-top: -12px;
-  opacity: 0.2;
-}
-
-.card-product-body {
-  height: fit-content;
-  background: #fff;
-  border-radius: 0 0 25px 25px;
-  padding: 16px;
-}
-
-
-
-.badge {
-  position: relative;
-  font-size: 15px;
-  font-weight: 300;
-  color: #fff;
-  background: #047f2fe3;
-  padding: 10px 10px;
-  border-radius: 4px;
-  top: -2px;
-  margin-left: 5px;
-  text-shadow: 2px;
-  // position: relative;
-  // font-size: 10px;
-  // font-weight: 300;
-  // color: #fff;
-  // background: #1a761a;
-  // padding: 2px 5px;
-  // border-radius: 4px;
-  // top: -2px;
-  // margin-left: 5px;
-}
-.card-remove-link {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  text-decoration: none;
-  color: $red;
-  opacity: 0.8;
-  &:hover {
-    color: $red;
-    opacity: 1;
-    text-decoration: none;
-  }
-}
-
-.card-row {
+.issue-icons {
   display: flex;
-  overflow: scroll;
-  padding: 40px;
+  justify-content: space-evenly;
+  padding: 16px 0 4px 0;
 }
 
-.appear {
-  transition: all 0.8s;
-  opacity: 0;
-  transform: translateY(40px);
-}
 
-.appear.inview {
-  opacity: 1;
-  transform: none;
-  transition-delay: 0.3s;
-}
+// Grid
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
@@ -151,68 +105,4 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
-
-.card-product {
-  overflow: hidden;
-  background: rgb(240, 240, 240);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  width: 260px;
-  height: auto;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.card-product > img {
-  height: 250px;
-  width: 260px;
-  object-fit: cover;
-}
-
-.card-body-product {
-  padding: 16px;
-}
-
-.card-product h2 {
-  font-size: 18px;
-  margin: 0;
-  text-align: left;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-}
-
-.card-product h3 {
-  font-size: 18px;
-  margin: 0;
-  text-align: left;
-  padding-bottom: 5px;
-  padding-top: 16px;
-}
-
-.card-product p {
-  font-size: 16px;
-  opacity: 1;
-  margin: 0;
-  text-align: left;
-  padding: 5px 0;
-}
-
-.card-product .card-product-infos {
-  color: #201e1f;
-  font-family: "Encode Sans Condensed", sans-serif;
-  padding: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: -webkit-fill-available;
 }

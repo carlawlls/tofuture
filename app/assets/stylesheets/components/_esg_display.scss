@@ -17,6 +17,7 @@
   text-align: end;
   padding: 0 40px;
   border-bottom: 10px solid #031532;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
   h2 {
     color: white;
@@ -34,13 +35,16 @@
   justify-content: space-around;
   padding: 1em 0;
   font-size: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: #5eeb5b;
   opacity: 0.9;
   border-radius: 3px;
   text-shadow: 1.1px 1.1px #000000;
+
 }
 
 .esg-box-medium {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   min-width: 28vmin;
   height: 28vmin;
   display: flex;
