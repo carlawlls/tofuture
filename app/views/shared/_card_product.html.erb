@@ -6,6 +6,9 @@
     <div class="card-top">
       <% if product.product_type == "Company" %>
         <h1 class="ticker-h1"> CMPNY </h1>
+        <div>
+          <h1 class="esg-h1" title="ESG Score" style="color: rgb(240, 240, 240)">0</h1>
+        </div>
       <% else %>
         <div>
           <h1 class="ticker-h1"> <%= product.ticker %> </h1>
