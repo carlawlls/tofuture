@@ -166,7 +166,7 @@
     border-color: $red;
   }
 
-  .heart-icon {
+  i {
     display: inline-block;
     fill: currentColor;
     width: 0.8em;
@@ -175,8 +175,12 @@
   }
 }
 
+.pin-button {
+  margin: 0 !important;
+}
+
 .red-button {
-  background-color: red;
+  background-color: rgb(65, 65, 159);
 }
 
 .modal-btn {

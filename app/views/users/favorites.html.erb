@@ -10,7 +10,7 @@
             <div class="position-relative">
               <%= render "shared/card_product", product: product %>
               <%= link_to  product_favorites_path(product), style: "top: 5px; right: 8px;", class: "position-absolute", data: {turbo_method: :delete} do %>
-                <i class="fa fa-trash delete-button" aria-hidden="true"></i>
+                <i class="fa-solid fa-trash"></i>
               <% end %>
             </div>
           <% end %>

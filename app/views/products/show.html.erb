@@ -16,12 +16,12 @@
         <% if current_user  %>
           <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
             <%= link_to "", product_path(@product), data: {turbo_method: :toggle_favorite, turbo_confirm: "Added to favorites list"} %>
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-thumbtack pin-button"></i>
           <% end %>
         <% else %>
           <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
             <% event.preventDefault() %>
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-thumbtack pin-button"></i>
           <% end %>
         <% end %>
       <% end %>
