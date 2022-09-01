@@ -4,12 +4,16 @@
       <i class="fa-solid fa-thumbtack"></i>
     <% end %>
     <div class="card-top">
-      <div>
-        <h1 class="ticker-h1"> <%= product.ticker %> </h1>
-      </div>
-      <div>
-        <h1 class="esg-h1" title="ESG Score"> <%= product.esg_score %> </h1>
-      </div>
+      <% if product.product_type == "Company" %>
+        <h1 class="ticker-h1"> CMPNY </h1>
+      <% else %>
+        <div>
+          <h1 class="ticker-h1"> <%= product.ticker %> </h1>
+        </div>
+        <div>
+          <h1 class="esg-h1" title="ESG Score"> <%= product.esg_score %> </h1>
+        </div>
+      <% end %>
     </div>
     <h2 class="product-title truncate">
       <%= product.name %>
