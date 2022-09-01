@@ -3,7 +3,7 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   height: fit-content;
   color: white;
-  width: 275px;
+  width: 260px;
 }
 
 .card-issue-head {
@@ -20,6 +20,14 @@
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   border-radius: 25px 25px 25px 25px;
   background-position: center;
+}
+
+.issue-h2 {
+  position: relative;
+  color: black;
+  font-weight: 300;
+  text-decoration: none;
+  margin-top: 25px;
 }
 
 .card-issue h2 {
