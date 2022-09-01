@@ -311,6 +311,17 @@ Issue.create!(
   icon: "cow.png"
 )
 
+Product.all.each do |product|
+  Issue.all.each do |issue|
+    if product.issue_list.include?(issue.issue_name)
+      IssueRelationship.create!(
+        product: product,
+        issue: issue
+      )
+    end
+  end
+end
+
 User.create!(
   email: "billcook8122@gmail.com",
   password: "123123",
@@ -355,28 +366,24 @@ board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", 
 
 shuffled_board_tag_generate = board_tag_generate.shuffle
 
+user_icon_generate = ["https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png", "https://i.pinimg.com/originals/34/62/d2/3462d27440aa255b1c314ff16f4032b4.png", "https://ih0.redbubble.net/image.618379802.1473/flat,1000x1000,075,f.u2.jpg", "https://i.pinimg.com/originals/7a/78/cc/7a78cc67e4dbc13e8b5b92f89d09002a.png"]
+
+shuffled_user_icon_generate = user_icon_generate.shuffle
+
+
 5.times do
-  User.create!(
+ rand_user = User.create!(
     email: Faker::Internet.email,
     username: Faker::Internet.username,
     board_label: shuffled_board_tag_generate.pop,
     board_user_image: shuffled_board_user_image_generate.pop,
-    password: "123123"
+    password: "123123",
+    user_icon: user_icon_generate.sample
   )
-end
-
-
-Product.all.each do |product|
-  Issue.all.each do |issue|
-    if product.issue_list.include?(issue.issue_name)
-      IssueRelationship.create!(
-        product: product,
-        issue: issue
-      )
-    end
+  rand(5..10).times do
+    rand_user.favorite(Product.all.sample)
   end
 end
-
 # Limit on the news API
 # newsapi = News.new("1eaedf572be74827bce43637e0c790c8")
 
