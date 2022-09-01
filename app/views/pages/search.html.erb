@@ -1,37 +1,39 @@
-<% if @issues.any? %>
-  <div class="issue-cards">
-    <h2 class="page-header">Issues</h2>
-    <div class="container">
-      <div class="cards">
-        <% @issues.each do |issue| %>
-          <%= link_to issue_path(issue) do %>
-            <div class="card-issue">
-              <div class="card-issue-head" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= issue.image_url %>)">
-                <h2> <%= issue.issue_name %> </h2>
+<div class="container">
+  <% if @issues.any? %>
+    <div class="issue-cards">
+      <h2 class="page-header">Issues</h2>
+      <div class="container">
+        <div class="cards">
+          <% @issues.each do |issue| %>
+            <%= link_to issue_path(issue) do %>
+              <div class="card-issue">
+                <div class="card-issue-head" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= issue.image_url %>)">
+                  <h2> <%= issue.issue_name %> </h2>
+                </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
-<% end %>
-<% if @products.any? %>
-  <div class="container">
-    <div class="display-cards">
-      <h2 class="page-header">Products</h2>
-      <div class="cards" data-controller="scroll-reveal">
-        <% @products.each do |product| %>
-          <%= link_to product_path(product) do %>
-            <%= render "shared/card_product", product: product %>
+  <% end %>
+  <% if @products.any? %>
+    <div class="container">
+      <div class="display-cards">
+        <h2 class="page-header">Products</h2>
+        <div class="cards" data-controller="scroll-reveal">
+          <% @products.each do |product| %>
+            <%= link_to product_path(product) do %>
+              <%= render "shared/card_product", product: product %>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
+  <% end %>
+  <div class="back-btn">
+    <%= link_to "Home", root_path, class: "show-button" %>
+    <%= link_to "Back", :back, class: "show-button" %>
   </div>
-<% end %>
-<div class="back-btn">
-  <%= link_to "Home", root_path, class: "show-button" %>
-  <%= link_to "Back", :back, class: "show-button" %>
 </div>
 </div>
