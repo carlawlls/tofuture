@@ -20,6 +20,7 @@
           <% end %>
         <% else %>
           <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
+            <% event.preventDefault() %>
             <i class="fa-solid fa-heart"></i>
           <% end %>
         <% end %>
