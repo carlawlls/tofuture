@@ -3,7 +3,8 @@ class PagesController < ApplicationController
 
   def home
     @skip_navbar = true
-    @products = Product.all.sample(3)
+    @products = Product.all
+    @issues = Issue.first(6)
   end
 
   def search
@@ -17,7 +18,6 @@ class PagesController < ApplicationController
     end
   end
 end
-
 
 # params[:query].present?
 #       @products = Product.search_by_name_and_ticker(params[:query])
