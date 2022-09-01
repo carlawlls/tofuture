@@ -54,6 +54,16 @@
   font-weight: 200;
 }
 
+.certifications-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cert-img {
+  width: 60px;
+  height: 60px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .trending-btn {

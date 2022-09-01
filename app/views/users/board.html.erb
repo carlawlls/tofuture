@@ -1,6 +1,10 @@
 <div class="view-banner">
   <h1 class="banner-h1"><%= @user.board_label %></h1>
 </div>
+<div class="creator-info">
+  <img src="<%= @user.user_icon %>" class="user-avatar"/>
+  <p>Created by <%= @user.username %></p>
+</div>
 <div class="container">
   <div class="favorites">
     <div class="container">

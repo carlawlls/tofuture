@@ -6,7 +6,8 @@
     <div class="banner-content">
       <div class="banner-top">
         <div class="banner-text">
-          <h1 class="banner-h1">cool boards</h1>
+          <h1 class="banner-h1">Invest <br>
+            in change</h1>
           <!-- <p>Invest in <strong>change</strong>.</p> -->
           <div class="searchbar">
             <%= form_tag search_path, method: :get, class: "d-flex my-3" do %>
@@ -109,12 +110,37 @@
         </div>
       </div>
       <div class="trending">
-        <h2 class="banner-h2">Trending Boards</h2>
+        <h2 class="banner-h2">Trending Topics</h2>
         <div class="trending-btn">
-          <% @issues.each do |issue| %>
-            <div class="btn btn-flat">
-              <%= link_to issue.issue_name, issue_path(issue)%>
-            </div>
+          <%= form_tag search_path, method: :get do %>
+            <%= hidden_field_tag :query,
+                    params[:query] = "Employee Diversity"%>
+            <%= submit_tag "Employee Diversity", class: "btn btn-flat"%>
+          <% end %>
+          <%= form_tag search_path, method: :get do %>
+            <%= hidden_field_tag :query,
+                    params[:query] = "Carbon Emissions"%>
+            <%= submit_tag "Carbon Emissions", class: "btn btn-flat"%>
+          <% end %>
+          <%= form_tag search_path, method: :get do %>
+            <%= hidden_field_tag :query,
+                    params[:query] = "Green Energy"%>
+            <%= submit_tag "Green Energy", class: "btn btn-flat"%>
+          <% end %>
+          <%= form_tag search_path, method: :get do %>
+            <%= hidden_field_tag :query,
+                    params[:query] = "Animal Welfare"%>
+            <%= submit_tag "Animal Welfare", class: "btn btn-flat"%>
+          <% end %>
+          <%= form_tag search_path, method: :get do %>
+            <%= hidden_field_tag :query,
+                    params[:query] = "Labor Standards"%>
+            <%= submit_tag "Labor Standards", class: "btn btn-flat"%>
+          <% end %>
+          <%= form_tag search_path, method: :get do %>
+            <%= hidden_field_tag :query,
+                    params[:query] = "Employee Diversity"%>
+            <%= submit_tag "Employee Diversity", class: "btn btn-flat"%>
           <% end %>
         </div>
       </div>
