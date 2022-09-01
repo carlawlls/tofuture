@@ -19,6 +19,8 @@ class Product < ApplicationRecord
 
   SECTORS = ['Trade & Services', 'Finance', 'Life Sciences', 'Energy & Transportation', 'Consumer Discretionary', 'Utilities', 'Industrials', 'Consumer Services', 'Technology', 'Manufacturing']
 
+  SECTOR_LABELS = SECTORS
+
   SECTORS = SECTORS.map do |sector|
     sector.upcase
   end
