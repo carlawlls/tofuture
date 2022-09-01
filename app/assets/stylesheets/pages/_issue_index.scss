@@ -11,13 +11,14 @@
   border-radius: 5px;
   overflow: hidden;
   background: rgb(240, 240, 240);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 500px;
   height: 300px;
   -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
+
   /*&:hover {
     -webkit-transform: translate(0, -8px);
     -moz-transform: translate(0, -8px);
@@ -34,6 +35,18 @@
     box-shadow: 10px 10px rgba(235, 235, 235, 1);
     margin-bottom: 16px;
   }*/
+}
+
+.issue-index-profile {
+  margin: 1px 4px;
+  padding: 2px 5px 0px 5px;
+  background-color: pink;
+  border-radius: 8px;
+  font-size: 12px;
+  bottom: 90px;
+  position: absolute;
+  opacity: 0;
+  left: 120px;
 }
 
 .issue-text {

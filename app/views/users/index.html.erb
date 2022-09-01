@@ -8,6 +8,9 @@
         <%= link_to  board_user_path(user) do %>
           <div class="issue-index-card reveal" data-scroll-reveal-target="item"style="width: 260px;">
             <img src="<%= user.board_user_image%>" class="issue-img" alt="...">
+            <div class="issue-index-profile">
+              <div class="avatar" src=<%=user.user_icon%>></div>
+            </div>
             <div class="card-body" >
               <div class="issue-text">
                 <h2 class="issue-h2"> <%= user.board_label %></h2>
