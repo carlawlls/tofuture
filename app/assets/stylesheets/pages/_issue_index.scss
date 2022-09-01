@@ -40,13 +40,11 @@
 .issue-index-profile {
   margin: 1px 4px;
   padding: 2px 5px 0px 5px;
-  background-color: pink;
   border-radius: 8px;
   font-size: 12px;
-  bottom: 90px;
+  bottom: 80px;
   position: absolute;
-  opacity: 0;
-  left: 120px;
+  left: 100px;
 }
 
 .issue-text {
@@ -54,5 +52,8 @@
   color: black;
   font-weight: 100;
   text-decoration: none;
-  margin-top: 25px;
+}
+
+.creator-info {
+  margin-top: 15px;
 }

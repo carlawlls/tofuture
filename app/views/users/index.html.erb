@@ -7,9 +7,12 @@
       <% @users.each do |user| %>
         <%= link_to  board_user_path(user) do %>
           <div class="issue-index-card reveal" data-scroll-reveal-target="item"style="width: 260px;">
-            <img src="<%= user.board_user_image%>" class="issue-img" alt="...">
+            <img src="<%= user.board_user_image %>" class="issue-img" alt="...">
             <div class="issue-index-profile">
-              <div class="avatar" src=<%=user.user_icon%>></div>
+              <img src="<%= user.user_icon %>" class="user-avatar"/>
+            </div>
+            <div class="creator-info">
+              <p>Created by <%= user.username %></p>
             </div>
             <div class="card-body" >
               <div class="issue-text">
