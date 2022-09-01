@@ -6,9 +6,7 @@
     <div class="issue-info">
       <div class="issue-explanation">
         <div class="d-flex flex-column align-items-center">
-          <h1 class="news-header"> About</h1>
-          <p class="explanation"><%= @issue.explanation %></p>
-          <h1 class="news-header"> Related Issues</h1>
+          <h1 class="news-header"> Pins</h1>
           <div class="cards" >
             <% Issue.all.sample(3).each do |issue| %>
               <%= link_to issue_path(issue) do %>
@@ -26,7 +24,7 @@
         </div>
       </div>
       <div class="news-cards">
-        <h1 class="news-header"> Recent News</h1>
+        <h1 class="news-header"> Related News</h1>
         <% @issue.news_stories.first(5).each do |news| %>
           <div class="card-news">
             <div class="card-news-head " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= news.image_url %>) ">

@@ -2,16 +2,16 @@
   <h1 class="banner-h1">Browse Pins</h1>
 </div>
 <div class="container">
-  <div class="d-flex justify-content-center">
+  <div class="d-flex">
     <div class="main-grid d-flex">
       <div class="search-form mb-5">
         <h4>Refine your search:</h4>
         <%= form_tag products_path, method: "GET", html: { class: 'form-inline' } do %>
           <p class="form-sub-heading">Sector:</p>
-          <% Product::SECTORS.each do |sector| %>
-            <div class="checkbox-style">
-              <%= check_box_tag "sectors[]",sector, params[:sectors]&.include?(sector) %>
-              <%= label_tag "sectors[]", sector %>
+          <% Product::SECTOR_LABELS.each do |sector| %>
+            <div class="checkbox-style align-items-start my-1">
+              <%= check_box_tag "sectors[]",sector.upcase, params[:sectors]&.include?(sector.upcase), class:"mt-2" %>
+              <%= label_tag "sectors[]", sector, class:"text-start" %>
             </div>
           <% end %>
           <p class="form-sub-heading">Products:</p>
