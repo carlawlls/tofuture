@@ -11,7 +11,7 @@
   padding: 0 4px;
 }
 
-.show-button-mg23{
+.show-button-mg23 {
   margin-top: 11px;
   margin-left: 0px;
 }
@@ -29,11 +29,11 @@
   background: #02162a;
   position: relative;
   font-size: 16px;
-  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   transition: all 250ms;
   overflow: hidden;
- }
+}
 
 .company-description-card {
   min-width: 400px;
@@ -42,13 +42,12 @@
   font-size: 20px;
   overflow: hidden;
   background: white;
-  box-shadow: 10px 10px rgba(0, 0, 0, 1.0);
+  box-shadow: 10px 10px rgba(0, 0, 0, 1);
 }
 
 .company-description-text {
   padding: 32px;
 }
-
 
 .column-company img {
   margin-top: 8px;
@@ -58,9 +57,8 @@
 
 .company-grid {
   display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 16px;
-
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 16px;
 }
 .company-info {
   direction: flex;
@@ -74,19 +72,16 @@
   margin-top: -10px;
 }
 
-
 .company-about-us-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
 .company-about-us-img-div {
   width: 500px;
   height: auto;
   text-align: center;
-
 }
 
 .company-about-us-img {
@@ -125,13 +120,9 @@
 }
 
 .company-images-grid > img {
-  width:  150px;
-  height: 150px;
-  object-fit: cover;
+  width: 113px;
+  height: 110px;
 }
-
-
-
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
