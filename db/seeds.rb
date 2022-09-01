@@ -64,7 +64,7 @@ response.each do |esg_info|
   product = Product.find_by(ticker: esg_info["stock_symbol"])
   next unless product
 
-  product.esg_score = esg_info["total"]
+  product.esg_score = esg_info ? esg_info["total"] : rand(192..932)
   product.er_score = esg_info["environment_score"]
   product.sr_score = esg_info["social_score"]
   product.gr_score = esg_info["governance_score"]
