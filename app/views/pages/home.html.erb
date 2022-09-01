@@ -42,7 +42,7 @@
                     <div class="issue-icons">
                       <% @products.first.issues.each do |issue| %>
                         <% if issue.icon %>
-                          <img src="<%= asset_path issue.icon %>"/>
+                          <img src="<%= asset_path issue.icon %>" title="<%= issue.issue_name %>"/>
                         <% end %>
                       <% end %>
                     </div>
@@ -70,7 +70,7 @@
                     <div class="issue-icons">
                       <% @products.second.issues.each do |issue| %>
                         <% if issue.icon %>
-                          <img src="<%= asset_path issue.icon %>"/>
+                          <img src="<%= asset_path issue.icon %>" title="<%= issue.issue_name %>"/>
                         <% end %>
                       <% end %>
                     </div>
@@ -87,7 +87,7 @@
                         <h1 class="ticker-h1"> <%= @products.third.ticker %> </h1>
                       </div>
                       <div>
-                        <h1 class="esg-h1"> <%= @products.third.esg_score %> </h1>
+                        <h1 class="esg-h1" title="ESG Score"> <%= @products.third.esg_score %> </h1>
                       </div>
                     </div>
                     <h2 class="product-title truncate">
@@ -98,7 +98,7 @@
                     <div class="issue-icons">
                       <% @products.third.issues.each do |issue| %>
                         <% if issue.icon %>
-                          <img src="<%= asset_path issue.icon %>"/>
+                          <img src="<%= asset_path issue.icon %>" title="<%= issue.issue_name %>"/>
                         <% end %>
                       <% end %>
                     </div>
