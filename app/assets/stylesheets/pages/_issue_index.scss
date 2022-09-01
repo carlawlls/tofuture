@@ -13,7 +13,7 @@
   background: rgb(240, 240, 240);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 500px;
-  height: 300px;
+  height: 325px;
   -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -42,7 +42,7 @@
   padding: 2px 5px 0px 5px;
   border-radius: 8px;
   font-size: 12px;
-  bottom: 80px;
+  bottom: 105px;
   position: absolute;
   left: 100px;
 }
@@ -56,4 +56,5 @@
 
 .creator-info {
   margin-top: 15px;
+  padding-top: 8px;
 }
