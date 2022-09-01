@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     member do
       post "toggle_favorite", to: "products#toggle_favorite", as: :toggle_favorite
     end
+    delete "/favorites", to: "products#delete_favorites"
   end
   resources :issues, only: [:index, :show]
   get "search", to: "pages#search"
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/favorites", to: "users#favorites", as: :favorites
+
 
 resources :compare_products, only: [:destroy, :index]
 end

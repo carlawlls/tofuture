@@ -25,25 +25,25 @@
             <div class="carousel-item active">
               <%= link_to product_path(@products.first) do %>
                 <div class="card-product">
-                  <div class="card-head">
-                    <div class="back-text truncate">
-                      <%= @products.first.ticker %>
-                    </div>
-                  </div>
                   <div class="card-body-product">
-                    <div class="product-desc">
-                      <h2 class="product-title truncate">
-                        <%= @products.first.name %>
-                      </h2>
-                      <span class="product-caption">
-                      </span>
+                    <div class="card-top">
+                      <div>
+                        <h1 class="ticker-h1"> <%= @products.first.ticker %> </h1>
+                      </div>
+                      <div>
+                        <h1 class="esg-h1"> <%= @products.first.esg_score %> </h1>
+                      </div>
                     </div>
+                    <h2 class="product-title truncate">
+                      <%= @products.first.name %>
+                    </h2>
                     <p> <%= @products.first.sector %> </p>
-                    <div class="product-properties">
-                      <% @products.first.issue_list.each do |issue| %>
-                        <span class="badge truncate">
-                          <%= issue %>
-                        </span>
+                    <p><%= @products.first.product_type %></p>
+                    <div class="issue-icons">
+                      <% @products.first.issues.each do |issue| %>
+                        <% if issue.icon %>
+                          <img src="<%= asset_path issue.icon %>" title="<%= issue.issue_name %>"/>
+                        <% end %>
                       <% end %>
                     </div>
                   </div>
@@ -53,25 +53,25 @@
             <div class="carousel-item">
               <%= link_to product_path(@products.second) do %>
                 <div class="card-product">
-                  <div class="card-head">
-                    <div class="back-text truncate">
-                      <%= @products.second.ticker %>
-                    </div>
-                  </div>
                   <div class="card-body-product">
-                    <div class="product-desc">
-                      <h2 class="product-title truncate">
-                        <%= @products.second.name %>
-                      </h2>
-                      <span class="product-caption">
-                      </span>
+                    <div class="card-top">
+                      <div>
+                        <h1 class="ticker-h1"> <%= @products.second.ticker %> </h1>
+                      </div>
+                      <div>
+                        <h1 class="esg-h1"> <%= @products.second.esg_score %> </h1>
+                      </div>
                     </div>
+                    <h2 class="product-title truncate">
+                      <%= @products.second.name %>
+                    </h2>
                     <p> <%= @products.second.sector %> </p>
-                    <div class="product-properties">
-                      <% @products.second.issue_list.each do |issue| %>
-                        <span class="badge truncate">
-                          <%= issue %>
-                        </span>
+                    <p><%= @products.second.product_type %></p>
+                    <div class="issue-icons">
+                      <% @products.second.issues.each do |issue| %>
+                        <% if issue.icon %>
+                          <img src="<%= asset_path issue.icon %>" title="<%= issue.issue_name %>"/>
+                        <% end %>
                       <% end %>
                     </div>
                   </div>
@@ -81,25 +81,25 @@
             <div class="carousel-item">
               <%= link_to product_path(@products.third) do %>
                 <div class="card-product">
-                  <div class="card-head">
-                    <div class="back-text truncate">
-                      <%= @products.third.ticker %>
-                    </div>
-                  </div>
                   <div class="card-body-product">
-                    <div class="product-desc">
-                      <h2 class="product-title truncate">
-                        <%= @products.third.name %>
-                      </h2>
-                      <span class="product-caption">
-                      </span>
+                    <div class="card-top">
+                      <div>
+                        <h1 class="ticker-h1"> <%= @products.third.ticker %> </h1>
+                      </div>
+                      <div>
+                        <h1 class="esg-h1" title="ESG Score"> <%= @products.third.esg_score %> </h1>
+                      </div>
                     </div>
+                    <h2 class="product-title truncate">
+                      <%= @products.third.name %>
+                    </h2>
                     <p> <%= @products.third.sector %> </p>
-                    <div class="product-properties">
-                      <% @products.third.issue_list.each do |issue| %>
-                        <span class="badge truncate">
-                          <%= issue %>
-                        </span>
+                    <p><%= @products.third.product_type %></p>
+                    <div class="issue-icons">
+                      <% @products.third.issues.each do |issue| %>
+                        <% if issue.icon %>
+                          <img src="<%= asset_path issue.icon %>" title="<%= issue.issue_name %>"/>
+                        <% end %>
                       <% end %>
                     </div>
                   </div>
@@ -154,13 +154,13 @@
     </div>
     <div class="about-us-information">
       <h2>About us</h2>
-      <p>At toFuture we use ESG scores to help find you the most ethically sustainable investment opportunities. </p>
+      <p>At toFuture, we know the importance of sustainable investment and our aim is to help ensure that you can invest your money in ethical companies. Our database is filtered with stocks that only adhear to the highest standard using.  </p>
     </div>
   </div>
   <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
     <div class="about-us-information">
       <h2>What are ESG Scores?</h2>
-      <p>Enivronmental, Social and Governance or ESG scores are a framework used by many companies to assess and understand a company's priorities as well as long term risks.</p>
+      <p>Enivronmental, Social and Governance or ESG scores are a framework used by many companies to assess and understand a company's priorities as well as long term risks. At toFuture, we only include stocks and ETFs that score highly overall in all aspects.</p>
     </div>
     <div class="about-us-img-div">
       <%= image_tag ("undraw_The_world_is_mine_re_j5cr.png"), alt: "invest image", class: "about-us-img" %>
@@ -171,8 +171,8 @@
       <%= image_tag ("undraw_Tree.png"), alt: "invest image", class: "about-us-img" %>
     </div>
     <div class="about-us-information" >
-      <h2>Why sustainable investment?</h2>
-      <p>Sustainable investing is important because it can help contribute to a better world. Investors can put their capital to work in a way that positively influences society so that we move towards a more sustainable future.</p>
+      <h2>What about growing companies?</h2>
+      <p>Unlike other conventional platforms, toFuture allows it users to view smaller up and coming companies that are achieveing great things. We look at each company individulally for several trends such as whether they are conforming to the <strong>Strategic Development Goals 17 (SDGs 17)</strong>, have<strong> B certification</strong> and are apart of specific organizations like <strong>Fairtrade.</strong>.</p>
     </div>
   </div>
 </div>

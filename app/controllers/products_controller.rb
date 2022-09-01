@@ -33,6 +33,15 @@ class ProductsController < ApplicationController
     redirect_to product_path(@product)
   end
 
+
+  def delete_favorites
+    @favorite = Product.find(params[:product_id])
+    current_user.unfavorite(@favorite)
+    redirect_to favorites_path
+  end
+
+
+
   def skip_pundit?
     devise_controller? || params[:controller]
   end

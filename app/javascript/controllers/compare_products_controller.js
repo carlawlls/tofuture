@@ -1,60 +1,61 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   connect() {
-    console.log("connected")
+    console.log("connected");
     var tables = document.querySelectorAll("table.sortable"),
-    table,
-    thead,
-    headers,
-    i,
-    j;
+      table,
+      thead,
+      headers,
+      i,
+      j;
 
-   for (i = 0; i < tables.length; i++) {
-    table = tables[i];
+    for (i = 0; i < tables.length; i++) {
+      table = tables[i];
 
-    if (thead = table.querySelector("thead")) {
+      if ((thead = table.querySelector("thead"))) {
         headers = thead.querySelectorAll("th");
 
         for (j = 0; j < headers.length; j++) {
-            headers[j].innerHTML = "<a href='#' class='white-text'>" + headers[j].innerText + "</a>";
+          headers[j].innerHTML =
+            "<a href='#' class='white-text'>" + headers[j].innerText + "</a>";
         }
 
         thead.addEventListener("click", sortTableFunction(table));
+      }
     }
-   }
 
-   /**
-   * Create a function to sort the given table.
-   */
-   function sortTableFunction(table) {
-    return function(ev) {
-        if (ev.target.tagName.toLowerCase() == 'a') {
-            sortRows(table, siblingIndex(ev.target.parentNode));
-            ev.preventDefault();
+    /**
+     * Create a function to sort the given table.
+     */
+    function sortTableFunction(table) {
+      return function (ev) {
+        if (ev.target.tagName.toLowerCase() == "a") {
+          sortRows(table, siblingIndex(ev.target.parentNode));
+          ev.preventDefault();
         }
-    };
-   }
-
-   /**
-   * Get the index of a node relative to its siblings — the first (eldest) sibling
-   * has index 0, the next index 1, etc.
-   */
-   function siblingIndex(node) {
-    var count = 0;
-
-    while (node = node.previousElementSibling) {
-        count++;
+      };
     }
 
-    return count;
-   }
+    /**
+     * Get the index of a node relative to its siblings — the first (eldest) sibling
+     * has index 0, the next index 1, etc.
+     */
+    function siblingIndex(node) {
+      var count = 0;
 
-   /**
-   * Sort the given table by the numbered column (0 is the first column, etc.)
-   */
-   function sortRows(table, columnIndex) {
-    var rows = table.querySelectorAll("tbody tr"),
+      while ((node = node.previousElementSibling)) {
+        count++;
+      }
+
+      return count;
+    }
+
+    /**
+     * Sort the given table by the numbered column (0 is the first column, etc.)
+     */
+    function sortRows(table, columnIndex) {
+      var rows = table.querySelectorAll("tbody tr"),
         sel = "thead th:nth-child(" + (columnIndex + 1) + ")",
         sel2 = "td:nth-child(" + (columnIndex + 1) + ")",
         classList = table.querySelector(sel).classList,
@@ -64,92 +65,92 @@ export default class extends Controller {
         val,
         index,
         node;
-    document.querySelectorAll('.fa-sort-down').forEach((icon) => {
-      icon.remove()
-    })
-    const clickHeader = table.querySelector(sel)
-    clickHeader.innerHTML = clickHeader.innerHTML + '<i class="fa-solid fa-sort-down"></i>'
+      document.querySelectorAll(".fa-sort-down").forEach((icon) => {
+        icon.remove();
+      });
+      const clickHeader = table.querySelector(sel);
+      clickHeader.innerHTML =
+        clickHeader.innerHTML + '<i class="fa-solid fa-sort-down"></i>';
 
-    if (classList) {
+      if (classList) {
         if (classList.contains("date")) {
-            cls = "date";
+          cls = "date";
         } else if (classList.contains("number")) {
-            cls = "number";
+          cls = "number";
         }
-    }
+      }
 
-    for (index = 0; index < rows.length; index++) {
+      for (index = 0; index < rows.length; index++) {
         node = rows[index].querySelector(sel2);
         val = node.innerText;
 
         if (isNaN(val)) {
-            allNum = false;
+          allNum = false;
         } else {
-            val = parseFloat(val);
+          val = parseFloat(val);
         }
 
         values.push({ value: val, row: rows[index] });
-    }
+      }
 
-    if (cls == "" && allNum) {
+      if (cls == "" && allNum) {
         cls = "number";
-    }
+      }
 
-    if (cls == "number") {
+      if (cls == "number") {
         values.sort(sortNumberVal);
         values = values.reverse();
-    } else if (cls == "date") {
+      } else if (cls == "date") {
         values.sort(sortDateVal);
-    } else {
+      } else {
         values.sort(sortTextVal);
-    }
+      }
 
-    for (var idx = 0; idx < values.length; idx++) {
+      for (var idx = 0; idx < values.length; idx++) {
         table.querySelector("tbody").appendChild(values[idx].row);
+      }
     }
-   }
 
-   /**
-   * Compare two 'value objects' numerically
-   */
-   function sortNumberVal(a, b) {
-    return sortNumber(a.value, b.value);
-   }
+    /**
+     * Compare two 'value objects' numerically
+     */
+    function sortNumberVal(a, b) {
+      return sortNumber(a.value, b.value);
+    }
 
-   /**
-   * Numeric sort comparison
-   */
-   function sortNumber(a, b) {
-    return a - b;
-   }
+    /**
+     * Numeric sort comparison
+     */
+    function sortNumber(a, b) {
+      return a - b;
+    }
 
-   /**
-   * Compare two 'value objects' as dates
-   */
-   function sortDateVal(a, b) {
-    var dateA = Date.parse(a.value),
+    /**
+     * Compare two 'value objects' as dates
+     */
+    function sortDateVal(a, b) {
+      var dateA = Date.parse(a.value),
         dateB = Date.parse(b.value);
 
-    return sortNumber(dateA, dateB);
-   }
+      return sortNumber(dateA, dateB);
+    }
 
-   /**
-   * Compare two 'value objects' as simple text; case-insensitive
-   */
-   function sortTextVal(a, b) {
-    var textA = (a.value + "").toUpperCase();
-    var textB = (b.value + "").toUpperCase();
+    /**
+     * Compare two 'value objects' as simple text; case-insensitive
+     */
+    function sortTextVal(a, b) {
+      var textA = (a.value + "").toUpperCase();
+      var textB = (b.value + "").toUpperCase();
 
-    if (textA < textB) {
+      if (textA < textB) {
         return -1;
-    }
+      }
 
-    if (textA > textB) {
+      if (textA > textB) {
         return 1;
+      }
+
+      return 0;
     }
-
-    return 0;
-   }
-
   }
 }
