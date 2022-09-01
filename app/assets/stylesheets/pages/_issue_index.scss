@@ -10,7 +10,7 @@
 .issue-index-card {
   border-radius: 5px;
   overflow: hidden;
-  background: #02162a;
+  background: rgb(240, 240, 240);
   width: 500px;
   height: 300px;
   -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -37,25 +37,8 @@
 
 .issue-text {
   position: relative;
-  color: white;
+  color: black;
+  font-weight: 100;
   text-decoration: none;
   margin-top: 25px;
-}
-
-.issue-text::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.issue-text:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
 }
