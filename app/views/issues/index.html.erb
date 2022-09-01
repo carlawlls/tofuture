@@ -6,7 +6,7 @@
     <div class="cards" data-controller="scroll-reveal" >
       <% @issues.each do |issue| %>
         <%= link_to issue_path(issue) do %>
-          <div class="issue-index-card reveal" data-scroll-reveal-target="item"style="width: 18rem;">
+          <div class="issue-index-card reveal" data-scroll-reveal-target="item"style="width: 260px;">
             <img src="<%= issue.image_url %>" class="issue-img" alt="...">
             <div class="card-body" >
               <div class="issue-text">
