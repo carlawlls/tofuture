@@ -82,7 +82,7 @@ end
 # COMPANY SEEDS -----------------------------------------------
 Product.create!(
   ticker: "",
-  name: "Who Gives a Crap",
+  name: "Adam's Friendly Farm",
   exchange: "",
   description: "Who Gives a Crap is an Australian startup that develops forest friendly toilet paper, paper towels, and tissues. It also donates a portion of the profits to water/sanitation projects in the developing world. Founded in 2012, Who Gives a Crap is based in Melbourne, Victoria.",
   sector: "Wholesale/Retail",
@@ -123,14 +123,14 @@ Product.create!(
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
   company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
-  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, we teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
   img_url_1: "coffee.jpg",
   img_url_2: "project.jpg",
   img_url_3: "schools.jpg",
   img_grid_1: "certified_b_coporation.jpg",
   img_grid_2: "direct_trade_logo.png",
-  img_grid_3: "plastic_free.jpg",
-  img_grid_4: "susinstable_restaurant_association.jpg"
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
 )
 
 Product.create!(
