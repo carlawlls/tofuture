@@ -3,6 +3,7 @@ require "uri"
 require "json"
 require "open-uri"
 require_relative "download_json"
+require "faker"
 puts "destroying sweet stocks"
 puts "creating sweet stocks..."
 puts "destroying users"
@@ -345,6 +346,24 @@ User.create!(
   username: "AyakaAyaka",
   user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
 )
+
+board_user_image_generate = ["https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg", "https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg", "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg"]
+
+shuffled_board_user_image_generate = board_user_image_generate.shuffle
+
+board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", "Deforestation", "Green Energy"]
+
+shuffled_board_tag_generate = board_tag_generate.shuffle
+
+5.times do
+  User.create!(
+    email: Faker::Internet.email,
+    username: Faker::Internet.username,
+    board_label: shuffled_board_tag_generate.pop,
+    board_user_image: shuffled_board_user_image_generate.pop,
+    password: "123123"
+  )
+end
 
 
 Product.all.each do |product|
