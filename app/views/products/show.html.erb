@@ -1,18 +1,17 @@
 <% if @product.product_type == "Company"  %>
   <%= render "shared/company" %>
 <% else %>
-
   <div class="view-banner">
     <h1 class="banner-h1"><%= @product.name %> / <%= @product.ticker %></h1>
   </div>
   <div class="container">
     <div class="product-show-buttons">
       <a href="https://robinhood.com/us/en/" target="_blank" class="show-button">Buy</a>
-           <% if CompareProduct.where(product: @product).empty? %>
-      <%= simple_form_for([@product, @compare_product]) do |f| %>
-        <%= f.submit "Compare", class: "show-button" %>
+      <% if CompareProduct.where(product: @product).empty? %>
+        <%= simple_form_for([@product, @compare_product]) do |f| %>
+          <%= f.submit "Compare", class: "show-button" %>
+        <% end %>
       <% end %>
-          <% end %>
       <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
         <% if current_user  %>
           <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
@@ -22,7 +21,6 @@
         <% else %>
           <%=  f.button  :button, as: :submit, class:"like-button", data:{disable_with: false} do %>
             <i class="fa-solid fa-heart"></i>
-
           <% end %>
         <% end %>
       <% end %>
@@ -35,26 +33,58 @@
           Read more
         </button>
       </div>
-      <div class="esg-box">
-        <h3>OVERALL</h3>
-        <span class="num" data-scores-target="num" data-val="<%= @product.esg_score %>">000</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
-      </div>
-      <div class="esg-box">
-        <h3>ENVIRONMENT</h3>
-        <span class="num" data-scores-target="num" data-val="<%= @product.er_score %>">000</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
-      </div>
-      <div class="esg-box">
-        <h3>SOCIAL</h3>
-        <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
-      </div>
-      <div class="esg-box">
-        <h3>GOVERNANCE</h3>
-        <span class="num" data-scores-target="num" data-val="<%= @product.gr_score %> ">000</span>
-        <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
-      </div>
+      <% if @product.esg_level == "High" %>
+        <div class="esg-box-high">
+          <h3>OVERALL</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.esg_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
+        </div>
+      <% else %>
+        <div class="esg-box-medium">
+          <h3>OVERALL</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.esg_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.esg_level %></span>
+        </div>
+      <% end %>
+      <% if @product.e_level == "High" %>
+        <div class="esg-box-high">
+          <h3>ENVIRONMENT</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.er_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
+        </div>
+      <% else %>
+        <div class="esg-box-medium">
+          <h3>ENVIRONMENT</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.er_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.e_level %></span>
+        </div>
+      <% end %>
+      <% if @product.s_level == "High" %>
+        <div class="esg-box-high">
+          <h3>SOCIAL</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
+        </div>
+      <% else %>
+        <div class="esg-box-medium">
+          <h3>SOCIAL</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.sr_score %>">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.s_level %></span>
+        </div>
+      <% end %>
+      <% if @product.g_level == "High" %>
+        <div class="esg-box-high">
+          <h3>GOVERNANCE</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.gr_score %> ">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
+        </div>
+      <% else %>
+        <div class="esg-box-medium">
+          <h3>GOVERNANCE</h3>
+          <span class="num" data-scores-target="num" data-val="<%= @product.gr_score %> ">000</span>
+          <span class="text"><i class="fa-solid fa-caret-right"></i> <%= @product.g_level %></span>
+        </div>
+      <% end %>
     </div>
     <div class="stock-info">
       <div id="container" style="height: 500px; min-width: 500px"></div>
