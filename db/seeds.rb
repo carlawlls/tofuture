@@ -307,7 +307,7 @@ Issue.create!(
   issue_name: "Animal Welfare",
   explanation: "In politics, lobbying, persuasion or interest representation is the act of lawfully attempting to influence the actions, policies, or decisions of government officials, most often legislators or members of regulatory agencies. Lobbying, which usually involves direct, face-to-face contact, is done by many types of people, associations and organized groups, including individuals in the private sector, corporations, fellow legislators or government officials, or advocacy groups.",
   image_url: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg",
-  icon: "protest.png"
+  icon: "cow.png"
 )
 
 User.create!(
