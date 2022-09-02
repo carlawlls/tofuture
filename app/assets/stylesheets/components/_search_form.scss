@@ -1,9 +1,9 @@
 .search-form {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: fit-content;
+  min-width: 320px;
   height: fit-content;
   padding: 40px;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .search-form h4 {
