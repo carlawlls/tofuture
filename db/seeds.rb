@@ -88,7 +88,7 @@ Product.create!(
   description: "Who Gives a Crap is an Australian startup that develops forest friendly toilet paper, paper towels, and tissues. It also donates a portion of the profits to water/sanitation projects in the developing world. Founded in 2012, Who Gives a Crap is based in Melbourne, Victoria.",
   sector: "Wholesale/Retail",
   product_type: 0,
-  issue_list: ["Green Energy", "Water Pollution", "Deforestation"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://au.whogivesacrap.org/'
 )
 
@@ -99,7 +99,7 @@ Product.create!(
   description: "Who Gives a Crap is an Australian startup that develops forest friendly toilet paper, paper towels, and tissues. It also donates a portion of the profits to water/sanitation projects in the developing world. Founded in 2012, Who Gives a Crap is based in Melbourne, Victoria.",
   sector: "Wholesale/Retail",
   product_type: 0,
-  issue_list: ["Green Energy", "Water Pollution", "Human Rights"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://au.whogivesacrap.org/'
 )
 
@@ -130,7 +130,7 @@ Product.create!(
   description: "Teapigs is a UK-based tea company owned by Tata Global Beverages Ltd, founded in November 2006. They produce a wide range of teas, including black, green, oolong, white, rooibos, Herbal teas, and Matcha tea.",
   product_type: 0,
   sector: "Retail",
-  issue_list: ["Labor Standards", "Human Rights", "Employee Diversity"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://www.teapigs.co.uk/',
   youtube_url: '9_oGPywjwo8',
   company_desc_1: "Teapig's focus is on real, quality tea, sourced sustainably, in packaging that’s better for the environment. They give back to the communities that source their tea. Teapigs is very proud to be a B Corp certified.",
@@ -151,7 +151,7 @@ Product.create!(
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "Wholesale/Retail",
-  issue_list: ["Green Energy", "Water Pollution", "Deforestation"],
+  issue_list: ["Labor Standards", "Human Rights", "Deforestation"],
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -172,7 +172,7 @@ Product.create!(
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "Pharmaceutical",
-  issue_list: ["Green Energy", "Water Pollution", "Deforestation"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -193,7 +193,7 @@ Product.create!(
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "Retail",
-  issue_list: ["Human Rights", "Green Energy", "Deforestation"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -214,7 +214,7 @@ Product.create!(
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "Pharmaceutical",
-  issue_list: ["Waste Management", "Carbon Emissions", "Green Energy"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -235,7 +235,7 @@ Product.create!(
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "Insurance",
-  issue_list: ["Green Energy", "Waste Management", "Carbon Emissions"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -256,7 +256,7 @@ Product.create!(
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "Insurance",
-  issue_list: ["Human Rights", "Labor Standards", "Carbon Emissions"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -277,7 +277,7 @@ Product.create!(
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "IT",
-  issue_list: ["Animal Welfare", "Labor Standards", "Human Rights"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -298,7 +298,7 @@ Product.create!(
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "Textile",
-  issue_list: ["Political Lobbying", "Air Pollution", "Green Energy"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -343,7 +343,7 @@ Product.create!(
   description: "Plamil is a pioneering ethical company, producing vegan, organic and Fairtrade products since the 1960's. It is an ethical leader in the food industry, and one the most ethical companies that Ethical Consumer rates and ranks in its product guides.",
   product_type: 0,
   sector: "Wholesale/Retail",
-  issue_list: ["Labor Standards", "Human Rights", "Animal Welfare"],
+  issue_list: issue_tags.sample(3),
   web_url: 'https://www.plamilfoods.co.uk/'
 )
 
