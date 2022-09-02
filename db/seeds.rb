@@ -579,7 +579,7 @@ board_user_image_generate = ["https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XL
 
 shuffled_board_user_image_generate = board_user_image_generate.shuffle
 
-board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", "Deforestation", "Green Energy", "Air Pollution", "Waste Management"]
+board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", "Deforestation", "Green Energy", "Waste Management"]
 
 shuffled_board_tag_generate = board_tag_generate.shuffle
 
