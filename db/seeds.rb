@@ -587,18 +587,75 @@ rand(10..15).times do
   user_1.favorite(Product.all.sample)
 end
 
+user_2 = User.create!(
+  email: Faker::Internet.email,
+  username: Faker::Internet.username,
+  board_user_image: "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg",
+  board_label: "Employee Diversity",
+  user_icon: user_icon_generate.sample,
+  password: "123123",
+)
+rand(10..15).times do
+  user_2.favorite(Product.all.sample)
+end
+
+user_3 = User.create!(
+  email: Faker::Internet.email,
+  username: Faker::Internet.username,
+  board_user_image: "http://chinapower.csis.org/wp-content/uploads/2017/07/AdobeStock_76247895_shanghai_pollution_header.jpg",
+  board_label: "Air Pollution",
+  user_icon: user_icon_generate.sample,
+  password: "123123",
+)
+rand(10..15).times do
+  user_3.favorite(Product.all.sample)
+end
+
+user_4 = User.create!(
+  email: Faker::Internet.email,
+  username: Faker::Internet.username,
+  board_user_image: "https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg",
+  board_label: "Deforestation",
+  user_icon: user_icon_generate.sample,
+  password: "123123",
+)
+rand(10..15).times do
+  user_4.favorite(Product.all.sample)
+end
+
+user_5 = User.create!(
+  email: Faker::Internet.email,
+  username: Faker::Internet.username,
+  board_user_image: "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg",
+  board_label: "Green Energy",
+  user_icon: user_icon_generate.sample,
+  password: "123123",
+)
+rand(10..15).times do
+  user_5.favorite(Product.all.sample)
+end
+
+user_6 = User.create!(
+  email: Faker::Internet.email,
+  username: Faker::Internet.username,
+  board_user_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU",
+  board_label: "Waste Management",
+  user_icon: user_icon_generate.sample,
+  password: "123123",
+)
+rand(10..15).times do
+  user_6.favorite(Product.all.sample)
+end
+
 board_user_image_generate = ["https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg", "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg", "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg", "https://www.niehs.nih.gov/health/assets/images/air_pollution_og.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU"]
 
 # shuffled_board_user_image_generate = board_user_image_generate.shuffle
 
-board_tag_generate = ["Employee Diversity", "Air Pollution", "Deforestation", "Green Energy", "Waste Management"]
+board_tag_generate = []
 
 # shuffled_board_tag_generate = board_tag_generate.shuffle
 
-
-
 # shuffled_user_icon_generate = user_icon_generate.shuffle
-
 
 # 6.times do
 #  rand_user = User.create!(
