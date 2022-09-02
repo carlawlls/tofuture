@@ -33,7 +33,7 @@
 .esg-h1 {
   font-size: 24px;
   font-weight: 300;
-  font-family: 'Oswald';
+  font-family: "Oswald";
 }
 
 .card-product h2 {
@@ -66,9 +66,7 @@
 
 .fa-thumbtack {
   display: flex;
-
 }
-
 
 // Grid
 
@@ -110,4 +108,17 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.favourite-count {
+  display: flex;
+  text-align: end;
+  font-size: 15px;
+  top: 5px;
+  left: 8px;
+}
+
+.product-show-buttons p {
+  margin: 0;
+  font-weight: 600;
 }

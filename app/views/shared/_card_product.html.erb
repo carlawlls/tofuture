@@ -1,8 +1,10 @@
 <div class="card-product reveal" data-scroll-reveal-target="item">
   <div class="card-body-product">
-    <%  if current_user.favorited?(product) %>
-      <i class="fa-solid fa-thumbtack"></i>
-    <% end %>
+    <div class="favourite-count">
+      <%  if current_user.favorited?(product) %>
+        <i class="fa-solid fa-thumbtack"> </i>
+      <% end %>
+    </div>
     <div class="card-top">
       <% if product.product_type == "Company" %>
         <h1 class="ticker-h1"> toFuture's Pick </h1>

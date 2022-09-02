@@ -22,6 +22,8 @@
   justify-content: end;
   margin-bottom: 32px;
   gap: 10px;
+  align-items: center;
+  margin-right: 85px;
 }
 
 body {
@@ -54,4 +56,4 @@ $g: #e4e2e5;
 $r: #fc3359;
 $y: #fefb3a;
 $bl: #222;
-$t: rgba(255,255,255,0.00001);
+$t: rgba(255, 255, 255, 0.00001);
