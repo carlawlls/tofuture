@@ -34,6 +34,26 @@
   border-color: grey;
 }
 
+.btn-trending {
+  color: white;
+  padding: 5px 24px;
+  border-radius: 20px;
+  background: #05284d;
+  transition: background 0.4s ease;
+  width: 400px;
+  font-size: 14px;
+}
+
+.btn-trending a {
+  color: white;
+}
+
+.btn-trending:hover {
+  background: grey;
+  color: white;
+  border-color: grey;
+}
+
 /* Yellow Button */
 .yellow-button {
   align-items: center;
