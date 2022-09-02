@@ -560,7 +560,7 @@ User.create!(
 User.create!(
   email: "jdchappelow@gmail.com",
   password: "123123",
-  board_user_image: "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg",
+  board_user_image: "https://www.airbus.com/sites/g/files/jlcbta136/files/styles/airbus_480x480/public/2021-06/human-rights-illustration.jpg?itok=FgBpQEO2",
   board_label: "Human Rights",
   username: "jchapps",
   user_icon: user_icon_generate.sample
