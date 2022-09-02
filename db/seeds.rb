@@ -55,7 +55,7 @@ end
 # # https://www.esgenterprise.com/esg-enterprise-data-api-services/
 
 # DO NOT CHANGE THIS AT ALL IT MUST BE KEPT FALSE ONLY LIL COOKIE CAN CHANGE
-if true
+if false
   download_esg
 end
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
