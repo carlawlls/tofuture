@@ -545,7 +545,7 @@ User.create!(
   board_user_image: "https://futureofsourcing.com/sites/default/files/styles/juicebox_medium/public/articles/Rise_Ethical_Consumer.jpg?itok=NU9eBWHn",
   board_label: "Ethical Consumption",
   username: "billcookie",
-  user_icon: user_icon_generate.sample
+  user_icon: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
 )
 
 User.create!(
@@ -588,7 +588,7 @@ shuffled_board_tag_generate = board_tag_generate.shuffle
 shuffled_user_icon_generate = user_icon_generate.shuffle
 
 
-7.times do
+6.times do
  rand_user = User.create!(
     email: Faker::Internet.email,
     username: Faker::Internet.username,
