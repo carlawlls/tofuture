@@ -12,6 +12,4 @@ class IssuesController < ApplicationController
     @user =
     @issue = Issue.find(params[:id])
   end
-
-
 end
