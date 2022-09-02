@@ -152,7 +152,7 @@ Product.create!(
   product_type: 0,
   sector: "Wholesale/Retail",
   issue_list: ["Labor Standards", "Human Rights", "Deforestation"],
-  web_url: 'https://gorongosa.org/coffee/',
+  web_url: 'https://gorongosa.org/donate/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
   company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
@@ -194,7 +194,7 @@ Product.create!(
   product_type: 0,
   sector: "Retail",
   issue_list: issue_tags.sample(3),
-  web_url: 'https://gorongosa.org/coffee/',
+  web_url: 'https://gorongosa.org/donate/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
   company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
@@ -554,7 +554,7 @@ User.create!(
   board_user_image: "https://images.theconversation.com/files/434574/original/file-20211129-25-1xtkgx6.jpg?ixlib=rb-1.1.0&rect=8%2C601%2C5982%2C2991&q=45&auto=format&w=668&h=324&fit=crop",
   board_label: "Political Lobbying",
   username: "carlawlls",
-  user_icon: user_icon_generate.sample
+  user_icon: "https://ih0.redbubble.net/image.618379802.1473/flat,1000x1000,075,f.u2.jpg"
 )
 
 User.create!(
@@ -563,7 +563,7 @@ User.create!(
   board_user_image: "https://www.airbus.com/sites/g/files/jlcbta136/files/styles/airbus_480x480/public/2021-06/human-rights-illustration.jpg?itok=FgBpQEO2",
   board_label: "Human Rights",
   username: "jchapps",
-  user_icon: user_icon_generate.sample
+  user_icon: "https://i.pinimg.com/originals/34/62/d2/3462d27440aa255b1c314ff16f4032b4.png"
 )
 
 User.create!(
@@ -572,7 +572,7 @@ User.create!(
   board_user_image: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg",
   board_label: "Animal Welfare",
   username: "ayakayaka",
-  user_icon: user_icon_generate.sample
+  user_icon: "https://i.pinimg.com/originals/7a/78/cc/7a78cc67e4dbc13e8b5b92f89d09002a.png"
 )
 
 user_1 = User.create!(
@@ -580,7 +580,7 @@ user_1 = User.create!(
   username: Faker::Internet.username,
   board_user_image: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_533979847_128300.jpg",
   board_label: "Labor Standards",
-  user_icon: user_icon_generate.sample,
+  user_icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThVc6iNnmXvikDPsj57jnJayUWThS-Sv17zJ7Q_KMlBQ&s",
   password: "123123",
 )
 rand(10..15).times do
@@ -592,7 +592,7 @@ user_2 = User.create!(
   username: Faker::Internet.username,
   board_user_image: "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg",
   board_label: "Employee Diversity",
-  user_icon: user_icon_generate.sample,
+  user_icon: "https://i.pinimg.com/originals/10/12/c0/1012c06c7e1b0f8f5e60611992785e5a.png",
   password: "123123",
 )
 rand(10..15).times do
@@ -604,7 +604,7 @@ user_3 = User.create!(
   username: Faker::Internet.username,
   board_user_image: "http://chinapower.csis.org/wp-content/uploads/2017/07/AdobeStock_76247895_shanghai_pollution_header.jpg",
   board_label: "Air Pollution",
-  user_icon: user_icon_generate.sample,
+  user_icon: "https://external-preview.redd.it/0dTT-3SprPcsNCqo1GTCI-nqGM9EdZYwqyYr_pZ-baE.jpg?auto=webp&s=a1e8532d326f5aa122df2f31694bf142f117fc06",
   password: "123123",
 )
 rand(10..15).times do
@@ -616,7 +616,7 @@ user_4 = User.create!(
   username: Faker::Internet.username,
   board_user_image: "https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg",
   board_label: "Deforestation",
-  user_icon: user_icon_generate.sample,
+  user_icon: "https://pro2-bar-s3-cdn-cf4.myportfolio.com/dddb0c1b4ab622854dd81280840458d3/50e8272e1fac95db8aa33e34_rw_600.png?h=5c620938ca992743e815e0c3629f52d9",
   password: "123123",
 )
 rand(10..15).times do
@@ -628,7 +628,7 @@ user_5 = User.create!(
   username: Faker::Internet.username,
   board_user_image: "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg",
   board_label: "Green Energy",
-  user_icon: user_icon_generate.sample,
+  user_icon: "https://pro2-bar-s3-cdn-cf.myportfolio.com/dddb0c1b4ab622854dd81280840458d3/8e65207aca8751179e10e03c_rw_600.png?h=506076a9f26fdf62293000f07c8c3c78",
   password: "123123",
 )
 rand(10..15).times do
@@ -640,7 +640,7 @@ user_6 = User.create!(
   username: Faker::Internet.username,
   board_user_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU",
   board_label: "Waste Management",
-  user_icon: user_icon_generate.sample,
+  user_icon: "https://pro2-bar-s3-cdn-cf.myportfolio.com/dddb0c1b4ab622854dd81280840458d3/8bc447512b9e74a71e124a89_rw_600.png?h=23c7de0d8bd2fe71f555ec2232b43543",
   password: "123123",
 )
 rand(10..15).times do
