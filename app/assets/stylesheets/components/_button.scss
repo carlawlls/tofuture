@@ -178,6 +178,7 @@
 
   &:active {
     transform: scale(0.95);
+    color: white;
   }
 
   &.selected {
@@ -188,7 +189,7 @@
 
   i {
     display: inline-block;
-    fill: currentColor;
+    fill: white;
     width: 0.8em;
     height: 0.8em;
     margin-right: 0.2em;
@@ -201,6 +202,7 @@
 
 .red-button {
   background-color: rgb(65, 65, 159);
+  color: white;
 }
 
 .modal-btn {
