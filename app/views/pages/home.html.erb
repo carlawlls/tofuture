@@ -115,9 +115,11 @@
         <div class="trending-btn">
           <div class="trending-btn">
             <% @users.each do |user| %>
-              <div class="btn btn-trending">
-                <%= link_to user.board_label, board_user_path(user) %>
-              </div>
+              <%= link_to board_user_path(user) do %>
+                <div class="btn btn-trending">
+                  <%= user.board_label %>
+                </div>
+              <% end %>
             <% end %>
           </div>
         </div>
