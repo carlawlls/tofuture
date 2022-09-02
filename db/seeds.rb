@@ -126,11 +126,32 @@ Product.create!(
 
 Product.create!(
   ticker: "",
+  name: "Econyl",
+  description: "Teapigs is a UK-based tea company owned by Tata Global Beverages Ltd, founded in November 2006. They produce a wide range of teas, including black, green, oolong, white, rooibos, Herbal teas, and Matcha tea.",
+  product_type: 0,
+  sector: "Retail",
+  issue_list: ["Labor Standards", "Human Rights", "Employee Diversity"],
+  web_url: 'https://www.teapigs.co.uk/',
+  youtube_url: '9_oGPywjwo8',
+  company_desc_1: "Teapig's focus is on real, quality tea, sourced sustainably, in packaging that’s better for the environment. They give back to the communities that source their tea. Teapigs is very proud to be a B Corp certified.",
+  company_desc_2: "Teapigs is the first tea company awarded the Plastic-Free trustmark from A Plastic Planet. This certifies packaging which is free of conventional plastic derived from fossil fuels. Our 15s and 50s packs of tea temples, our tins of tea and matcha tins are certified plastic-free.",
+  company_desc_3: "Teapigs is proud to be a certified B Corp; joining a wonderful global community committed to using business as a force for good. B Corp is about purpose, and the overall positive impact of a company. Rather than focusing on a product, B Corp analyse a company’s impact on its workers, customers, community, and environment. To become B Corp certified, companies are assessed and audited, and have to meet the highest standards of social and environmental performance, accountability, and transparency. ",
+  img_url_1: "pickers.jpg",
+  img_url_2: "product_content.jpg",
+  img_url_3: "donation.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "rainforest.jpg",
+  img_grid_3: "plastic_free.jpg",
+  img_grid_4: "susinstable_restaurant_association.jpg"
+)
+
+Product.create!(
+  ticker: "",
   name: "Gorongosa",
   description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
   product_type: 0,
   sector: "Wholesale/Retail",
-  issue_list: ["Labor Standards", "Human Rights", "Deforestation"],
+  issue_list: ["Green Energy", "Water Pollution", "Deforestation"],
   web_url: 'https://gorongosa.org/coffee/',
   youtube_url: 'iT7yHG01_UI',
   company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
@@ -144,6 +165,154 @@ Product.create!(
   img_grid_3: "SDG12.png",
   img_grid_4: "for_the_planet_log.png"
 )
+
+Product.create!(
+  ticker: "",
+  name: "Meow Meow Tweet",
+  description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
+  product_type: 0,
+  sector: "Pharmaceutical",
+  issue_list: ["Green Energy", "Water Pollution", "Deforestation"],
+  web_url: 'https://gorongosa.org/coffee/',
+  youtube_url: 'iT7yHG01_UI',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
+)
+
+Product.create!(
+  ticker: "",
+  name: "Nudie Jeans",
+  description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
+  product_type: 0,
+  sector: "Retail",
+  issue_list: ["Human Rights", "Green Energy", "Deforestation"],
+  web_url: 'https://gorongosa.org/coffee/',
+  youtube_url: 'iT7yHG01_UI',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
+)
+
+Product.create!(
+  ticker: "",
+  name: "Naturaw",
+  description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
+  product_type: 0,
+  sector: "Pharmaceutical",
+  issue_list: ["Waste Management", "Carbon Emissions", "Green Energy"],
+  web_url: 'https://gorongosa.org/coffee/',
+  youtube_url: 'iT7yHG01_UI',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
+)
+
+Product.create!(
+  ticker: "",
+  name: "Naturesave",
+  description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
+  product_type: 0,
+  sector: "Insurance",
+  issue_list: ["Green Energy", "Waste Management", "Carbon Emissions"],
+  web_url: 'https://gorongosa.org/coffee/',
+  youtube_url: 'iT7yHG01_UI',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
+)
+
+Product.create!(
+  ticker: "",
+  name: "Paychex",
+  description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
+  product_type: 0,
+  sector: "Insurance",
+  issue_list: ["Human Rights", "Labor Standards", "Carbon Emissions"],
+  web_url: 'https://gorongosa.org/coffee/',
+  youtube_url: 'iT7yHG01_UI',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
+)
+
+Product.create!(
+  ticker: "",
+  name: "Element AI",
+  description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
+  product_type: 0,
+  sector: "IT",
+  issue_list: ["Animal Welfare", "Labor Standards", "Human Rights"],
+  web_url: 'https://gorongosa.org/coffee/',
+  youtube_url: 'iT7yHG01_UI',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
+)
+
+Product.create!(
+  ticker: "",
+  name: "Good Connection",
+  description: "100% of profits from Gorongosa specialty coffee support Gorongosa National Park in Mozambique and the people who call it home. Gorongosa believe that people and the planet can thrive together. Every cup of Gorongosa Coffee helps replant a rainforest, restore wildlife and build a future for the communities surrounding Gorongosa National Park.",
+  product_type: 0,
+  sector: "Textile",
+  issue_list: ["Political Lobbying", "Air Pollution", "Green Energy"],
+  web_url: 'https://gorongosa.org/coffee/',
+  youtube_url: 'iT7yHG01_UI',
+  company_desc_1: "Gorongosa Coffee brings you coffee from the slopes of Mount Gorongosa achieving rainforest reforestation and employing local farmers. 100% of our profits fund  conservation and human development projects in and around Gorongosa National Park. When you purchase any of Gorongosa products, you become part of our self sustaining system that helps to restore and protect the park, creates jobs and provides healthcare, training and education for its people.",
+  company_desc_2: "Advance an integrated multi-partner approach to conservation and to people-centred development. The Gorongosa Project protects the Park’s biodiversity and ecosystem services and unlocks its economic potential for the community inhabitants of the Gorongosa Buffer Zone, Sofala Province, Mozambique and further afield.",
+  company_desc_3: "Education is how we hope to shape the future. At Gorongosa National Park, they teach local people (especially children) the principles and values of environmental conservation so they will be willing and able to help us protect the Park in the future.",
+  img_url_1: "coffee.jpg",
+  img_url_2: "project.jpg",
+  img_url_3: "schools.jpg",
+  img_grid_1: "certified_b_coporation.jpg",
+  img_grid_2: "direct_trade_logo.png",
+  img_grid_3: "SDG12.png",
+  img_grid_4: "for_the_planet_log.png"
+)
+
 
 Product.create!(
   ticker: "",
