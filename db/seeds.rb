@@ -64,7 +64,7 @@ response.each do |esg_info|
   product = Product.find_by(ticker: esg_info["stock_symbol"])
   next unless product
 
-  product.esg_score = esg_info ? esg_info["total"] : rand(192..932)
+  product.esg_score = esg_info["total"] ? esg_info["total"] : rand(192..932)
   product.er_score = esg_info["environment_score"]
   product.sr_score = esg_info["social_score"]
   product.gr_score = esg_info["governance_score"]
@@ -373,8 +373,8 @@ user_icon_generate = ["https://mir-s3-cdn-cf.behance.net/project_modules/disp/84
 User.create!(
   email: "billcook8122@gmail.com",
   password: "123123",
-  board_user_image: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg",
-  board_label: "Animal Welfare",
+  board_user_image: "https://futureofsourcing.com/sites/default/files/styles/juicebox_medium/public/articles/Rise_Ethical_Consumer.jpg?itok=NU9eBWHn",
+  board_label: "Ethical Consumption",
   username: "billcookie",
   user_icon: user_icon_generate.sample
 )
@@ -400,17 +400,17 @@ User.create!(
 User.create!(
   email: "ayakayakaaaa@gmail.com",
   password: "123123",
-  board_user_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU",
-  board_label: "Waste Management",
+  board_user_image: "https://p.potaufeu.asahi.com/39eb-p/picture/24453900/ccfe2b8c90130e5302445beb35e58387.jpg",
+  board_label: "Animal Welfare",
   username: "ayakayaka",
   user_icon: user_icon_generate.sample
 )
 
-board_user_image_generate = ["https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg", "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg", "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg", "https://www.incimages.com/uploaded_files/image/1920x1080/getty_533979847_128300.jpg", "https://www.niehs.nih.gov/health/assets/images/air_pollution_og.jpg"]
+board_user_image_generate = ["https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg", "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg", "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg", "https://www.incimages.com/uploaded_files/image/1920x1080/getty_533979847_128300.jpg", "https://www.niehs.nih.gov/health/assets/images/air_pollution_og.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU"]
 
 shuffled_board_user_image_generate = board_user_image_generate.shuffle
 
-board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", "Deforestation", "Green Energy", "Air Pollution"]
+board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", "Deforestation", "Green Energy", "Air Pollution", "Waste Management"]
 
 shuffled_board_tag_generate = board_tag_generate.shuffle
 
@@ -419,7 +419,7 @@ shuffled_board_tag_generate = board_tag_generate.shuffle
 shuffled_user_icon_generate = user_icon_generate.shuffle
 
 
-5.times do
+7.times do
  rand_user = User.create!(
     email: Faker::Internet.email,
     username: Faker::Internet.username,
