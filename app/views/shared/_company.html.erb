@@ -4,6 +4,9 @@
 <div class="container">
   <div class="product-top">
     <div class="product-show-buttons">
+      <div class="show-button-mg23">
+        <%= link_to 'Support', @product.web_url, class: "show-button", target: :_blank %>
+      </div>
       <%= simple_form_for(@product, url: toggle_favorite_product_path, method: :post) do |f| %>
         <% if current_user  %>
           <%= f.button  :button, class:"like-button #{'red-button' if current_user.favorited?(@product)}" do %>
@@ -16,9 +19,6 @@
           <% end %>
         <% end %>
       <% end %>
-      <div class="show-button-mg23">
-        <%= link_to 'Engage', @product.web_url, class: "show-button", target: :_blank %>
-      </div>
     </div>
   </div>
   <div class="d-flex justify-content-around">
