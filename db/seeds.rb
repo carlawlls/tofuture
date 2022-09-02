@@ -575,32 +575,44 @@ User.create!(
   user_icon: user_icon_generate.sample
 )
 
-board_user_image_generate = ["https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg", "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg", "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg", "https://www.incimages.com/uploaded_files/image/1920x1080/getty_533979847_128300.jpg", "https://www.niehs.nih.gov/health/assets/images/air_pollution_og.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU"]
-
-shuffled_board_user_image_generate = board_user_image_generate.shuffle
-
-board_tag_generate = ["Labor Standards", "Employee Diversity", "Air Pollution", "Deforestation", "Green Energy", "Waste Management"]
-
-shuffled_board_tag_generate = board_tag_generate.shuffle
-
-
-
-shuffled_user_icon_generate = user_icon_generate.shuffle
-
-
-6.times do
- rand_user = User.create!(
-    email: Faker::Internet.email,
-    username: Faker::Internet.username,
-    board_label: shuffled_board_tag_generate.pop,
-    board_user_image: shuffled_board_user_image_generate.pop,
-    password: "123123",
-    user_icon: user_icon_generate.sample
-  )
-  rand(10..15).times do
-    rand_user.favorite(Product.all.sample)
-  end
+user_1 = User.create!(
+  email: Faker::Internet.email,
+  username: Faker::Internet.username,
+  board_user_image: "https://www.incimages.com/uploaded_files/image/1920x1080/getty_533979847_128300.jpg",
+  board_label: "Labor Standards",
+  user_icon: user_icon_generate.sample,
+  password: "123123",
+)
+rand(10..15).times do
+  user_1.favorite(Product.all.sample)
 end
+
+board_user_image_generate = ["https://cdn.mos.cms.futurecdn.net/WVMczmo522VVf5XLsEavaW-1200-80.jpg", "https://caspiannews.com/media/caspian_news/all_original_photos/1571153138_4329836_1571152765_98610523266804.jpg", "https://www.concentrix.com/wp-content/uploads/2017/09/Workplace-Diversity.jpg", "https://www.niehs.nih.gov/health/assets/images/air_pollution_og.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDpqa9qxlitazS4rQUNPLhC7VLpVw9v6WQg&usqp=CAU"]
+
+# shuffled_board_user_image_generate = board_user_image_generate.shuffle
+
+board_tag_generate = ["Employee Diversity", "Air Pollution", "Deforestation", "Green Energy", "Waste Management"]
+
+# shuffled_board_tag_generate = board_tag_generate.shuffle
+
+
+
+# shuffled_user_icon_generate = user_icon_generate.shuffle
+
+
+# 6.times do
+#  rand_user = User.create!(
+#     email: Faker::Internet.email,
+#     username: Faker::Internet.username,
+#     board_label: shuffled_board_tag_generate.pop,
+#     board_user_image: shuffled_board_user_image_generate.pop,
+
+#     user_icon: user_icon_generate.sample
+#   )
+#   rand(10..15).times do
+#     rand_user.favorite(Product.all.sample)
+#   end
+# end
 
 
 
