@@ -110,98 +110,74 @@
         </div>
       </div>
       <div class="trending">
-        <h2 class="banner-h2">Trending Topics</h2>
+        <h2 class="banner-h2">Trending Boards</h2>
         <div class="trending-btn">
-          <%= form_tag search_path, method: :get do %>
-            <%= hidden_field_tag :query,
-                    params[:query] = "Employee Diversity"%>
-            <%= submit_tag "Employee Diversity", class: "btn btn-flat"%>
-          <% end %>
-          <%= form_tag search_path, method: :get do %>
-            <%= hidden_field_tag :query,
-                    params[:query] = "Carbon Emissions"%>
-            <%= submit_tag "Carbon Emissions", class: "btn btn-flat"%>
-          <% end %>
-          <%= form_tag search_path, method: :get do %>
-            <%= hidden_field_tag :query,
-                    params[:query] = "Green Energy"%>
-            <%= submit_tag "Green Energy", class: "btn btn-flat"%>
-          <% end %>
-          <%= form_tag search_path, method: :get do %>
-            <%= hidden_field_tag :query,
-                    params[:query] = "Animal Welfare"%>
-            <%= submit_tag "Animal Welfare", class: "btn btn-flat"%>
-          <% end %>
-          <%= form_tag search_path, method: :get do %>
-            <%= hidden_field_tag :query,
-                    params[:query] = "Labor Standards"%>
-            <%= submit_tag "Labor Standards", class: "btn btn-flat"%>
-          <% end %>
-          <%= form_tag search_path, method: :get do %>
-            <%= hidden_field_tag :query,
-                    params[:query] = "Employee Diversity"%>
-            <%= submit_tag "Employee Diversity", class: "btn btn-flat"%>
-          <% end %>
+          <div class="trending-btn">
+            <% @users.each do |user| %>
+              <div class="btn btn-trending">
+                <%= link_to user.board_label, board_user_path(user) %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="container" data-controller="scroll-reveal">
-  <div class="about-us-section reveal" data-scroll-reveal-target="item">
-    <div class="about-us-img-div">
-      <%= image_tag ("undraw_environment_iaus.png"), alt: "invest image", class: "about-us-img" %>
+  <div class="container" data-controller="scroll-reveal">
+    <div class="about-us-section reveal" data-scroll-reveal-target="item">
+      <div class="about-us-img-div">
+        <%= image_tag ("undraw_environment_iaus.png"), alt: "invest image", class: "about-us-img" %>
+      </div>
+      <div class="about-us-information">
+        <h2>About us</h2>
+        <p>At toFuture, we know the importance of sustainable investment and our aim is to help ensure that you can invest your money in ethical companies. Our database is filtered with stocks that only adhear to the highest standard using.  </p>
+      </div>
     </div>
-    <div class="about-us-information">
-      <h2>About us</h2>
-      <p>At toFuture, we know the importance of sustainable investment and our aim is to help ensure that you can invest your money in ethical companies. Our database is filtered with stocks that only adhear to the highest standard using.  </p>
+    <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+      <div class="about-us-information">
+        <h2>What are ESG Scores?</h2>
+        <p>Enivronmental, Social and Governance or ESG scores are a framework used by many companies to assess and understand a company's priorities as well as long term risks. At toFuture, we only include stocks and ETFs that score highly overall in all aspects.</p>
+      </div>
+      <div class="about-us-img-div">
+        <%= image_tag ("undraw_The_world_is_mine_re_j5cr.png"), alt: "invest image", class: "about-us-img" %>
+      </div>
+    </div>
+    <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+      <div class="about-us-img-div">
+        <%= image_tag ("undraw_Tree.png"), alt: "invest image", class: "about-us-img" %>
+      </div>
+      <div class="about-us-information" >
+        <h2>What about growing companies?</h2>
+        <p>Unlike other conventional platforms, toFuture allows it users to view smaller up and coming companies that are achieveing great things. We look at each company individulally for several trends such as whether they are conforming to the <strong>Strategic Development Goals 17 (SDGs 17)</strong>, have<strong> B certification</strong> and are apart of specific organizations like <strong>Fairtrade.</strong>.</p>
+      </div>
+    </div>
+    <div class="reveal" data-scroll-reveal-target="item"  data-delay="250ms">
+      <h2 class="text-center">How we compare</h2>
+      <div class="what-we-use d-flex justify-content-center" >
+        <div class="company-images-grid company-images-grid-1">
+          <%= image_tag ("all_sdg_17.png"), alt: "invest image"%>
+        </div>
+        <div class="company-images-grid company-images-grid-2">
+          <%= image_tag ("certified_b_coporation.jpg"), alt: "invest image"%>
+        </div>
+        <div class="company-images-grid company-images-grid-3">
+          <%= image_tag ("ESG-logo-whitebg.png"), alt: "invest image"%>
+        </div>
+        <div class="company-images-grid company-images-grid-4">
+          <%= image_tag ("for_the_planet_log.png"), alt: "invest image"%>
+        </div>
+        <div class="company-images-grid company-images-grid-1">
+          <%= image_tag ('direct_trade_logo.png'), alt: "invest image"%>
+        </div>
+        <div class="company-images-grid company-images-grid-2">
+          <%= image_tag ("img_label_gots.png"), alt: "invest image"%>
+        </div>
+        <div class="company-images-grid company-images-grid-3">
+          <%= image_tag ("img_label_fairtrade.png"), alt: "invest image"%>
+        </div>
+        <div class="company-images-grid company-images-grid-4">
+          <%= image_tag ("vegan_free.png"), alt: "invest image"%>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
-    <div class="about-us-information">
-      <h2>What are ESG Scores?</h2>
-      <p>Enivronmental, Social and Governance or ESG scores are a framework used by many companies to assess and understand a company's priorities as well as long term risks. At toFuture, we only include stocks and ETFs that score highly overall in all aspects.</p>
-    </div>
-    <div class="about-us-img-div">
-      <%= image_tag ("undraw_The_world_is_mine_re_j5cr.png"), alt: "invest image", class: "about-us-img" %>
-    </div>
-  </div>
-  <div class="about-us-section reveal" data-scroll-reveal-target="item"  data-delay="250ms">
-    <div class="about-us-img-div">
-      <%= image_tag ("undraw_Tree.png"), alt: "invest image", class: "about-us-img" %>
-    </div>
-    <div class="about-us-information" >
-      <h2>What about growing companies?</h2>
-      <p>Unlike other conventional platforms, toFuture allows it users to view smaller up and coming companies that are achieveing great things. We look at each company individulally for several trends such as whether they are conforming to the <strong>Strategic Development Goals 17 (SDGs 17)</strong>, have<strong> B certification</strong> and are apart of specific organizations like <strong>Fairtrade.</strong>.</p>
-    </div>
-  </div>
-  <div class="reveal" data-scroll-reveal-target="item"  data-delay="250ms">
-    <h2 class="text-center">How we compare</h2>
-    <div class="what-we-use d-flex justify-content-center" >
-      <div class="company-images-grid company-images-grid-1">
-        <%= image_tag ("all_sdg_17.png"), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-2">
-        <%= image_tag ("certified_b_coporation.jpg"), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-3">
-        <%= image_tag ("ESG-logo-whitebg.png"), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-4">
-        <%= image_tag ("for_the_planet_log.png"), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-1">
-        <%= image_tag ('direct_trade_logo.png'), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-2">
-        <%= image_tag ("img_label_gots.png"), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-3">
-        <%= image_tag ("img_label_fairtrade.png"), alt: "invest image"%>
-      </div>
-      <div class="company-images-grid company-images-grid-4">
-        <%= image_tag ("vegan_free.png"), alt: "invest image"%>
-      </div>
-    </div>
-  </div>
-</div>

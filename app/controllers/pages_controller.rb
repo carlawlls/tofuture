@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @skip_navbar = true
     @products = Product.all
     @issues = Issue.first(6)
+    @users = User.first(6)
   end
 
   def search
