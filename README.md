@@ -1,4 +1,4 @@
-# 📚 Tokyo Vinyls
+# 📚 toFuture
 
 An app built in 10 days that allows users to find sustainble investment and support opportunities through a community platform.
 
